@@ -1057,20 +1057,24 @@ pre .javascript .function {
   margin: 10px;
 }
 .back-to-top {
-  display: none;
-  margin: 20px -10px -20px;
-  background: #eee;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: -100px;
+  right: 30px;
+  z-index: 1050;
+  padding: 0 6px;
+  width: 24px;
+  background: #222;
   font-size: 12px;
   opacity: 0.6;
+  color: #fff;
   cursor: pointer;
   text-align: center;
   -webkit-transform: translateZ(0);
+  transition-property: bottom;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
-}
-.back-to-top:hover {
-  opacity: 0.8;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .back-to-top {
@@ -1083,7 +1087,7 @@ pre .javascript .function {
   }
 }
 .back-to-top.back-to-top-on {
-  display: block;
+  bottom: 30px;
 }
 .header {
   background: transparent;
@@ -1991,7 +1995,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b8c8ff;
+  background: #c401e2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2863,14 +2867,11 @@ pre {
   bottom: unset;
   transition: all 0.5s ease-in-out;
   background: url("/images/scroll.png");
-/*
-        > i {
-             display: none; 
-        } 
-        
-        &.back-to-top-on { 
-            bottom: unset; 
-            top: 100vh < (900px + 200px) ? calc( 100vh - 900px - 200px ) : 0px; 
-        }
-        */
+}
+.back-to-top > i {
+  display: none;
+}
+.back-to-top.back-to-top-on {
+  bottom: unset;
+  top: calc(100vh - 900px - 200px);
 }
