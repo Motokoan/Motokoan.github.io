@@ -421,6 +421,43 @@
 
       <h2 class="post-title">
         
+            <a class="post-title-link" href="/2020/03/06/backup/" itemprop="url">
+              
+                <span itemprop="name">backup</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2020-03-06T00:00:00+08:00"
+              content="2020-03-06" >
+          03-06
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
             <a class="post-title-link" href="/2020/03/06/cookie/" itemprop="url">
               
                 <span itemprop="name">cookie</span>
@@ -461,43 +498,6 @@
             <a class="post-title-link" href="/2020/03/06/view_source/" itemprop="url">
               
                 <span itemprop="name">view_source</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-06T00:00:00+08:00"
-              content="2020-03-06" >
-          03-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/06/backup/" itemprop="url">
-              
-                <span itemprop="name">backup</span>
               
             </a>
         
@@ -707,22 +707,34 @@
 -->
 
 
-本站已安全运行: <span id = "momk" > </span><script language=javascript>function show_date_time(){window.setTimeout("show_date_time()",1000);BirthDay=new Date("02-02-2020 11:12:13");/ / 建站日期today = new Date();  
-timeold = (today.getTime() - BirthDay.getTime());  
-sectimeold = timeold / 1000secondsold = Math.floor(sectimeold);  
-msPerDay = 24 * 60 * 60 * 1000e_daysold = timeold / msPerDaydaysold = Math.floor(e_daysold);  
-e_hrsold = (daysold - e_daysold) * -24;  
-hrsold = Math.floor(e_hrsold);  
-e_minsold = (hrsold - e_hrsold) * -60;  
-minsold = Math.floor((hrsold - e_hrsold) * -60);  
-seconds = Math.floor((minsold - e_minsold) * -60);  
-momk.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒"  
-}  
-show_date_time(); 
-< /script>
-  <style>
-    #momk{animation:change 10s infinite;font-weight:800}@keyframes change{0%{color:#5cb85c}25%{color:#556bd8}50%{color:#e40707}75%{color:#66e616}100%{color:#67bd31}}
-  </style >   
+<span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function momxc() {
+var birthDay =NewDate("2020-02-02");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("momk").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(momxc, 1000);
+}momxc();
+</script>  <style>
+#momk{animation:change 10s infinite;font-weight:800; }
+@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
+</style>
         
 
 
