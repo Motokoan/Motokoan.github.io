@@ -763,6 +763,222 @@ apt-get install fcitx-googlepinyin</code></pre><p>然后重启，就会出现新
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://vuitton-motoko.github.io/2020/03/06/robots/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ba2in9a">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ba2in9a's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/06/robots/" itemprop="url">robots</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-06T00:00:00+08:00">
+                2020-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2020/03/06/robots/" class="leancloud_visitors" data-flag-title="robots">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  627
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p>
+<p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
+<li>α</li>
+</ul>
+<h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p>
+<p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p>
+<p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p>
+<ul>
+<li>β</li>
+</ul>
+<h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p>
+<pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p>
+<p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p>
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *
+
+Disallow:  /
+
+Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p>
+<p>配置项详解:</p>
+<p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p>
+<p>Disallow:不允许爬取的目录。 </p>
+<p>Allow:一般配合Disallow使用，用于排除限制。 </p>
+<p>常见的爬虫名: </p>
+<pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符
+
+Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录
+
+Disallow: /require/  这里定义是禁止爬寻require目录下面的目录
+
+Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录
+
+Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。
+
+Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址
+
+Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片
+
+Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。
+
+Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录
+
+Allow: /tmp  这里定义是允许爬寻tmp的整个目录
+
+Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。
+
+Allow: .gif$  允许抓取网页和gif格式图片
+
+Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+          
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://vuitton-motoko.github.io/2020/03/06/cookie/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1249,6 +1465,196 @@ rm *.apk</code></pre><p>其实吧，没必要耗费精力搞这么个伪Android�
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://vuitton-motoko.github.io/2020/03/06/view_source/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ba2in9a">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ba2in9a's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/06/view_source/" itemprop="url">view_source</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-06T00:00:00+08:00">
+                2020-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2020/03/06/view_source/" class="leancloud_visitors" data-flag-title="view_source">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  343
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="view-source"><a href="#view-source" class="headerlink" title="view_source"></a>view_source</h1><p><img src="https://i.imgur.com/j7BNCHh.png" alt=""></p>
+<p>无法使用右键查看网页源代码</p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
+<li>α</li>
+</ul>
+<h4 id="在url中通过view-source-的方法来访问源码"><a href="#在url中通过view-source-的方法来访问源码" class="headerlink" title="在url中通过view-source:的方法来访问源码"></a>在url中通过view-source:的方法来访问源码</h4><p>/view-source是一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令./</p>
+<p>以前的使用方法：在浏览器地址栏中输入</p>
+<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
+<p>JS用法:</p>
+<p>​    window.location=”view-source:” + window.location</p>
+<p><img src="https://i.imgur.com/jDoFlnb.png" alt=""></p>
+<p><img src="https://i.imgur.com/ewwthcJ.png" alt=""></p>
+<ul>
+<li>β</li>
+</ul>
+<h4 id="F12调出web开发者工具，浏览查看器页面"><a href="#F12调出web开发者工具，浏览查看器页面" class="headerlink" title="F12调出web开发者工具，浏览查看器页面"></a>F12调出web开发者工具，浏览查看器页面</h4><p><img src="https://i.imgur.com/1spwnXo.png" alt=""></p>
+<ul>
+<li>γ</li>
+</ul>
+<h4 id="使用Burpsuite抓包查看源代码"><a href="#使用Burpsuite抓包查看源代码" class="headerlink" title="使用Burpsuite抓包查看源代码"></a>使用Burpsuite抓包查看源代码</h4><p><img src="https://i.imgur.com/YIs0S24.png" alt=""></p>
+<pre><code>Flag=cyberpeace{69759f4dc46ad159300f1c451609c781}</code></pre><h2 id="view-source-协议"><a href="#view-source-协议" class="headerlink" title="view-source 协议"></a>view-source 协议</h2><p>一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令</p>
+<h4 id="以前的使用方法："><a href="#以前的使用方法：" class="headerlink" title="以前的使用方法："></a>以前的使用方法：</h4><p>在浏览器地址栏中输入</p>
+<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
+<h4 id="JS用法"><a href="#JS用法" class="headerlink" title="JS用法:"></a>JS用法:</h4><pre><code>window.location=&quot;view-source:&quot; + window.location</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+          
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://vuitton-motoko.github.io/2020/03/06/backup/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1391,412 +1797,6 @@ rm *.apk</code></pre><p>其实吧，没必要耗费精力搞这么个伪Android�
 .bak 
 
 .bash_history</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    <div>
-          
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://vuitton-motoko.github.io/2020/03/06/robots/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ba2in9a">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ba2in9a's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/06/robots/" itemprop="url">robots</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-06T00:00:00+08:00">
-                2020-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2020/03/06/robots/" class="leancloud_visitors" data-flag-title="robots">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                <span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  627
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p>
-<p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p>
-<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
-<li>α</li>
-</ul>
-<h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p>
-<p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p>
-<p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p>
-<ul>
-<li>β</li>
-</ul>
-<h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p>
-<pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p>
-<p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p>
-<h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *
-
-Disallow:  /
-
-Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p>
-<p>配置项详解:</p>
-<p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p>
-<p>Disallow:不允许爬取的目录。 </p>
-<p>Allow:一般配合Disallow使用，用于排除限制。 </p>
-<p>常见的爬虫名: </p>
-<pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符
-
-Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录
-
-Disallow: /require/  这里定义是禁止爬寻require目录下面的目录
-
-Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录
-
-Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。
-
-Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址
-
-Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片
-
-Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。
-
-Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录
-
-Allow: /tmp  这里定义是允许爬寻tmp的整个目录
-
-Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。
-
-Allow: .gif$  允许抓取网页和gif格式图片
-
-Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    <div>
-          
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://vuitton-motoko.github.io/2020/03/06/view_source/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ba2in9a">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ba2in9a's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/06/view_source/" itemprop="url">view_source</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-06T00:00:00+08:00">
-                2020-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2020/03/06/view_source/" class="leancloud_visitors" data-flag-title="view_source">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                <span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  343
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="view-source"><a href="#view-source" class="headerlink" title="view_source"></a>view_source</h1><p><img src="https://i.imgur.com/j7BNCHh.png" alt=""></p>
-<p>无法使用右键查看网页源代码</p>
-<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
-<li>α</li>
-</ul>
-<h4 id="在url中通过view-source-的方法来访问源码"><a href="#在url中通过view-source-的方法来访问源码" class="headerlink" title="在url中通过view-source:的方法来访问源码"></a>在url中通过view-source:的方法来访问源码</h4><p>/view-source是一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令./</p>
-<p>以前的使用方法：在浏览器地址栏中输入</p>
-<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
-<p>JS用法:</p>
-<p>​    window.location=”view-source:” + window.location</p>
-<p><img src="https://i.imgur.com/jDoFlnb.png" alt=""></p>
-<p><img src="https://i.imgur.com/ewwthcJ.png" alt=""></p>
-<ul>
-<li>β</li>
-</ul>
-<h4 id="F12调出web开发者工具，浏览查看器页面"><a href="#F12调出web开发者工具，浏览查看器页面" class="headerlink" title="F12调出web开发者工具，浏览查看器页面"></a>F12调出web开发者工具，浏览查看器页面</h4><p><img src="https://i.imgur.com/1spwnXo.png" alt=""></p>
-<ul>
-<li>γ</li>
-</ul>
-<h4 id="使用Burpsuite抓包查看源代码"><a href="#使用Burpsuite抓包查看源代码" class="headerlink" title="使用Burpsuite抓包查看源代码"></a>使用Burpsuite抓包查看源代码</h4><p><img src="https://i.imgur.com/YIs0S24.png" alt=""></p>
-<pre><code>Flag=cyberpeace{69759f4dc46ad159300f1c451609c781}</code></pre><h2 id="view-source-协议"><a href="#view-source-协议" class="headerlink" title="view-source 协议"></a>view-source 协议</h2><p>一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令</p>
-<h4 id="以前的使用方法："><a href="#以前的使用方法：" class="headerlink" title="以前的使用方法："></a>以前的使用方法：</h4><p>在浏览器地址栏中输入</p>
-<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
-<h4 id="JS用法"><a href="#JS用法" class="headerlink" title="JS用法:"></a>JS用法:</h4><pre><code>window.location=&quot;view-source:&quot; + window.location</code></pre>
           
         
       
@@ -2237,32 +2237,22 @@ hexo deploy</code></pre><h2 id="感谢-codesheep-cn"><a href="#感谢-codesheep-
 -->
 
 
-<!--本站已安全运行:-->
-<span id="momk"></span>
-<script language=javascript>
-function show_date_time(){
-window.setTimeout("show_date_time()", 1000);
-BirthDay=new Date("02-02-2020 00:00:00");//建站日期
-today=new Date();
-timeold=(today.getTime()-BirthDay.getTime());
-sectimeold=timeold/1000
-secondsold=Math.floor(sectimeold);
-msPerDay=24*60*60*1000
-e_daysold=timeold/msPerDay
-daysold=Math.floor(e_daysold);
-e_hrsold=(daysold-e_daysold)*-24;
-hrsold=Math.floor(e_hrsold);
-e_minsold=(hrsold-e_hrsold)*-60;
-minsold=Math.floor((hrsold-e_hrsold)*-60);
-seconds=Math.floor((minsold-e_minsold)*-60);
-momk.innerHTML=daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒" ;
-}
-show_date_time();
-</script>
-<style>
-#momk{animation:change 10s infinite;font-weight:800; }
-@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
-</style>
+本站已安全运行: <span id = "momk" > </span><script language=javascript>function show_date_time(){window.setTimeout("show_date_time()",1000);BirthDay=new Date("02-02-2020 11:12:13");/ / 建站日期today = new Date();  
+timeold = (today.getTime() - BirthDay.getTime());  
+sectimeold = timeold / 1000secondsold = Math.floor(sectimeold);  
+msPerDay = 24 * 60 * 60 * 1000e_daysold = timeold / msPerDaydaysold = Math.floor(e_daysold);  
+e_hrsold = (daysold - e_daysold) * -24;  
+hrsold = Math.floor(e_hrsold);  
+e_minsold = (hrsold - e_hrsold) * -60;  
+minsold = Math.floor((hrsold - e_hrsold) * -60);  
+seconds = Math.floor((minsold - e_minsold) * -60);  
+momk.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒"  
+}  
+show_date_time(); 
+< /script>
+  <style>
+    #momk{animation:change 10s infinite;font-weight:800}@keyframes change{0%{color:#5cb85c}25%{color:#556bd8}50%{color:#e40707}75%{color:#66e616}100%{color:#67bd31}}
+  </style >   
         
 
 
