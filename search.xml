@@ -84,6 +84,63 @@ apt-get install fcitx-googlepinyin</code></pre><p>然后重启，就会出现新
       </tags>
   </entry>
   <entry>
+    <title>robots</title>
+    <url>/2020/03/06/robots/</url>
+    <content><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p>
+<p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
+<li>α</li>
+</ul>
+<h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p>
+<p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p>
+<p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p>
+<ul>
+<li>β</li>
+</ul>
+<h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p>
+<pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p>
+<p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p>
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *
+
+Disallow:  /
+
+Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p>
+<p>配置项详解:</p>
+<p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p>
+<p>Disallow:不允许爬取的目录。 </p>
+<p>Allow:一般配合Disallow使用，用于排除限制。 </p>
+<p>常见的爬虫名: </p>
+<pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符
+
+Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录
+
+Disallow: /require/  这里定义是禁止爬寻require目录下面的目录
+
+Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录
+
+Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。
+
+Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址
+
+Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片
+
+Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。
+
+Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录
+
+Allow: /tmp  这里定义是允许爬寻tmp的整个目录
+
+Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。
+
+Allow: .gif$  允许抓取网页和gif格式图片
+
+Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
+]]></content>
+      <tags>
+        <tag>Writeup</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VMware安装Android X86</title>
     <url>/2020/02/05/Vmware%E5%AE%89%E8%A3%85Android-X86/</url>
     <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>废话不多，淦它！</p>
@@ -227,57 +284,25 @@ rm *.apk</code></pre><p>其实吧，没必要耗费精力搞这么个伪Android�
       </tags>
   </entry>
   <entry>
-    <title>robots</title>
-    <url>/2020/03/06/robots/</url>
-    <content><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p>
-<p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p>
+    <title>cookie</title>
+    <url>/2020/03/06/cookie/</url>
+    <content><![CDATA[<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><img src="https://i.imgur.com/Jrb5zzg.png" alt=""></p>
 <h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
 <li>α</li>
 </ul>
-<h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p>
-<p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p>
-<p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p>
+<h4 id="使用Burpsuit进行抓包"><a href="#使用Burpsuit进行抓包" class="headerlink" title="使用Burpsuit进行抓包"></a>使用Burpsuit进行抓包</h4><p><img src="https://i.imgur.com/BBo9qRc.png" alt=""></p>
+<p><img src="https://i.imgur.com/tcIoxDK.png" alt=""></p>
+<p><img src="https://i.imgur.com/6SillS2.png" alt=""></p>
+<p><img src="https://i.imgur.com/yVu20RK.png" alt=""></p>
 <ul>
 <li>β</li>
 </ul>
-<h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p>
-<pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p>
-<p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p>
-<h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *
-
-Disallow:  /
-
-Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p>
-<p>配置项详解:</p>
-<p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p>
-<p>Disallow:不允许爬取的目录。 </p>
-<p>Allow:一般配合Disallow使用，用于排除限制。 </p>
-<p>常见的爬虫名: </p>
-<pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符
-
-Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录
-
-Disallow: /require/  这里定义是禁止爬寻require目录下面的目录
-
-Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录
-
-Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。
-
-Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址
-
-Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片
-
-Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。
-
-Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录
-
-Allow: /tmp  这里定义是允许爬寻tmp的整个目录
-
-Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。
-
-Allow: .gif$  允许抓取网页和gif格式图片
-
-Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
+<h4 id="使用-HTTP-Header-Live-拓展"><a href="#使用-HTTP-Header-Live-拓展" class="headerlink" title="使用 HTTP Header Live 拓展"></a>使用 HTTP Header Live 拓展</h4><p><img src="https://i.imgur.com/DpPsVxr.png" alt=""></p>
+<p><img src="https://i.imgur.com/6y6f0hR.png" alt=""></p>
+<p>flag=cyberpeace{34275870cbf633cfcc2f07a54fe5b16e}</p>
+<h2 id="了解cookie"><a href="#了解cookie" class="headerlink" title="了解cookie"></a>了解cookie</h2><p>Cookie 并不是它的原意“甜饼”的意思, 而是一个保存在客户机中的简单的文本文件, 这个文件与特定的 Web文档关联在一起, 保存了该客户机访问这个Web 文档时的信息, 当客户机再次访问这个 Web 文档时这些信息可供该文档使用。由于“Cookie”具有可以保存在客户机上的神奇特性, 因此它可以帮助我们实现记录用户个人信息的功能, 而这一切都不必使用复杂的CGI等程序 。举例来说, 一个 Web 站点可能会为每一个访问者产生一个唯一的ID, 然后以 Cookie 文件的形式保存在每个用户的机器上。如果使用浏览器访问 Web, 会看到所有保存在硬盘上的  Cookie。在这个文件夹里每一个文件都是一个由“名/值”对组成的文本文件,另外还有一个文件保存有所有对应的 Web 站点的信息。在这里的每个  Cookie 文件都是一个简单而又普通的文本文件。透过文件名, 就可以看到是哪个 Web  站点在机器上放置了Cookie(当然站点信息在文件里也有保存)</p>
+<p><a href="https://segmentfault.com/a/1190000016248401" target="_blank" rel="noopener">资料1</a></p>
+<p><a href="https://www.jianshu.com/p/6fc9cea6daa2" target="_blank" rel="noopener">资料2</a></p>
 ]]></content>
       <tags>
         <tag>Writeup</tag>
@@ -314,37 +339,6 @@ Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a 
 .bak 
 
 .bash_history</code></pre>]]></content>
-      <tags>
-        <tag>Writeup</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>view_source</title>
-    <url>/2020/03/06/view_source/</url>
-    <content><![CDATA[<h1 id="view-source"><a href="#view-source" class="headerlink" title="view_source"></a>view_source</h1><p><img src="https://i.imgur.com/j7BNCHh.png" alt=""></p>
-<p>无法使用右键查看网页源代码</p>
-<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
-<li>α</li>
-</ul>
-<h4 id="在url中通过view-source-的方法来访问源码"><a href="#在url中通过view-source-的方法来访问源码" class="headerlink" title="在url中通过view-source:的方法来访问源码"></a>在url中通过view-source:的方法来访问源码</h4><p>/view-source是一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令./</p>
-<p>以前的使用方法：在浏览器地址栏中输入</p>
-<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
-<p>JS用法:</p>
-<p>​    window.location=”view-source:” + window.location</p>
-<p><img src="https://i.imgur.com/jDoFlnb.png" alt=""></p>
-<p><img src="https://i.imgur.com/ewwthcJ.png" alt=""></p>
-<ul>
-<li>β</li>
-</ul>
-<h4 id="F12调出web开发者工具，浏览查看器页面"><a href="#F12调出web开发者工具，浏览查看器页面" class="headerlink" title="F12调出web开发者工具，浏览查看器页面"></a>F12调出web开发者工具，浏览查看器页面</h4><p><img src="https://i.imgur.com/1spwnXo.png" alt=""></p>
-<ul>
-<li>γ</li>
-</ul>
-<h4 id="使用Burpsuite抓包查看源代码"><a href="#使用Burpsuite抓包查看源代码" class="headerlink" title="使用Burpsuite抓包查看源代码"></a>使用Burpsuite抓包查看源代码</h4><p><img src="https://i.imgur.com/YIs0S24.png" alt=""></p>
-<pre><code>Flag=cyberpeace{69759f4dc46ad159300f1c451609c781}</code></pre><h2 id="view-source-协议"><a href="#view-source-协议" class="headerlink" title="view-source 协议"></a>view-source 协议</h2><p>一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令</p>
-<h4 id="以前的使用方法："><a href="#以前的使用方法：" class="headerlink" title="以前的使用方法："></a>以前的使用方法：</h4><p>在浏览器地址栏中输入</p>
-<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
-<h4 id="JS用法"><a href="#JS用法" class="headerlink" title="JS用法:"></a>JS用法:</h4><pre><code>window.location=&quot;view-source:&quot; + window.location</code></pre>]]></content>
       <tags>
         <tag>Writeup</tag>
       </tags>
@@ -408,26 +402,32 @@ hexo deploy</code></pre><h2 id="感谢-codesheep-cn"><a href="#感谢-codesheep-
       </tags>
   </entry>
   <entry>
-    <title>cookie</title>
-    <url>/2020/03/06/cookie/</url>
-    <content><![CDATA[<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><img src="https://i.imgur.com/Jrb5zzg.png" alt=""></p>
+    <title>view_source</title>
+    <url>/2020/03/06/view_source/</url>
+    <content><![CDATA[<h1 id="view-source"><a href="#view-source" class="headerlink" title="view_source"></a>view_source</h1><p><img src="https://i.imgur.com/j7BNCHh.png" alt=""></p>
+<p>无法使用右键查看网页源代码</p>
 <h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
 <li>α</li>
 </ul>
-<h4 id="使用Burpsuit进行抓包"><a href="#使用Burpsuit进行抓包" class="headerlink" title="使用Burpsuit进行抓包"></a>使用Burpsuit进行抓包</h4><p><img src="https://i.imgur.com/BBo9qRc.png" alt=""></p>
-<p><img src="https://i.imgur.com/tcIoxDK.png" alt=""></p>
-<p><img src="https://i.imgur.com/6SillS2.png" alt=""></p>
-<p><img src="https://i.imgur.com/yVu20RK.png" alt=""></p>
+<h4 id="在url中通过view-source-的方法来访问源码"><a href="#在url中通过view-source-的方法来访问源码" class="headerlink" title="在url中通过view-source:的方法来访问源码"></a>在url中通过view-source:的方法来访问源码</h4><p>/view-source是一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令./</p>
+<p>以前的使用方法：在浏览器地址栏中输入</p>
+<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
+<p>JS用法:</p>
+<p>​    window.location=”view-source:” + window.location</p>
+<p><img src="https://i.imgur.com/jDoFlnb.png" alt=""></p>
+<p><img src="https://i.imgur.com/ewwthcJ.png" alt=""></p>
 <ul>
 <li>β</li>
 </ul>
-<h4 id="使用-HTTP-Header-Live-拓展"><a href="#使用-HTTP-Header-Live-拓展" class="headerlink" title="使用 HTTP Header Live 拓展"></a>使用 HTTP Header Live 拓展</h4><p><img src="https://i.imgur.com/DpPsVxr.png" alt=""></p>
-<p><img src="https://i.imgur.com/6y6f0hR.png" alt=""></p>
-<p>flag=cyberpeace{34275870cbf633cfcc2f07a54fe5b16e}</p>
-<h2 id="了解cookie"><a href="#了解cookie" class="headerlink" title="了解cookie"></a>了解cookie</h2><p>Cookie 并不是它的原意“甜饼”的意思, 而是一个保存在客户机中的简单的文本文件, 这个文件与特定的 Web文档关联在一起, 保存了该客户机访问这个Web 文档时的信息, 当客户机再次访问这个 Web 文档时这些信息可供该文档使用。由于“Cookie”具有可以保存在客户机上的神奇特性, 因此它可以帮助我们实现记录用户个人信息的功能, 而这一切都不必使用复杂的CGI等程序 。举例来说, 一个 Web 站点可能会为每一个访问者产生一个唯一的ID, 然后以 Cookie 文件的形式保存在每个用户的机器上。如果使用浏览器访问 Web, 会看到所有保存在硬盘上的  Cookie。在这个文件夹里每一个文件都是一个由“名/值”对组成的文本文件,另外还有一个文件保存有所有对应的 Web 站点的信息。在这里的每个  Cookie 文件都是一个简单而又普通的文本文件。透过文件名, 就可以看到是哪个 Web  站点在机器上放置了Cookie(当然站点信息在文件里也有保存)</p>
-<p><a href="https://segmentfault.com/a/1190000016248401" target="_blank" rel="noopener">资料1</a></p>
-<p><a href="https://www.jianshu.com/p/6fc9cea6daa2" target="_blank" rel="noopener">资料2</a></p>
-]]></content>
+<h4 id="F12调出web开发者工具，浏览查看器页面"><a href="#F12调出web开发者工具，浏览查看器页面" class="headerlink" title="F12调出web开发者工具，浏览查看器页面"></a>F12调出web开发者工具，浏览查看器页面</h4><p><img src="https://i.imgur.com/1spwnXo.png" alt=""></p>
+<ul>
+<li>γ</li>
+</ul>
+<h4 id="使用Burpsuite抓包查看源代码"><a href="#使用Burpsuite抓包查看源代码" class="headerlink" title="使用Burpsuite抓包查看源代码"></a>使用Burpsuite抓包查看源代码</h4><p><img src="https://i.imgur.com/YIs0S24.png" alt=""></p>
+<pre><code>Flag=cyberpeace{69759f4dc46ad159300f1c451609c781}</code></pre><h2 id="view-source-协议"><a href="#view-source-协议" class="headerlink" title="view-source 协议"></a>view-source 协议</h2><p>一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令</p>
+<h4 id="以前的使用方法："><a href="#以前的使用方法：" class="headerlink" title="以前的使用方法："></a>以前的使用方法：</h4><p>在浏览器地址栏中输入</p>
+<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
+<h4 id="JS用法"><a href="#JS用法" class="headerlink" title="JS用法:"></a>JS用法:</h4><pre><code>window.location=&quot;view-source:&quot; + window.location</code></pre>]]></content>
       <tags>
         <tag>Writeup</tag>
       </tags>
