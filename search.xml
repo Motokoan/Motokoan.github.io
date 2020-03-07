@@ -1,159 +1,435 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>backup</title>
-      <link href="/2020/03/06/backup/"/>
-      <url>/2020/03/06/backup/</url>
-      
-        <content type="html"><![CDATA[<h1 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h1><p><img src="https://i.imgur.com/eQ1rXd0.png" alt=""></p><h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><h3 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h3><h4 id="index-php-save"><a href="#index-php-save" class="headerlink" title="index.php.save"></a>index.php.save</h4><p><img src="https://i.imgur.com/hIYytPH.png" alt=""></p><h4 id="index-php-bak"><a href="#index-php-bak" class="headerlink" title="index.php.bak"></a>index.php.bak</h4><p><img src="https://i.imgur.com/XcLdGfj.png" alt=""></p><p><img src="https://i.imgur.com/VcHw2Yq.png" alt=""></p><pre><code>Flag=Cyberpeace{855A1C4B3401294CB6604CCC98BDE334}</code></pre><h2 id="备份文件"><a href="#备份文件" class="headerlink" title="备份文件"></a>备份文件</h2><p>很多开发人员在编辑文件前，都会先进行一次备份，同时会把备份文件和源文件放在服务器上的同一个地方。这样的话，如果存在绕过身份验证，就可以直接下载到这个备份文件，从而得到网站源代码。</p><h4 id="有关备份文件的可以利用的情况主要有3种"><a href="#有关备份文件的可以利用的情况主要有3种" class="headerlink" title="有关备份文件的可以利用的情况主要有3种"></a>有关备份文件的可以利用的情况主要有3种</h4><ol><li><p>代码编辑器产生的备份文件</p></li><li><p>没有删除版本控制系统（VCS）产生的备份文件</p></li><li><p>没有删除开发人员手动备份的文件</p></li></ol><h4 id="php的备份有两种"><a href="#php的备份有两种" class="headerlink" title="php的备份有两种"></a>php的备份有两种</h4><pre><code>.php~.php.bak</code></pre><h4 id="常见的备份文件后缀名"><a href="#常见的备份文件后缀名" class="headerlink" title="常见的备份文件后缀名"></a>常见的备份文件后缀名</h4><pre><code>.git.svn .swp.svn .~ .bak .bash_history</code></pre>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Writeup </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>cookie</title>
-      <link href="/2020/03/06/cookie/"/>
-      <url>/2020/03/06/cookie/</url>
-      
-        <content type="html"><![CDATA[<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><img src="https://i.imgur.com/Jrb5zzg.png" alt=""></p><h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul><li>α</li></ul><h4 id="使用Burpsuit进行抓包"><a href="#使用Burpsuit进行抓包" class="headerlink" title="使用Burpsuit进行抓包"></a>使用Burpsuit进行抓包</h4><p><img src="https://i.imgur.com/BBo9qRc.png" alt=""></p><p><img src="https://i.imgur.com/tcIoxDK.png" alt=""></p><p><img src="https://i.imgur.com/6SillS2.png" alt=""></p><p><img src="https://i.imgur.com/yVu20RK.png" alt=""></p><ul><li>β</li></ul><h4 id="使用-HTTP-Header-Live-拓展"><a href="#使用-HTTP-Header-Live-拓展" class="headerlink" title="使用 HTTP Header Live 拓展"></a>使用 HTTP Header Live 拓展</h4><p><img src="https://i.imgur.com/DpPsVxr.png" alt=""></p><p><img src="https://i.imgur.com/6y6f0hR.png" alt=""></p><p>flag=cyberpeace{34275870cbf633cfcc2f07a54fe5b16e}</p><h2 id="了解cookie"><a href="#了解cookie" class="headerlink" title="了解cookie"></a>了解cookie</h2><p>Cookie 并不是它的原意“甜饼”的意思, 而是一个保存在客户机中的简单的文本文件, 这个文件与特定的 Web文档关联在一起, 保存了该客户机访问这个Web 文档时的信息, 当客户机再次访问这个 Web 文档时这些信息可供该文档使用。由于“Cookie”具有可以保存在客户机上的神奇特性, 因此它可以帮助我们实现记录用户个人信息的功能, 而这一切都不必使用复杂的CGI等程序 。举例来说, 一个 Web 站点可能会为每一个访问者产生一个唯一的ID, 然后以 Cookie 文件的形式保存在每个用户的机器上。如果使用浏览器访问 Web, 会看到所有保存在硬盘上的  Cookie。在这个文件夹里每一个文件都是一个由“名/值”对组成的文本文件,另外还有一个文件保存有所有对应的 Web 站点的信息。在这里的每个  Cookie 文件都是一个简单而又普通的文本文件。透过文件名, 就可以看到是哪个 Web  站点在机器上放置了Cookie(当然站点信息在文件里也有保存)</p><p><a href="https://segmentfault.com/a/1190000016248401" target="_blank" rel="noopener">资料1</a></p><p><a href="https://www.jianshu.com/p/6fc9cea6daa2" target="_blank" rel="noopener">资料2</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Writeup </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>robots</title>
-      <link href="/2020/03/06/robots/"/>
-      <url>/2020/03/06/robots/</url>
-      
-        <content type="html"><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p><p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p><h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul><li>α</li></ul><h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p><p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p><p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p><ul><li>β</li></ul><h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p><pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p><p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p><h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *Disallow:  /Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p><p>配置项详解:</p><p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p><p>Disallow:不允许爬取的目录。 </p><p>Allow:一般配合Disallow使用，用于排除限制。 </p><p>常见的爬虫名: </p><pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录Disallow: /require/  这里定义是禁止爬寻require目录下面的目录Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录Allow: /tmp  这里定义是允许爬寻tmp的整个目录Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。Allow: .gif$  允许抓取网页和gif格式图片Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Writeup </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>view_source</title>
-      <link href="/2020/03/06/view_source/"/>
-      <url>/2020/03/06/view_source/</url>
-      
-        <content type="html"><![CDATA[<h1 id="view-source"><a href="#view-source" class="headerlink" title="view_source"></a>view_source</h1><p><img src="https://i.imgur.com/j7BNCHh.png" alt=""></p><p>无法使用右键查看网页源代码</p><h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul><li>α</li></ul><h4 id="在url中通过view-source-的方法来访问源码"><a href="#在url中通过view-source-的方法来访问源码" class="headerlink" title="在url中通过view-source:的方法来访问源码"></a>在url中通过view-source:的方法来访问源码</h4><p>/view-source是一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令./</p><p>以前的使用方法：在浏览器地址栏中输入</p><pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p><p>JS用法:</p><p>​    window.location=”view-source:” + window.location</p><p><img src="https://i.imgur.com/jDoFlnb.png" alt=""></p><p><img src="https://i.imgur.com/ewwthcJ.png" alt=""></p><ul><li>β</li></ul><h4 id="F12调出web开发者工具，浏览查看器页面"><a href="#F12调出web开发者工具，浏览查看器页面" class="headerlink" title="F12调出web开发者工具，浏览查看器页面"></a>F12调出web开发者工具，浏览查看器页面</h4><p><img src="https://i.imgur.com/1spwnXo.png" alt=""></p><ul><li>γ</li></ul><h4 id="使用Burpsuite抓包查看源代码"><a href="#使用Burpsuite抓包查看源代码" class="headerlink" title="使用Burpsuite抓包查看源代码"></a>使用Burpsuite抓包查看源代码</h4><p><img src="https://i.imgur.com/YIs0S24.png" alt=""></p><pre><code>Flag=cyberpeace{69759f4dc46ad159300f1c451609c781}</code></pre><h2 id="view-source-协议"><a href="#view-source-协议" class="headerlink" title="view-source 协议"></a>view-source 协议</h2><p>一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令</p><h4 id="以前的使用方法："><a href="#以前的使用方法：" class="headerlink" title="以前的使用方法："></a>以前的使用方法：</h4><p>在浏览器地址栏中输入</p><pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p><h4 id="JS用法"><a href="#JS用法" class="headerlink" title="JS用法:"></a>JS用法:</h4><pre><code>window.location=&quot;view-source:&quot; + window.location</code></pre>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Writeup </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>BurpSuite_pro下载</title>
-      <link href="/2020/02/29/BurpSuite-pro%E4%B8%8B%E8%BD%BD/"/>
-      <url>/2020/02/29/BurpSuite-pro%E4%B8%8B%E8%BD%BD/</url>
-      
-        <content type="html"><![CDATA[<h1 id="burpsuite-pro"><a href="#burpsuite-pro" class="headerlink" title="burpsuite pro"></a>burpsuite pro</h1><p>burpsuite pro v2020.1 破解后的许可界面：<br><img src="https://i.imgur.com/MdyZA4f.png" alt=""></p><p>burpsuite pro v2020.1 汉化后的许可界面:<br><img src="https://i.imgur.com/boF3cB9.png" alt=""></p><p>注：所有的汉化破解教程都需要在你安装好Java环境的前提下</p><p>推荐使用Java8即可适配burprsuite1.7或2.0+。</p><p>汉化破解教程：</p><p><a href="https://mrxn.net/hacktools/Burp_Suite_Pro_v1_7_3_2_Loader_Keygen_Cracked_Share.html" target="_blank" rel="noopener">破解教程</a></p><p>先按照这个教程破解后</p><p>再去执行 【创建桌面快捷方式.bat】即可在桌面创建汉化的快捷方式。</p><p>执行【Create-Desktop-Link.bat】即可在桌面创建英文原版的快捷方式。</p><h4 id="burpsuite-pro-v2020-1-zip文件包含："><a href="#burpsuite-pro-v2020-1-zip文件包含：" class="headerlink" title="burpsuite_pro_v2020.1.zip文件包含："></a>burpsuite_pro_v2020.1.zip文件包含：</h4><p>+— burp-loader-keygen-2020_1.jar<br>+— burpsuite pro 2020.1.png<br>+— burpsuite pro 2020.1汉化.png<br>+— BurpSuiteChs.jar<br>+— burpsuite_pro_v2020.1.jar<br>+— Burp_start.bat<br>+— Burp_start_en.bat<br>+— Create-Desktop-Link.bat<br>+— Goescat-Macaron-Burp-suite.ico<br>+— jython.jar<br>+— 创建桌面快捷方式.bat<br>+— 汉化破解说明.txt</p><h3 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h3><p>——<a href="http://tmp.link/f/5e53630ba1fdd" target="_blank" rel="noopener">http://tmp.link/f/5e53630ba1fdd</a></p><p>——<a href="http://www79.zippyshare.com/v/d0pMoYPg/file.html" target="_blank" rel="noopener">http://www79.zippyshare.com/v/d0pMoYPg/file.html</a></p><p>备用地址，如果速度慢需要代理：</p><p>——<a href="https://mir.cr/1EFTTD3O" target="_blank" rel="noopener">https://mir.cr/1EFTTD3O</a></p><p>——<a href="https://tusfiles.com/yfhl5gdgwyu0" target="_blank" rel="noopener">https://tusfiles.com/yfhl5gdgwyu0</a></p><p>——<a href="https://userscloud.com/w0760j7n2wct" target="_blank" rel="noopener">https://userscloud.com/w0760j7n2wct</a></p><p>——<a href="https://uptobox.com/v65hsq7l6le8" target="_blank" rel="noopener">https://uptobox.com/v65hsq7l6le8</a></p><p><img src="https://i.imgur.com/CtuIx73.jpg" alt=""></p><p> &lt;今天是二月二十九号，可我浑浑噩噩，百无聊赖&gt;</p><p> &lt;好想拜访这灿烂盛世&gt;</p><p> &lt;安&gt;</p><p>参考<a href="https://mrxn.net/hacktools/burpsuite_pro_v2020_1.html" target="_blank" rel="noopener">Mrxn’s Blog</a></p><p>鸣谢Mrxn</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Download </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Kali-2020.1更新汉化配置</title>
-      <link href="/2020/02/18/Kali-2020-1%E6%9B%B4%E6%96%B0%E6%B1%89%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
-      <url>/2020/02/18/Kali-2020-1%E6%9B%B4%E6%96%B0%E6%B1%89%E5%8C%96%E9%85%8D%E7%BD%AE/</url>
-      
-        <content type="html"><![CDATA[<p><img src="https://i.imgur.com/dRpyOSH.png" alt=""></p><h2 id="开始操作"><a href="#开始操作" class="headerlink" title="开始操作"></a>开始操作</h2><p>首先了解一下apt和apt-get之间的区别</p><p><a href="https://www.sysgeek.cn/apt-vs-apt-get/" target="_blank" rel="noopener">https://www.sysgeek.cn/apt-vs-apt-get/</a></p><p>感兴趣的话可以深入探究</p><p>One</p><pre><code>apt update</code></pre><p>这个操作并没有开始更新软件，类似于将远程源中的最新版本信息更新到本地</p><p>接下来才开始更新软件：</p><pre><code>apt upgrade</code></pre><p>更新系统：</p><pre><code>apt full-upgrade</code></pre><p>或者：</p><pre><code>apt-get dist-upgrade</code></pre><p>清理安装包：</p><pre><code>apt-get cleanapt-get autoclean</code></pre><p>Two</p><h3 id="推荐使用"><a href="#推荐使用" class="headerlink" title="推荐使用"></a>推荐使用</h3><pre><code>apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get clean</code></pre><h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><p>如果已会科学上网，不需要更新源文件，自我感觉Kali官方源可行。(￣▽￣)”</p><p>Linux 更新源文件位于 /etc/apt/sources.list ，系统就是从这个文件中读取一些网址参数下载安装软件，默认的是 kali 官方源，我们可以修改为国内一些较快的源，例如阿里、中科大、网易等，加快下载速度。</p><pre><code>vim /etc/apt/sources.list</code></pre><p>vim相关操作请自行学习</p><p>找到并编辑上述 sources.list 源文件，替换为以下内容：</p><h4 id="aliyun-阿里云"><a href="#aliyun-阿里云" class="headerlink" title="aliyun 阿里云"></a>aliyun 阿里云</h4><p>deb <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib</p><h4 id="ustc-中科大"><a href="#ustc-中科大" class="headerlink" title="ustc 中科大"></a>ustc 中科大</h4><p>deb <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>    deb <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free<br>    deb-src <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free</p><h4 id="kali-官方源"><a href="#kali-官方源" class="headerlink" title="kali 官方源"></a>kali 官方源</h4><p>​    deb <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib<br>​    deb-src <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib </p><h5 id="默认的，可以注释掉不用管"><a href="#默认的，可以注释掉不用管" class="headerlink" title="默认的，可以注释掉不用管"></a>默认的，可以注释掉不用管</h5><p>​    deb <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>​    deb-src <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>————————————————</p><h3 id="kali源更新失败（数字签名无效或没有数字签名）"><a href="#kali源更新失败（数字签名无效或没有数字签名）" class="headerlink" title="kali源更新失败（数字签名无效或没有数字签名）"></a>kali源更新失败（数字签名无效或没有数字签名）</h3><p><img src="https://i.imgur.com/u8V81To.png" alt=""></p><p>西文硬伤，根据提示，可参考： man 8 apt-secure</p><p>解决方法：</p><p>wget archive.kali.org/archive-key.asc   //下载签名</p><p>apt-key add archive-key.asc   //安装签名</p><h5 id="其他：已安装的签名列表：apt-key-list"><a href="#其他：已安装的签名列表：apt-key-list" class="headerlink" title="其他：已安装的签名列表：apt-key list"></a>其他：已安装的签名列表：apt-key list</h5><hr><h2 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h2><p>首先终端输入：</p><pre><code>apt-get install xfonts-intl-chinese ttf-wqy-microhei </code></pre><p>来安装中文字体</p><p><img src="https://i.imgur.com/Nxu091u.jpg" alt=""></p><p>做完这些后再输入：</p><p>在命令行输入”dpkg-reconfigure locales”。（root用户）进入图形化界面之后，（空格是选择，Tab是切换，带*是选中），选中zh_CN.UTF-8，确定后，将zh_CN.UTF-8选为默认。</p><p>界面下选项，上下键可以下拉，排序为从a-z排序，空格选中语言，tab键切换到ok，再回车确认进入下一步</p><p><img src="https://i.imgur.com/iaJtybB.jpg" alt=""></p><p>在这里我们用上下键选择语言zh_CN.UTF-8后tab切换到确认直接回车</p><p><img src="https://i.imgur.com/A5fcVqv.jpg" alt=""></p><p>终端输入：reboot重启 系统，到登录界面，右上角语言列表注意是否为zh_CN.utf8,点开列表，确定选中的为中文-中国</p><p>（默认没有问题，重启已经是中文）</p><h3 id="安装输入法"><a href="#安装输入法" class="headerlink" title="安装输入法"></a>安装输入法</h3><p>这里采取的是Google的输入法 </p><pre><code>apt-get updateapt-get install fcitxapt-get install fcitx-googlepinyin</code></pre><p>然后重启，就会出现新的输入法，不用再像原先的一样需要配置，点击右上角输入法就可以切换，也可以自己配置快捷键。</p><h5 id="注：若安装后输入中文显示为乱码，请卸载后重新安装"><a href="#注：若安装后输入中文显示为乱码，请卸载后重新安装" class="headerlink" title="注：若安装后输入中文显示为乱码，请卸载后重新安装"></a>注：若安装后输入中文显示为乱码，请卸载后重新安装</h5><h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="https://knightyun.github.io/2018/04/21/linux-sources-list" target="_blank" rel="noopener">黄琦雲的博客</a> </p><p><a href="https://blog.csdn.net/ayatou666/article/details/80092529" target="_blank" rel="noopener">ayatou666的博客</a></p><p><a href="https://blog.csdn.net/Jack0610/article/details/103931466" target="_blank" rel="noopener">Jeromeyoungh的博客</a></p><h3 id="在此鸣谢"><a href="#在此鸣谢" class="headerlink" title="在此鸣谢"></a>在此鸣谢</h3>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Kali </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>VMware安装Android X86</title>
-      <link href="/2020/02/05/Vmware%E5%AE%89%E8%A3%85Android-X86/"/>
-      <url>/2020/02/05/Vmware%E5%AE%89%E8%A3%85Android-X86/</url>
-      
-        <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>废话不多，淦它！</p><p>选择第一项回车</p><p>选择NO回车</p><p>选择NEW回车</p><p>选择Primary在回车</p><p>保持默认直接回车</p><p>新建了主分区后需要激活分区才能启动，也就是写磁盘引导信息，选择“Bootable”然后回车。“sda1”的Flags就是“Boot”。</p><p>选择Write在回车</p><p>输入yes在回车</p><p>然后选中“Quit”然后回车，退出分区</p><p>选择 “sda1”,即第一块硬盘的第一个分区，然后用“Tab”键选中“OK” 后回车</p><p>这一步安装程序要我们选择要格式化的文件系统类型，选择ETX4，选OK回车下一步</p><p>选择Yes，回车</p><p>选择Yes，回车</p><p>选择Yes，回车</p><p>接下来会自动安装系统，直到安装完成，我们选择重启即可</p><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>系统已经安装完成，但是我们发现重启之后是进不了系统的，出现黑屏，或者以下这种提示</p><p>所以我们还需要进一步设置，需要先关闭虚拟机，之后在开机，开机选择第二项回车，进入debug模式</p><p>回车输入才下命令，以 RW 模式重新挂载分区</p><pre><code>mount -o remount,rw /mnt</code></pre><p>编辑文件：</p><pre><code>vi /mnt/grub/menu.lst</code></pre><p>按i，进入编辑模式，在第一个启动项，quiet后面加入nomodeset，如图：</p><p>nomodeset不加载任何显卡驱动模式</p><p>按esc键取消编辑模式，输入：wq回车保存并退出，重启虚拟机即可。</p><p>重启之后就可以进入系统了。</p><p>提示：<br>如果安装app后闪退，在虚拟机的终端中运行enable_houdini命令。</p><p>#####Vim#####</p><p>1、复制</p><p>1）单行复制，在命令模式下，将光标移动到将要复制的行处，按“yy”进行复制；</p><p>2）多行复制，在命令模式下，将光标移动到将要复制的首行处，按“nyy”复制n行；其中n为1、2、3……</p><p>2、粘贴<br>在命令模式下，将光标移动到将要粘贴的行处，按“p”进行粘贴</p><p>3、删除<br>在命令模式下，将光标移动到将要删除的行处，按“dd”进行删除</p><p><a href="https://blog.csdn.net/xhaimail/article/details/101020042" target="_blank" rel="noopener">原文链接</a></p><p>adb连接在虚拟机console 输入ip a 获取ip 192<strong>**<br>使用adb connect 192**</strong>:5555连接即可</p><p> 分别针对VMWare和Virtual Box两种虚拟机介绍安装配置方法，并描述了如何使用eclipse进行调试。</p><p>设置虚拟机网络</p><p>1、vmware设置</p><p>a、安装虚拟机时需要使用nat模式</p><p>b、如果/data/misc/dhcp目录不存在，则进入console模式创建</p><pre><code>mkdir /data/misc/dhcp</code></pre><p>c、关闭虚拟机及vmware，修改vmx文件</p><pre><code>ethernet0.virtualDev = &quot;vlance&quot;</code></pre><p>d、开启虚拟机，进入console模式</p><pre><code>su dhcpcd eth0</code></pre><p>e、设定dns，或者设置为与宿主机的dns一致的地址</p><pre><code>setprop net.dns1 8.8.8.8</code></pre><p>2、virtualbox设置：</p><p>使用桥接模式：</p><p>a、使用netcfg命令查看eth0设备是否已经分配ip地址</p><p>b、开启虚拟机，使用ALT+F1进入console模式，输入su切换root用户</p><p>c、指定ip地址，执行如下脚本，ip地址需要和物理主机在同一个网段中</p><pre><code>ifconfig eth0 192.168.120.200 netmask 255.255.255.0 up</code></pre><p>将物理主机网关加入路由表</p><pre><code>route add default gw 192.168.120.254 dev eth0</code></pre><p>d、设定dns，或者设置为与物理主机的dns一致的地址，如202.106.196.115</p><pre><code>setprop net.dns1 8.8.8.8</code></pre><p>如果使用NAT模式，需要使用dncpcd自动分配ip地址，dns要和物理主机一样，示例如下：<br>     dhcpcd<br>     ifconfig eth0 up<br>     setprop net.dns1 202.107.117.11</p><p>另外还需要配置端口转发</p><p>端口转发也可以在物理主机virtual box目录下使用如下命令：</p><pre><code>VBoxManage modifyvm &quot;Your Android VB name&quot; --natpf1 adb,tcp,*,5555,*,5555</code></pre><p>3、使设置长期生效</p><p>在console模式下的配置信息似乎不会保存，使用以下方法可以保证设置一直生效</p><pre><code>Vi /etc/init.sh</code></pre><p>在文件末尾增加如下配置：</p><pre><code>ifconfig eth0 192.168.120.200 netmask 255.255.255.0 uproute add default gw 192.168.120.254 dev eth0setprop net.dns1 202.106.196.115</code></pre><p>配置分辨率，可以分别模拟手机和平板移动设备</p><p>Virtual box可以配置分辨率，vmware还没有很好的办法，因此以Virtual box为例。</p><p>1、在虚拟机添加自定义分辨率</p><p>在虚拟机关闭以后进行。</p><p>方法一：对应的虚拟机的vbox文件的“”下新开一行，添加以下内容</p><pre><code>&lt;&lt;/span&gt;ExtraDataItem name=&quot;CustomVideoMode1&quot; value=&quot;480x800x16&quot;/&gt; &lt;&lt;/span&gt;ExtraDataItem name=&quot;CustomVideoMode2&quot; value=&quot;320x480x16&quot;/&gt;</code></pre><p>方法二：执行命令，其中“VM name”替换为你自己的虚拟机的名字</p><p>在dos模式下进入VirtualBox安装目录，默认为C:\Program Files\Oracle\VirtualBox，执行如下命令</p><pre><code>VBoxManage setextradata &quot;VM name&quot; &quot;CustomVideoMode1&quot; &quot;480x800x16&quot; VBoxManage setextradata &quot;VM name&quot; &quot;CustomVideoMode2&quot; &quot;320x480x16&quot;</code></pre><p>2、修改grub的menu.lst</p><p>启动虚拟机，到debug mode下</p><p>以 RW 模式重新挂载分区</p><pre><code>mount -o remount,rw /mnt</code></pre><p>编辑文件：</p><pre><code>vi /mnt/grub/menu.lst</code></pre><p>如果是手机分辨率则复制MDPI的几行，平板分辨率则复制HDPI的内容。把title改为自己想要的启动项名字，如“Android-x86 480×800x16”，在“kernel”后加上：</p><pre><code>UVESA_MODE=480x800</code></pre><p>320×480的分辨率也类似进行。</p><p>3、在debug mode下重启Android-x86<br>运行命令</p><pre><code>/system/bin/reboot</code></pre><p>即可</p><p>配置eclipse允许使用虚拟机远程调试开发</p><p>1、查询ip地址</p><p>进入cosole模式，使用netcfg或ip命令查询虚拟机的ip地址：</p><p>其中eth0表示虚拟机的网络设备，后面的ip地址即为虚拟机的ip地址。</p><p>2、配置eclipse</p><p>使用Alt+F7返回图形界面。</p><p>打开eclipse，进入Android开发插件的设定界面,选择ddms,勾选 Use ado host, 并在ADT host value 一栏填写虚拟机的ip地址,具体界面请参看下图：</p><p>打开devices视图，如果未加载devices视图，可以使用如下方法打开devices视图<br>在devices视图中选择重启adb：</p><p>或者也可以使用命令行重启adb，新版的adb命令位于platform-tools目录下：<br>    adb kill-server<br>    adb start-server</p><p>重新启动后可以看到虚拟机设备已经在列表中了</p><p>3、配置项目run或debug参数</p><p>运行或调试程序时就可以选择虚拟机作为调试设备了</p><p>如果eclipse找不到虚拟机设备，请检查系统是否安装豌豆荚等Android连接程序，如果安装需要</p><p>停止相关进程。</p><p>配置SD卡</p><p>配置SD卡可以使用多种方式。</p><p>1、将文件伪装成 SD 卡</p><p>在console模式下执行如下脚本：</p><pre><code>dd if=/dev/zero of=/data/sdcard.img bs=1024 count=65536losetup /dev/block/loop7 /data/sdcard.imgnewfs_msdos /dev/block/loop7</code></pre><p>其中65536表示64MB的SD卡，可以修改此数字增大SD卡大小</p><p>重新启动虚拟机进入debug模式，以 RW模式重新挂载分区</p><pre><code>mount -o remount,rw /mnt</code></pre><p>编辑文件：</p><pre><code>vi /mnt/grub/menu.lst</code></pre><p>向 kernel 中添加一个参数：</p><pre><code>SDCARD=/data/sdcard.img</code></pre><p>2、使用独立的分区</p><p>首先需要在 VirtualBox 中创建一个新的硬盘，然后将其配属给 VM：</p><p>然后以debug模式启动VM，新建的分区默认挂载为/dev/sdb文件</p><p>创建分区前可以查询分区情况：</p><pre><code>fdisk -l /dev/sdb</code></pre><p>使用 fdisk 创建一个新的分区。分区创建完成后，对它进行格式化：</p><pre><code>fdisk /dev/sdb</code></pre><p>该命令后续操作包含如下参数：</p><pre><code>输入 m 显示所有命令列示。输入 p 显示硬盘分割情形。输入 a 设定硬盘启动区。输入 n 设定新的硬盘分割区。输入 e 硬盘为[延伸]分割区(extend)。输入 p 硬盘为[主要]分割区(primary)。输入 t 改变硬盘分割区属性。输入 d 删除硬盘分割区属性。输入 q 结束不存入硬盘分割区属性。输入 w 结束并写入硬盘分割区属性</code></pre><p>##安装应用</p><p>1、安装应用</p><p>如果未连接设备，可以在物理主机的命令行模式下使用如下命令连接</p><pre><code>adb connect 192.168.11.12</code></pre><p>可以使用如下命令安装apk：</p><pre><code>adb install -r HelloWorld.apk</code></pre><p>但有时安装的时候报如下错误：</p><pre><code>more than one device and emulator</code></pre><p>可以使用如下方法：</p><p>查找设备：</p><pre><code>adb devicesList of devices attachedemulator-5554   device</code></pre><p>安装</p><pre><code>adb -s emulator-5554 install -r HelloWorld.apk</code></pre><p>2、卸载</p><pre><code>adb uninstall HelloWorld.apk</code></pre><p>或者直接删除文件</p><pre><code>adb -s emulator-5554 shellcd /data/apprm HelloWorld.apkexit</code></pre><p>删除系统应用：</p><pre><code>adb remount （重新挂载系统分区，使系统分区重新可写）。adb shellcd system/apprm *.apk</code></pre><p>其实吧，没必要耗费精力搞这么个伪Android，对于我来说好无用啊！！！</p><p>鸣谢大佬 </p><p>   <a href="https://blog.csdn.net/Rocloud/article/details/24930511" target="_blank" rel="noopener">原文链接</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> VMware </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>博客搭建:Github Pages+Hexo</title>
-      <link href="/2020/02/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%9AHexo/"/>
-      <url>/2020/02/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%9AHexo/</url>
-      
-        <content type="html"><![CDATA[<p><img src="https://i.imgur.com/UIIq7FV.png" alt=""></p><h1 id="Hexo-博客框架"><a href="#Hexo-博客框架" class="headerlink" title="Hexo 博客框架"></a>Hexo 博客框架</h1><p>00 安装 Node.js  </p><pre><code>https://nodejs.org/zh-cn/</code></pre><p>选择 LTS（长期支持版）</p><h2 id="以管理员方式打开cmd"><a href="#以管理员方式打开cmd" class="headerlink" title="以管理员方式打开cmd"></a>以管理员方式打开cmd</h2><pre><code>注：runas /user:administrator &quot;cmd/k&quot;</code></pre><p>01 查看版本</p><pre><code>node -vnpm -v</code></pre><p>02 安装cnpm<br>    npm install -g cnpm –reistry=<a href="https://registry.npm.taobo.org" target="_blank" rel="noopener">https://registry.npm.taobo.org</a></p><p>注：淘宝镜像源</p><pre><code>cnpm -v</code></pre><p>03 全局安装hexo-cli</p><pre><code>cnpm install -g hexo-clihexo -v            查看  hexo-cli项 与 node项</code></pre><h2 id="C-Users-administertor路径下新建文件夹blog"><a href="#C-Users-administertor路径下新建文件夹blog" class="headerlink" title="C:\Users\administertor路径下新建文件夹blog"></a>C:\Users\administertor路径下新建文件夹blog</h2><p>如果将来出错，干掉它！</p><p>重新来过</p><p>04 cd blog</p><pre><code>hexo init      初始化博客hexo server    启动博客</code></pre><p>###本地预览###</p><pre><code>http://localhost:4000</code></pre><p>操作成功之后会出现博客界面</p><p><img src="https://i.imgur.com/QDN9AwO.png" alt=""></p><p>恭喜你，即将成功</p><p>###新建博文###<br>    hexo new “新建文章名称”</p><p>05 接下来就需要创作和编辑内容了（请自行学习）</p><pre><code> cd ../..    重新生成，退回至blog 目录hexo cleanhexo generatehexo server （重新启动）</code></pre><p>本地启动完成</p><pre><code>Ctrl+c 结束</code></pre><h2 id="通过Github部署至远端"><a href="#通过Github部署至远端" class="headerlink" title="通过Github部署至远端"></a>通过Github部署至远端</h2><p>06 新建一个仓库  New repository</p><pre><code>Repository name   用户名.github.io</code></pre><p>Create repository</p><p>07 blog目录下安装Git部署插件</p><pre><code>cnpm install hexo-deployer-git --save</code></pre><p>08 设置_config.yml文件</p><pre><code>notepad _config.ymltype: gitrepo: 仓库地址branch: master</code></pre><h2 id="部署至远端"><a href="#部署至远端" class="headerlink" title="部署至远端"></a>部署至远端</h2><pre><code>hexo d</code></pre><p>09 输入Github账号，密码</p><p>注意：需提前git设置用户名和邮箱地址</p><pre><code>$ git config --global user.name &quot;John Doe&quot;$ git config --global user.email &quot;johndoe@example.com&quot;</code></pre><p>###拓展——更换博客主题###</p><p>例：在blog目录中下载主题</p><pre><code>git clone https://github.com/litten/hexo-yilia.git themes/yilia</code></pre><p>  哎，clone的贼慢，太难了</p><p>10 修改_config.yml文件</p><pre><code>notepad _config.yml</code></pre><p>theme: landscape&gt;&gt;&gt;yilia 更改主题名称</p><pre><code>hexo cleanhexo generatehexo server    hexo deploy</code></pre><h2 id="感谢-codesheep-cn"><a href="#感谢-codesheep-cn" class="headerlink" title="感谢 codesheep.cn"></a>感谢 <a href="www.codesheep.cn">codesheep.cn</a></h2><hr><p> <a href="https://www.bilibili.com/video/av44544186?t=1644" target="_blank" rel="noopener">视频教程链接</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>Kali-2020.1更新汉化配置</title>
+    <url>/2020/02/18/Kali-2020-1%E6%9B%B4%E6%96%B0%E6%B1%89%E5%8C%96%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/dRpyOSH.png" alt=""></p>
+<h2 id="开始操作"><a href="#开始操作" class="headerlink" title="开始操作"></a>开始操作</h2><p>首先了解一下apt和apt-get之间的区别</p>
+<p><a href="https://www.sysgeek.cn/apt-vs-apt-get/" target="_blank" rel="noopener">https://www.sysgeek.cn/apt-vs-apt-get/</a></p>
+<p>感兴趣的话可以深入探究</p>
+<p>One</p>
+<pre><code>apt update</code></pre><p>这个操作并没有开始更新软件，类似于将远程源中的最新版本信息更新到本地</p>
+<p>接下来才开始更新软件：</p>
+<pre><code>apt upgrade</code></pre><p>更新系统：</p>
+<pre><code>apt full-upgrade</code></pre><p>或者：</p>
+<pre><code>apt-get dist-upgrade</code></pre><p>清理安装包：</p>
+<pre><code>apt-get clean
+apt-get autoclean</code></pre><p>Two</p>
+<h3 id="推荐使用"><a href="#推荐使用" class="headerlink" title="推荐使用"></a>推荐使用</h3><pre><code>apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get clean</code></pre><h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><p>如果已会科学上网，不需要更新源文件，自我感觉Kali官方源可行。(￣▽￣)”</p>
+<p>Linux 更新源文件位于 /etc/apt/sources.list ，系统就是从这个文件中读取一些网址参数下载安装软件，默认的是 kali 官方源，我们可以修改为国内一些较快的源，例如阿里、中科大、网易等，加快下载速度。</p>
+<pre><code>vim /etc/apt/sources.list</code></pre><p>vim相关操作请自行学习</p>
+<p>找到并编辑上述 sources.list 源文件，替换为以下内容：</p>
+<h4 id="aliyun-阿里云"><a href="#aliyun-阿里云" class="headerlink" title="aliyun 阿里云"></a>aliyun 阿里云</h4><p>deb <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib</p>
+<h4 id="ustc-中科大"><a href="#ustc-中科大" class="headerlink" title="ustc 中科大"></a>ustc 中科大</h4><p>deb <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>    deb <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free<br>    deb-src <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free</p>
+<h4 id="kali-官方源"><a href="#kali-官方源" class="headerlink" title="kali 官方源"></a>kali 官方源</h4><p>​    deb <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib<br>​    deb-src <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib </p>
+<h5 id="默认的，可以注释掉不用管"><a href="#默认的，可以注释掉不用管" class="headerlink" title="默认的，可以注释掉不用管"></a>默认的，可以注释掉不用管</h5><p>​    deb <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>​    deb-src <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>————————————————</p>
+<h3 id="kali源更新失败（数字签名无效或没有数字签名）"><a href="#kali源更新失败（数字签名无效或没有数字签名）" class="headerlink" title="kali源更新失败（数字签名无效或没有数字签名）"></a>kali源更新失败（数字签名无效或没有数字签名）</h3><p><img src="https://i.imgur.com/u8V81To.png" alt=""></p>
+<p>西文硬伤，根据提示，可参考： man 8 apt-secure</p>
+<p>解决方法：</p>
+<p>wget archive.kali.org/archive-key.asc   //下载签名</p>
+<p>apt-key add archive-key.asc   //安装签名</p>
+<h5 id="其他：已安装的签名列表：apt-key-list"><a href="#其他：已安装的签名列表：apt-key-list" class="headerlink" title="其他：已安装的签名列表：apt-key list"></a>其他：已安装的签名列表：apt-key list</h5><hr>
+<h2 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h2><p>首先终端输入：</p>
+<pre><code>apt-get install xfonts-intl-chinese ttf-wqy-microhei </code></pre><p>来安装中文字体</p>
+<p><img src="https://i.imgur.com/Nxu091u.jpg" alt=""></p>
+<p>做完这些后再输入：</p>
+<p>在命令行输入”dpkg-reconfigure locales”。（root用户）进入图形化界面之后，（空格是选择，Tab是切换，带*是选中），选中zh_CN.UTF-8，确定后，将zh_CN.UTF-8选为默认。</p>
+<p>界面下选项，上下键可以下拉，排序为从a-z排序，空格选中语言，tab键切换到ok，再回车确认进入下一步</p>
+<p><img src="https://i.imgur.com/iaJtybB.jpg" alt=""></p>
+<p>在这里我们用上下键选择语言zh_CN.UTF-8后tab切换到确认直接回车</p>
+<p><img src="https://i.imgur.com/A5fcVqv.jpg" alt=""></p>
+<p>终端输入：reboot重启 系统，到登录界面，右上角语言列表注意是否为zh_CN.utf8,点开列表，确定选中的为中文-中国</p>
+<p>（默认没有问题，重启已经是中文）</p>
+<h3 id="安装输入法"><a href="#安装输入法" class="headerlink" title="安装输入法"></a>安装输入法</h3><p>这里采取的是Google的输入法 </p>
+<pre><code>apt-get update
+apt-get install fcitx
+apt-get install fcitx-googlepinyin</code></pre><p>然后重启，就会出现新的输入法，不用再像原先的一样需要配置，点击右上角输入法就可以切换，也可以自己配置快捷键。</p>
+<h5 id="注：若安装后输入中文显示为乱码，请卸载后重新安装"><a href="#注：若安装后输入中文显示为乱码，请卸载后重新安装" class="headerlink" title="注：若安装后输入中文显示为乱码，请卸载后重新安装"></a>注：若安装后输入中文显示为乱码，请卸载后重新安装</h5><h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="https://knightyun.github.io/2018/04/21/linux-sources-list" target="_blank" rel="noopener">黄琦雲的博客</a> </p>
+<p><a href="https://blog.csdn.net/ayatou666/article/details/80092529" target="_blank" rel="noopener">ayatou666的博客</a></p>
+<p><a href="https://blog.csdn.net/Jack0610/article/details/103931466" target="_blank" rel="noopener">Jeromeyoungh的博客</a></p>
+<h3 id="在此鸣谢"><a href="#在此鸣谢" class="headerlink" title="在此鸣谢"></a>在此鸣谢</h3>]]></content>
+      <tags>
+        <tag>Kali</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BurpSuite_pro下载</title>
+    <url>/2020/02/29/BurpSuite-pro%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<h1 id="burpsuite-pro"><a href="#burpsuite-pro" class="headerlink" title="burpsuite pro"></a>burpsuite pro</h1><p>burpsuite pro v2020.1 破解后的许可界面：<br><img src="https://i.imgur.com/MdyZA4f.png" alt=""></p>
+<p>burpsuite pro v2020.1 汉化后的许可界面:<br><img src="https://i.imgur.com/boF3cB9.png" alt=""></p>
+<p>注：所有的汉化破解教程都需要在你安装好Java环境的前提下</p>
+<p>推荐使用Java8即可适配burprsuite1.7或2.0+。</p>
+<p>汉化破解教程：</p>
+<p><a href="https://mrxn.net/hacktools/Burp_Suite_Pro_v1_7_3_2_Loader_Keygen_Cracked_Share.html" target="_blank" rel="noopener">破解教程</a></p>
+<p>先按照这个教程破解后</p>
+<p>再去执行 【创建桌面快捷方式.bat】即可在桌面创建汉化的快捷方式。</p>
+<p>执行【Create-Desktop-Link.bat】即可在桌面创建英文原版的快捷方式。</p>
+<h4 id="burpsuite-pro-v2020-1-zip文件包含："><a href="#burpsuite-pro-v2020-1-zip文件包含：" class="headerlink" title="burpsuite_pro_v2020.1.zip文件包含："></a>burpsuite_pro_v2020.1.zip文件包含：</h4><p>+— burp-loader-keygen-2020_1.jar<br>+— burpsuite pro 2020.1.png<br>+— burpsuite pro 2020.1汉化.png<br>+— BurpSuiteChs.jar<br>+— burpsuite_pro_v2020.1.jar<br>+— Burp_start.bat<br>+— Burp_start_en.bat<br>+— Create-Desktop-Link.bat<br>+— Goescat-Macaron-Burp-suite.ico<br>+— jython.jar<br>+— 创建桌面快捷方式.bat<br>+— 汉化破解说明.txt</p>
+<h3 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h3><p>——<a href="http://tmp.link/f/5e53630ba1fdd" target="_blank" rel="noopener">http://tmp.link/f/5e53630ba1fdd</a></p>
+<p>——<a href="http://www79.zippyshare.com/v/d0pMoYPg/file.html" target="_blank" rel="noopener">http://www79.zippyshare.com/v/d0pMoYPg/file.html</a></p>
+<p>备用地址，如果速度慢需要代理：</p>
+<p>——<a href="https://mir.cr/1EFTTD3O" target="_blank" rel="noopener">https://mir.cr/1EFTTD3O</a></p>
+<p>——<a href="https://tusfiles.com/yfhl5gdgwyu0" target="_blank" rel="noopener">https://tusfiles.com/yfhl5gdgwyu0</a></p>
+<p>——<a href="https://userscloud.com/w0760j7n2wct" target="_blank" rel="noopener">https://userscloud.com/w0760j7n2wct</a></p>
+<p>——<a href="https://uptobox.com/v65hsq7l6le8" target="_blank" rel="noopener">https://uptobox.com/v65hsq7l6le8</a></p>
+<p><img src="https://i.imgur.com/CtuIx73.jpg" alt=""></p>
+<p> &lt;今天是二月二十九号，可我浑浑噩噩，百无聊赖&gt;</p>
+<p> &lt;好想拜访这灿烂盛世&gt;</p>
+<p> &lt;安&gt;</p>
+<p>参考<a href="https://mrxn.net/hacktools/burpsuite_pro_v2020_1.html" target="_blank" rel="noopener">Mrxn’s Blog</a></p>
+<p>鸣谢Mrxn</p>
+]]></content>
+      <tags>
+        <tag>Download</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cookie</title>
+    <url>/2020/03/06/cookie/</url>
+    <content><![CDATA[<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><img src="https://i.imgur.com/Jrb5zzg.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
+<li>α</li>
+</ul>
+<h4 id="使用Burpsuit进行抓包"><a href="#使用Burpsuit进行抓包" class="headerlink" title="使用Burpsuit进行抓包"></a>使用Burpsuit进行抓包</h4><p><img src="https://i.imgur.com/BBo9qRc.png" alt=""></p>
+<p><img src="https://i.imgur.com/tcIoxDK.png" alt=""></p>
+<p><img src="https://i.imgur.com/6SillS2.png" alt=""></p>
+<p><img src="https://i.imgur.com/yVu20RK.png" alt=""></p>
+<ul>
+<li>β</li>
+</ul>
+<h4 id="使用-HTTP-Header-Live-拓展"><a href="#使用-HTTP-Header-Live-拓展" class="headerlink" title="使用 HTTP Header Live 拓展"></a>使用 HTTP Header Live 拓展</h4><p><img src="https://i.imgur.com/DpPsVxr.png" alt=""></p>
+<p><img src="https://i.imgur.com/6y6f0hR.png" alt=""></p>
+<p>flag=cyberpeace{34275870cbf633cfcc2f07a54fe5b16e}</p>
+<h2 id="了解cookie"><a href="#了解cookie" class="headerlink" title="了解cookie"></a>了解cookie</h2><p>Cookie 并不是它的原意“甜饼”的意思, 而是一个保存在客户机中的简单的文本文件, 这个文件与特定的 Web文档关联在一起, 保存了该客户机访问这个Web 文档时的信息, 当客户机再次访问这个 Web 文档时这些信息可供该文档使用。由于“Cookie”具有可以保存在客户机上的神奇特性, 因此它可以帮助我们实现记录用户个人信息的功能, 而这一切都不必使用复杂的CGI等程序 。举例来说, 一个 Web 站点可能会为每一个访问者产生一个唯一的ID, 然后以 Cookie 文件的形式保存在每个用户的机器上。如果使用浏览器访问 Web, 会看到所有保存在硬盘上的  Cookie。在这个文件夹里每一个文件都是一个由“名/值”对组成的文本文件,另外还有一个文件保存有所有对应的 Web 站点的信息。在这里的每个  Cookie 文件都是一个简单而又普通的文本文件。透过文件名, 就可以看到是哪个 Web  站点在机器上放置了Cookie(当然站点信息在文件里也有保存)</p>
+<p><a href="https://segmentfault.com/a/1190000016248401" target="_blank" rel="noopener">资料1</a></p>
+<p><a href="https://www.jianshu.com/p/6fc9cea6daa2" target="_blank" rel="noopener">资料2</a></p>
+]]></content>
+      <tags>
+        <tag>Writeup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VMware安装Android X86</title>
+    <url>/2020/02/05/Vmware%E5%AE%89%E8%A3%85Android-X86/</url>
+    <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>废话不多，淦它！</p>
+<p>选择第一项回车</p>
+<p>选择NO回车</p>
+<p>选择NEW回车</p>
+<p>选择Primary在回车</p>
+<p>保持默认直接回车</p>
+<p>新建了主分区后需要激活分区才能启动，也就是写磁盘引导信息，选择“Bootable”然后回车。“sda1”的Flags就是“Boot”。</p>
+<p>选择Write在回车</p>
+<p>输入yes在回车</p>
+<p>然后选中“Quit”然后回车，退出分区</p>
+<p>选择 “sda1”,即第一块硬盘的第一个分区，然后用“Tab”键选中“OK” 后回车</p>
+<p>这一步安装程序要我们选择要格式化的文件系统类型，选择ETX4，选OK回车下一步</p>
+<p>选择Yes，回车</p>
+<p>选择Yes，回车</p>
+<p>选择Yes，回车</p>
+<p>接下来会自动安装系统，直到安装完成，我们选择重启即可</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>系统已经安装完成，但是我们发现重启之后是进不了系统的，出现黑屏，或者以下这种提示</p>
+<p>所以我们还需要进一步设置，需要先关闭虚拟机，之后在开机，开机选择第二项回车，进入debug模式</p>
+<p>回车输入才下命令，以 RW 模式重新挂载分区</p>
+<pre><code>mount -o remount,rw /mnt</code></pre><p>编辑文件：</p>
+<pre><code>vi /mnt/grub/menu.lst</code></pre><p>按i，进入编辑模式，在第一个启动项，quiet后面加入nomodeset，如图：</p>
+<p>nomodeset不加载任何显卡驱动模式</p>
+<p>按esc键取消编辑模式，输入：wq回车保存并退出，重启虚拟机即可。</p>
+<p>重启之后就可以进入系统了。</p>
+<p>提示：<br>如果安装app后闪退，在虚拟机的终端中运行enable_houdini命令。</p>
+<p>#####Vim#####</p>
+<p>1、复制</p>
+<p>1）单行复制，在命令模式下，将光标移动到将要复制的行处，按“yy”进行复制；</p>
+<p>2）多行复制，在命令模式下，将光标移动到将要复制的首行处，按“nyy”复制n行；其中n为1、2、3……</p>
+<p>2、粘贴<br>在命令模式下，将光标移动到将要粘贴的行处，按“p”进行粘贴</p>
+<p>3、删除<br>在命令模式下，将光标移动到将要删除的行处，按“dd”进行删除</p>
+<p><a href="https://blog.csdn.net/xhaimail/article/details/101020042" target="_blank" rel="noopener">原文链接</a></p>
+<p>adb连接在虚拟机console 输入ip a 获取ip 192<strong>**<br>使用adb connect 192**</strong>:5555连接即可</p>
+<p> 分别针对VMWare和Virtual Box两种虚拟机介绍安装配置方法，并描述了如何使用eclipse进行调试。</p>
+<p>设置虚拟机网络</p>
+<p>1、vmware设置</p>
+<p>a、安装虚拟机时需要使用nat模式</p>
+<p>b、如果/data/misc/dhcp目录不存在，则进入console模式创建</p>
+<pre><code>mkdir /data/misc/dhcp</code></pre><p>c、关闭虚拟机及vmware，修改vmx文件</p>
+<pre><code>ethernet0.virtualDev = &quot;vlance&quot;</code></pre><p>d、开启虚拟机，进入console模式</p>
+<pre><code>su 
+dhcpcd eth0</code></pre><p>e、设定dns，或者设置为与宿主机的dns一致的地址</p>
+<pre><code>setprop net.dns1 8.8.8.8</code></pre><p>2、virtualbox设置：</p>
+<p>使用桥接模式：</p>
+<p>a、使用netcfg命令查看eth0设备是否已经分配ip地址</p>
+<p>b、开启虚拟机，使用ALT+F1进入console模式，输入su切换root用户</p>
+<p>c、指定ip地址，执行如下脚本，ip地址需要和物理主机在同一个网段中</p>
+<pre><code>ifconfig eth0 192.168.120.200 netmask 255.255.255.0 up</code></pre><p>将物理主机网关加入路由表</p>
+<pre><code>route add default gw 192.168.120.254 dev eth0</code></pre><p>d、设定dns，或者设置为与物理主机的dns一致的地址，如202.106.196.115</p>
+<pre><code>setprop net.dns1 8.8.8.8</code></pre><p>如果使用NAT模式，需要使用dncpcd自动分配ip地址，dns要和物理主机一样，示例如下：<br>     dhcpcd<br>     ifconfig eth0 up<br>     setprop net.dns1 202.107.117.11</p>
+<p>另外还需要配置端口转发</p>
+<p>端口转发也可以在物理主机virtual box目录下使用如下命令：</p>
+<pre><code>VBoxManage modifyvm &quot;Your Android VB name&quot; --natpf1 adb,tcp,*,5555,*,5555</code></pre><p>3、使设置长期生效</p>
+<p>在console模式下的配置信息似乎不会保存，使用以下方法可以保证设置一直生效</p>
+<pre><code>Vi /etc/init.sh</code></pre><p>在文件末尾增加如下配置：</p>
+<pre><code>ifconfig eth0 192.168.120.200 netmask 255.255.255.0 up
+route add default gw 192.168.120.254 dev eth0
+setprop net.dns1 202.106.196.115</code></pre><p>配置分辨率，可以分别模拟手机和平板移动设备</p>
+<p>Virtual box可以配置分辨率，vmware还没有很好的办法，因此以Virtual box为例。</p>
+<p>1、在虚拟机添加自定义分辨率</p>
+<p>在虚拟机关闭以后进行。</p>
+<p>方法一：对应的虚拟机的vbox文件的“”下新开一行，添加以下内容</p>
+<pre><code>&lt;&lt;/span&gt;ExtraDataItem name=&quot;CustomVideoMode1&quot; value=&quot;480x800x16&quot;/&gt; 
+&lt;&lt;/span&gt;ExtraDataItem name=&quot;CustomVideoMode2&quot; value=&quot;320x480x16&quot;/&gt;</code></pre><p>方法二：执行命令，其中“VM name”替换为你自己的虚拟机的名字</p>
+<p>在dos模式下进入VirtualBox安装目录，默认为C:\Program Files\Oracle\VirtualBox，执行如下命令</p>
+<pre><code>VBoxManage setextradata &quot;VM name&quot; &quot;CustomVideoMode1&quot; &quot;480x800x16&quot; 
+VBoxManage setextradata &quot;VM name&quot; &quot;CustomVideoMode2&quot; &quot;320x480x16&quot;</code></pre><p>2、修改grub的menu.lst</p>
+<p>启动虚拟机，到debug mode下</p>
+<p>以 RW 模式重新挂载分区</p>
+<pre><code>mount -o remount,rw /mnt</code></pre><p>编辑文件：</p>
+<pre><code>vi /mnt/grub/menu.lst</code></pre><p>如果是手机分辨率则复制MDPI的几行，平板分辨率则复制HDPI的内容。把title改为自己想要的启动项名字，如“Android-x86 480×800x16”，在“kernel”后加上：</p>
+<pre><code>UVESA_MODE=480x800</code></pre><p>320×480的分辨率也类似进行。</p>
+<p>3、在debug mode下重启Android-x86<br>运行命令</p>
+<pre><code>/system/bin/reboot</code></pre><p>即可</p>
+<p>配置eclipse允许使用虚拟机远程调试开发</p>
+<p>1、查询ip地址</p>
+<p>进入cosole模式，使用netcfg或ip命令查询虚拟机的ip地址：</p>
+<p>其中eth0表示虚拟机的网络设备，后面的ip地址即为虚拟机的ip地址。</p>
+<p>2、配置eclipse</p>
+<p>使用Alt+F7返回图形界面。</p>
+<p>打开eclipse，进入Android开发插件的设定界面,选择ddms,勾选 Use ado host, 并在ADT host value 一栏填写虚拟机的ip地址,具体界面请参看下图：</p>
+<p>打开devices视图，如果未加载devices视图，可以使用如下方法打开devices视图<br>在devices视图中选择重启adb：</p>
+<p>或者也可以使用命令行重启adb，新版的adb命令位于platform-tools目录下：<br>    adb kill-server<br>    adb start-server</p>
+<p>重新启动后可以看到虚拟机设备已经在列表中了</p>
+<p>3、配置项目run或debug参数</p>
+<p>运行或调试程序时就可以选择虚拟机作为调试设备了</p>
+<p>如果eclipse找不到虚拟机设备，请检查系统是否安装豌豆荚等Android连接程序，如果安装需要</p>
+<p>停止相关进程。</p>
+<p>配置SD卡</p>
+<p>配置SD卡可以使用多种方式。</p>
+<p>1、将文件伪装成 SD 卡</p>
+<p>在console模式下执行如下脚本：</p>
+<pre><code>dd if=/dev/zero of=/data/sdcard.img bs=1024 count=65536
+losetup /dev/block/loop7 /data/sdcard.img
+newfs_msdos /dev/block/loop7</code></pre><p>其中65536表示64MB的SD卡，可以修改此数字增大SD卡大小</p>
+<p>重新启动虚拟机进入debug模式，以 RW模式重新挂载分区</p>
+<pre><code>mount -o remount,rw /mnt</code></pre><p>编辑文件：</p>
+<pre><code>vi /mnt/grub/menu.lst</code></pre><p>向 kernel 中添加一个参数：</p>
+<pre><code>SDCARD=/data/sdcard.img</code></pre><p>2、使用独立的分区</p>
+<p>首先需要在 VirtualBox 中创建一个新的硬盘，然后将其配属给 VM：</p>
+<p>然后以debug模式启动VM，新建的分区默认挂载为/dev/sdb文件</p>
+<p>创建分区前可以查询分区情况：</p>
+<pre><code>fdisk -l /dev/sdb</code></pre><p>使用 fdisk 创建一个新的分区。分区创建完成后，对它进行格式化：</p>
+<pre><code>fdisk /dev/sdb</code></pre><p>该命令后续操作包含如下参数：</p>
+<pre><code>输入 m 显示所有命令列示。
+输入 p 显示硬盘分割情形。
+输入 a 设定硬盘启动区。
+输入 n 设定新的硬盘分割区。
+输入 e 硬盘为[延伸]分割区(extend)。
+输入 p 硬盘为[主要]分割区(primary)。
+输入 t 改变硬盘分割区属性。
+输入 d 删除硬盘分割区属性。
+输入 q 结束不存入硬盘分割区属性。
+输入 w 结束并写入硬盘分割区属性</code></pre><p>##安装应用</p>
+<p>1、安装应用</p>
+<p>如果未连接设备，可以在物理主机的命令行模式下使用如下命令连接</p>
+<pre><code>adb connect 192.168.11.12</code></pre><p>可以使用如下命令安装apk：</p>
+<pre><code>adb install -r HelloWorld.apk</code></pre><p>但有时安装的时候报如下错误：</p>
+<pre><code>more than one device and emulator</code></pre><p>可以使用如下方法：</p>
+<p>查找设备：</p>
+<pre><code>adb devices
+List of devices attached
+emulator-5554   device</code></pre><p>安装</p>
+<pre><code>adb -s emulator-5554 install -r HelloWorld.apk</code></pre><p>2、卸载</p>
+<pre><code>adb uninstall HelloWorld.apk</code></pre><p>或者直接删除文件</p>
+<pre><code>adb -s emulator-5554 shell
+cd /data/app
+rm HelloWorld.apk
+exit</code></pre><p>删除系统应用：</p>
+<pre><code>adb remount （重新挂载系统分区，使系统分区重新可写）。
+adb shell
+cd system/app
+rm *.apk</code></pre><p>其实吧，没必要耗费精力搞这么个伪Android，对于我来说好无用啊！！！</p>
+<p>鸣谢大佬 </p>
+<p>   <a href="https://blog.csdn.net/Rocloud/article/details/24930511" target="_blank" rel="noopener">原文链接</a></p>
+]]></content>
+      <tags>
+        <tag>VMware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>backup</title>
+    <url>/2020/03/06/backup/</url>
+    <content><![CDATA[<h1 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h1><p><img src="https://i.imgur.com/eQ1rXd0.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><h3 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h3><h4 id="index-php-save"><a href="#index-php-save" class="headerlink" title="index.php.save"></a>index.php.save</h4><p><img src="https://i.imgur.com/hIYytPH.png" alt=""></p>
+<h4 id="index-php-bak"><a href="#index-php-bak" class="headerlink" title="index.php.bak"></a>index.php.bak</h4><p><img src="https://i.imgur.com/XcLdGfj.png" alt=""></p>
+<p><img src="https://i.imgur.com/VcHw2Yq.png" alt=""></p>
+<pre><code>Flag=Cyberpeace{855A1C4B3401294CB6604CCC98BDE334}</code></pre><h2 id="备份文件"><a href="#备份文件" class="headerlink" title="备份文件"></a>备份文件</h2><p>很多开发人员在编辑文件前，都会先进行一次备份，同时会把备份文件和源文件放在服务器上的同一个地方。这样的话，如果存在绕过身份验证，就可以直接下载到这个备份文件，从而得到网站源代码。</p>
+<h4 id="有关备份文件的可以利用的情况主要有3种"><a href="#有关备份文件的可以利用的情况主要有3种" class="headerlink" title="有关备份文件的可以利用的情况主要有3种"></a>有关备份文件的可以利用的情况主要有3种</h4><ol>
+<li><p>代码编辑器产生的备份文件</p>
+</li>
+<li><p>没有删除版本控制系统（VCS）产生的备份文件</p>
+</li>
+<li><p>没有删除开发人员手动备份的文件</p>
+</li>
+</ol>
+<h4 id="php的备份有两种"><a href="#php的备份有两种" class="headerlink" title="php的备份有两种"></a>php的备份有两种</h4><pre><code>.php~
+
+.php.bak</code></pre><h4 id="常见的备份文件后缀名"><a href="#常见的备份文件后缀名" class="headerlink" title="常见的备份文件后缀名"></a>常见的备份文件后缀名</h4><pre><code>.git
+
+.svn 
+
+.swp
+
+.svn 
+
+.~ 
+
+.bak 
+
+.bash_history</code></pre>]]></content>
+      <tags>
+        <tag>Writeup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>view_source</title>
+    <url>/2020/03/06/view_source/</url>
+    <content><![CDATA[<h1 id="view-source"><a href="#view-source" class="headerlink" title="view_source"></a>view_source</h1><p><img src="https://i.imgur.com/j7BNCHh.png" alt=""></p>
+<p>无法使用右键查看网页源代码</p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
+<li>α</li>
+</ul>
+<h4 id="在url中通过view-source-的方法来访问源码"><a href="#在url中通过view-source-的方法来访问源码" class="headerlink" title="在url中通过view-source:的方法来访问源码"></a>在url中通过view-source:的方法来访问源码</h4><p>/view-source是一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令./</p>
+<p>以前的使用方法：在浏览器地址栏中输入</p>
+<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
+<p>JS用法:</p>
+<p>​    window.location=”view-source:” + window.location</p>
+<p><img src="https://i.imgur.com/jDoFlnb.png" alt=""></p>
+<p><img src="https://i.imgur.com/ewwthcJ.png" alt=""></p>
+<ul>
+<li>β</li>
+</ul>
+<h4 id="F12调出web开发者工具，浏览查看器页面"><a href="#F12调出web开发者工具，浏览查看器页面" class="headerlink" title="F12调出web开发者工具，浏览查看器页面"></a>F12调出web开发者工具，浏览查看器页面</h4><p><img src="https://i.imgur.com/1spwnXo.png" alt=""></p>
+<ul>
+<li>γ</li>
+</ul>
+<h4 id="使用Burpsuite抓包查看源代码"><a href="#使用Burpsuite抓包查看源代码" class="headerlink" title="使用Burpsuite抓包查看源代码"></a>使用Burpsuite抓包查看源代码</h4><p><img src="https://i.imgur.com/YIs0S24.png" alt=""></p>
+<pre><code>Flag=cyberpeace{69759f4dc46ad159300f1c451609c781}</code></pre><h2 id="view-source-协议"><a href="#view-source-协议" class="headerlink" title="view-source 协议"></a>view-source 协议</h2><p>一种协议，早期基本上每个浏览器都支持这个协议。后来Microsoft考虑安全性，对于WindowsXP  pack2以及更高版本以后IE就不再支持此协议。但是这个方法在FireFox和Chrome浏览器都还可以使用。  如果要在IE下查看源代码,只能使用查看中的”查看源代码”命令</p>
+<h4 id="以前的使用方法："><a href="#以前的使用方法：" class="headerlink" title="以前的使用方法："></a>以前的使用方法：</h4><p>在浏览器地址栏中输入</p>
+<pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
+<h4 id="JS用法"><a href="#JS用法" class="headerlink" title="JS用法:"></a>JS用法:</h4><pre><code>window.location=&quot;view-source:&quot; + window.location</code></pre>]]></content>
+      <tags>
+        <tag>Writeup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建:Github Pages+Hexo</title>
+    <url>/2020/02/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%9AHexo/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/UIIq7FV.png" alt=""></p>
+<h1 id="Hexo-博客框架"><a href="#Hexo-博客框架" class="headerlink" title="Hexo 博客框架"></a>Hexo 博客框架</h1><p>00 安装 Node.js  </p>
+<pre><code>https://nodejs.org/zh-cn/</code></pre><p>选择 LTS（长期支持版）</p>
+<h2 id="以管理员方式打开cmd"><a href="#以管理员方式打开cmd" class="headerlink" title="以管理员方式打开cmd"></a>以管理员方式打开cmd</h2><pre><code>注：runas /user:administrator &quot;cmd/k&quot;</code></pre><p>01 查看版本</p>
+<pre><code>node -v
+npm -v</code></pre><p>02 安装cnpm<br>    npm install -g cnpm –reistry=<a href="https://registry.npm.taobo.org" target="_blank" rel="noopener">https://registry.npm.taobo.org</a></p>
+<p>注：淘宝镜像源</p>
+<pre><code>cnpm -v</code></pre><p>03 全局安装hexo-cli</p>
+<pre><code>cnpm install -g hexo-cli
+
+hexo -v            查看  hexo-cli项 与 node项</code></pre><h2 id="C-Users-administertor路径下新建文件夹blog"><a href="#C-Users-administertor路径下新建文件夹blog" class="headerlink" title="C:\Users\administertor路径下新建文件夹blog"></a>C:\Users\administertor路径下新建文件夹blog</h2><p>如果将来出错，干掉它！</p>
+<p>重新来过</p>
+<p>04 cd blog</p>
+<pre><code>hexo init      初始化博客
+
+hexo server    启动博客</code></pre><p>###本地预览###</p>
+<pre><code>http://localhost:4000</code></pre><p>操作成功之后会出现博客界面</p>
+<p><img src="https://i.imgur.com/QDN9AwO.png" alt=""></p>
+<p>恭喜你，即将成功</p>
+<p>###新建博文###<br>    hexo new “新建文章名称”</p>
+<p>05 接下来就需要创作和编辑内容了（请自行学习）</p>
+<pre><code> cd ../..    重新生成，退回至blog 目录
+
+
+hexo clean
+
+hexo generate
+
+hexo server （重新启动）</code></pre><p>本地启动完成</p>
+<pre><code>Ctrl+c 结束</code></pre><h2 id="通过Github部署至远端"><a href="#通过Github部署至远端" class="headerlink" title="通过Github部署至远端"></a>通过Github部署至远端</h2><p>06 新建一个仓库  New repository</p>
+<pre><code>Repository name   用户名.github.io</code></pre><p>Create repository</p>
+<p>07 blog目录下安装Git部署插件</p>
+<pre><code>cnpm install hexo-deployer-git --save</code></pre><p>08 设置_config.yml文件</p>
+<pre><code>notepad _config.yml
+
+type: git
+repo: 仓库地址
+branch: master</code></pre><h2 id="部署至远端"><a href="#部署至远端" class="headerlink" title="部署至远端"></a>部署至远端</h2><pre><code>hexo d</code></pre><p>09 输入Github账号，密码</p>
+<p>注意：需提前git设置用户名和邮箱地址</p>
+<pre><code>$ git config --global user.name &quot;John Doe&quot;
+$ git config --global user.email &quot;johndoe@example.com&quot;</code></pre><p>###拓展——更换博客主题###</p>
+<p>例：在blog目录中下载主题</p>
+<pre><code>git clone https://github.com/litten/hexo-yilia.git themes/yilia</code></pre><p>  哎，clone的贼慢，太难了</p>
+<p>10 修改_config.yml文件</p>
+<pre><code>notepad _config.yml</code></pre><p>theme: landscape&gt;&gt;&gt;yilia 更改主题名称</p>
+<pre><code>hexo clean
+hexo generate
+hexo server    
+
+hexo deploy</code></pre><h2 id="感谢-codesheep-cn"><a href="#感谢-codesheep-cn" class="headerlink" title="感谢 codesheep.cn"></a>感谢 <a href="www.codesheep.cn">codesheep.cn</a></h2><p> <a href="https://www.bilibili.com/video/av44544186?t=1644" target="_blank" rel="noopener">视频教程链接</a></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>robots</title>
+    <url>/2020/03/06/robots/</url>
+    <content><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p>
+<p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
+<li>α</li>
+</ul>
+<h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p>
+<p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p>
+<p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p>
+<ul>
+<li>β</li>
+</ul>
+<h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p>
+<pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p>
+<p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p>
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *
+
+Disallow:  /
+
+Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p>
+<p>配置项详解:</p>
+<p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p>
+<p>Disallow:不允许爬取的目录。 </p>
+<p>Allow:一般配合Disallow使用，用于排除限制。 </p>
+<p>常见的爬虫名: </p>
+<pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符
+
+Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录
+
+Disallow: /require/  这里定义是禁止爬寻require目录下面的目录
+
+Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录
+
+Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。
+
+Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址
+
+Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片
+
+Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。
+
+Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录
+
+Allow: /tmp  这里定义是允许爬寻tmp的整个目录
+
+Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。
+
+Allow: .gif$  允许抓取网页和gif格式图片
+
+Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
+]]></content>
+      <tags>
+        <tag>Writeup</tag>
+      </tags>
+  </entry>
 </search>
