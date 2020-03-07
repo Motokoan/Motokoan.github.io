@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Kali," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Ba2in9a's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="开始操作首先了解一下apt和apt-get之间的区别 https:&#x2F;&#x2F;www.sysgeek.cn&#x2F;apt-vs-apt-get&#x2F; 感兴趣的话可以深入探究 One apt update这个操作并没有开始更新软件，类似于将远程源中的最新版本信息更新到本地 接下来才开始更新软件： apt upgrade更新系统： apt full-upgrade或者： apt-get dist-upgrade清理安">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kali-2020.1更新汉化配置">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/Kali-2020-1%E6%9B%B4%E6%96%B0%E6%B1%89%E5%8C%96%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="Ba2in9a&#39;s Blog">
+<meta property="og:description" content="开始操作首先了解一下apt和apt-get之间的区别 https:&#x2F;&#x2F;www.sysgeek.cn&#x2F;apt-vs-apt-get&#x2F; 感兴趣的话可以深入探究 One apt update这个操作并没有开始更新软件，类似于将远程源中的最新版本信息更新到本地 接下来才开始更新软件： apt upgrade更新系统： apt full-upgrade或者： apt-get dist-upgrade清理安">
+<meta property="og:image" content="https://i.imgur.com/dRpyOSH.png">
+<meta property="og:image" content="https://i.imgur.com/u8V81To.png">
+<meta property="og:image" content="https://i.imgur.com/Nxu091u.jpg">
+<meta property="og:image" content="https://i.imgur.com/iaJtybB.jpg">
+<meta property="og:image" content="https://i.imgur.com/A5fcVqv.jpg">
+<meta property="article:published_time" content="2020-02-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-06T04:44:25.431Z">
+<meta property="article:author" content="Ba2in9a">
+<meta property="article:tag" content="Kali">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/dRpyOSH.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/18/Kali-2020-1更新汉化配置/"/>
+
+
+
+
+
+  <title>Kali-2020.1更新汉化配置 | Ba2in9a's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/vuitton-motoko/vuitton-motoko.github.io" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ba2in9a's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">You jump, I jump！If you jump, I will not jump with you.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/Kali-2020-1%E6%9B%B4%E6%96%B0%E6%B1%89%E5%8C%96%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ba2in9a">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ba2in9a's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Kali-2020.1更新汉化配置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-18T00:00:00+08:00">
+                2020-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  816
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://i.imgur.com/dRpyOSH.png" alt=""></p>
+<h2 id="开始操作"><a href="#开始操作" class="headerlink" title="开始操作"></a>开始操作</h2><p>首先了解一下apt和apt-get之间的区别</p>
+<p><a href="https://www.sysgeek.cn/apt-vs-apt-get/" target="_blank" rel="noopener">https://www.sysgeek.cn/apt-vs-apt-get/</a></p>
+<p>感兴趣的话可以深入探究</p>
+<p>One</p>
+<pre><code>apt update</code></pre><p>这个操作并没有开始更新软件，类似于将远程源中的最新版本信息更新到本地</p>
+<p>接下来才开始更新软件：</p>
+<pre><code>apt upgrade</code></pre><p>更新系统：</p>
+<pre><code>apt full-upgrade</code></pre><p>或者：</p>
+<pre><code>apt-get dist-upgrade</code></pre><p>清理安装包：</p>
+<pre><code>apt-get clean
+apt-get autoclean</code></pre><p>Two</p>
+<h3 id="推荐使用"><a href="#推荐使用" class="headerlink" title="推荐使用"></a>推荐使用</h3><pre><code>apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get clean</code></pre><h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><p>如果已会科学上网，不需要更新源文件，自我感觉Kali官方源可行。(￣▽￣)”</p>
+<p>Linux 更新源文件位于 /etc/apt/sources.list ，系统就是从这个文件中读取一些网址参数下载安装软件，默认的是 kali 官方源，我们可以修改为国内一些较快的源，例如阿里、中科大、网易等，加快下载速度。</p>
+<pre><code>vim /etc/apt/sources.list</code></pre><p>vim相关操作请自行学习</p>
+<p>找到并编辑上述 sources.list 源文件，替换为以下内容：</p>
+<h4 id="aliyun-阿里云"><a href="#aliyun-阿里云" class="headerlink" title="aliyun 阿里云"></a>aliyun 阿里云</h4><p>deb <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib</p>
+<h4 id="ustc-中科大"><a href="#ustc-中科大" class="headerlink" title="ustc 中科大"></a>ustc 中科大</h4><p>deb <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>    deb <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free<br>    deb-src <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free</p>
+<h4 id="kali-官方源"><a href="#kali-官方源" class="headerlink" title="kali 官方源"></a>kali 官方源</h4><p>​    deb <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib<br>​    deb-src <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib </p>
+<h5 id="默认的，可以注释掉不用管"><a href="#默认的，可以注释掉不用管" class="headerlink" title="默认的，可以注释掉不用管"></a>默认的，可以注释掉不用管</h5><p>​    deb <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>​    deb-src <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>————————————————</p>
+<h3 id="kali源更新失败（数字签名无效或没有数字签名）"><a href="#kali源更新失败（数字签名无效或没有数字签名）" class="headerlink" title="kali源更新失败（数字签名无效或没有数字签名）"></a>kali源更新失败（数字签名无效或没有数字签名）</h3><p><img src="https://i.imgur.com/u8V81To.png" alt=""></p>
+<p>西文硬伤，根据提示，可参考： man 8 apt-secure</p>
+<p>解决方法：</p>
+<p>wget archive.kali.org/archive-key.asc   //下载签名</p>
+<p>apt-key add archive-key.asc   //安装签名</p>
+<h5 id="其他：已安装的签名列表：apt-key-list"><a href="#其他：已安装的签名列表：apt-key-list" class="headerlink" title="其他：已安装的签名列表：apt-key list"></a>其他：已安装的签名列表：apt-key list</h5><hr>
+<h2 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h2><p>首先终端输入：</p>
+<pre><code>apt-get install xfonts-intl-chinese ttf-wqy-microhei </code></pre><p>来安装中文字体</p>
+<p><img src="https://i.imgur.com/Nxu091u.jpg" alt=""></p>
+<p>做完这些后再输入：</p>
+<p>在命令行输入”dpkg-reconfigure locales”。（root用户）进入图形化界面之后，（空格是选择，Tab是切换，带*是选中），选中zh_CN.UTF-8，确定后，将zh_CN.UTF-8选为默认。</p>
+<p>界面下选项，上下键可以下拉，排序为从a-z排序，空格选中语言，tab键切换到ok，再回车确认进入下一步</p>
+<p><img src="https://i.imgur.com/iaJtybB.jpg" alt=""></p>
+<p>在这里我们用上下键选择语言zh_CN.UTF-8后tab切换到确认直接回车</p>
+<p><img src="https://i.imgur.com/A5fcVqv.jpg" alt=""></p>
+<p>终端输入：reboot重启 系统，到登录界面，右上角语言列表注意是否为zh_CN.utf8,点开列表，确定选中的为中文-中国</p>
+<p>（默认没有问题，重启已经是中文）</p>
+<h3 id="安装输入法"><a href="#安装输入法" class="headerlink" title="安装输入法"></a>安装输入法</h3><p>这里采取的是Google的输入法 </p>
+<pre><code>apt-get update
+apt-get install fcitx
+apt-get install fcitx-googlepinyin</code></pre><p>然后重启，就会出现新的输入法，不用再像原先的一样需要配置，点击右上角输入法就可以切换，也可以自己配置快捷键。</p>
+<h5 id="注：若安装后输入中文显示为乱码，请卸载后重新安装"><a href="#注：若安装后输入中文显示为乱码，请卸载后重新安装" class="headerlink" title="注：若安装后输入中文显示为乱码，请卸载后重新安装"></a>注：若安装后输入中文显示为乱码，请卸载后重新安装</h5><h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="https://knightyun.github.io/2018/04/21/linux-sources-list" target="_blank" rel="noopener">黄琦雲的博客</a> </p>
+<p><a href="https://blog.csdn.net/ayatou666/article/details/80092529" target="_blank" rel="noopener">ayatou666的博客</a></p>
+<p><a href="https://blog.csdn.net/Jack0610/article/details/103931466" target="_blank" rel="noopener">Jeromeyoungh的博客</a></p>
+<h3 id="在此鸣谢"><a href="#在此鸣谢" class="headerlink" title="在此鸣谢"></a>在此鸣谢</h3>
+      
+    </div>
+    
+    
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Kali/" rel="tag"><i class="fa fa-tag"></i> Kali</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/05/Vmware%E5%AE%89%E8%A3%85Android-X86/" rel="next" title="VMware安装Android X86">
+                <i class="fa fa-chevron-left"></i> VMware安装Android X86
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/29/BurpSuite-pro%E4%B8%8B%E8%BD%BD/" rel="prev" title="BurpSuite_pro下载">
+                BurpSuite_pro下载 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80ODk3Ni8yNTQ3MA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Ba2in9a</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/LakeMotoko" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://instagram.com/Ba2in9a" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/Ba2in9a" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://youtube.com/Ba2in9a" target="_blank" title="YouTube">
+                      
+                        <i class="fa fa-fw fa-youtube"></i>YouTube</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/vuitton-motoko" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:hi_saber@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开始操作"><span class="nav-number">1.</span> <span class="nav-text">开始操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐使用"><span class="nav-number">1.1.</span> <span class="nav-text">推荐使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新源"><span class="nav-number">1.2.</span> <span class="nav-text">更新源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#aliyun-阿里云"><span class="nav-number">1.2.1.</span> <span class="nav-text">aliyun 阿里云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ustc-中科大"><span class="nav-number">1.2.2.</span> <span class="nav-text">ustc 中科大</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#kali-官方源"><span class="nav-number">1.2.3.</span> <span class="nav-text">kali 官方源</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#默认的，可以注释掉不用管"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">默认的，可以注释掉不用管</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kali源更新失败（数字签名无效或没有数字签名）"><span class="nav-number">1.3.</span> <span class="nav-text">kali源更新失败（数字签名无效或没有数字签名）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#其他：已安装的签名列表：apt-key-list"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">其他：已安装的签名列表：apt-key list</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#汉化"><span class="nav-number">2.</span> <span class="nav-text">汉化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装输入法"><span class="nav-number">2.1.</span> <span class="nav-text">安装输入法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注：若安装后输入中文显示为乱码，请卸载后重新安装"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">注：若安装后输入中文显示为乱码，请卸载后重新安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考"><span class="nav-number">2.1.0.2.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在此鸣谢"><span class="nav-number">2.2.</span> <span class="nav-text">在此鸣谢</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ba2in9a</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">3.7k</span>
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数: <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+-->
+
+  <span class="post-meta-divider">|</span>
+
+<!--
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+-->
+
+
+<!--pv的方式，单个用户连续点击n篇文章，记录n次访问量-->
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+<!--uv的方式，单个用户连续点击n篇文章，只记录1次访客数-->
+<span id="busuanzi_container_site_uv">
+  本站总访问量<span id="busuanzi_value_site_uv"></span>次
+</span>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共3.7k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
