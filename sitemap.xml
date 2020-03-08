@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://vuitton-motoko.github.io/about/index.html</loc>
+    
+    <lastmod>2020-03-08T02:16:29.920Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://vuitton-motoko.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-03-08T02:14:49.237Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://vuitton-motoko.github.io/2020/02/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%9AHexo/</loc>
     
     <lastmod>2020-03-07T13:23:31.011Z</lastmod>
@@ -58,23 +72,9 @@
   </url>
   
   <url>
-    <loc>https://vuitton-motoko.github.io/tags/index.html</loc>
-    
-    <lastmod>2020-03-07T08:17:25.261Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://vuitton-motoko.github.io/categories/index.html</loc>
     
     <lastmod>2020-03-07T08:16:45.474Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://vuitton-motoko.github.io/about/index.html</loc>
-    
-    <lastmod>2020-03-07T08:15:17.578Z</lastmod>
     
   </url>
   
