@@ -1,176 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>BurpSuite_pro下载</title>
-    <url>/2020/02/29/BurpSuite-pro%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<h1 id="burpsuite-pro"><a href="#burpsuite-pro" class="headerlink" title="burpsuite pro"></a>burpsuite pro</h1><p>burpsuite pro v2020.1 破解后的许可界面：<br><img src="https://i.imgur.com/MdyZA4f.png" alt=""></p>
-<p>burpsuite pro v2020.1 汉化后的许可界面:<br><img src="https://i.imgur.com/boF3cB9.png" alt=""></p>
-<p>注：所有的汉化破解教程都需要在你安装好Java环境的前提下</p>
-<p>推荐使用Java8即可适配burprsuite1.7或2.0+。</p>
-<p>汉化破解教程：</p>
-<p><a href="https://mrxn.net/hacktools/Burp_Suite_Pro_v1_7_3_2_Loader_Keygen_Cracked_Share.html" target="_blank" rel="noopener">破解教程</a></p>
-<p>先按照这个教程破解后</p>
-<p>再去执行 【创建桌面快捷方式.bat】即可在桌面创建汉化的快捷方式。</p>
-<p>执行【Create-Desktop-Link.bat】即可在桌面创建英文原版的快捷方式。</p>
-<h4 id="burpsuite-pro-v2020-1-zip文件包含："><a href="#burpsuite-pro-v2020-1-zip文件包含：" class="headerlink" title="burpsuite_pro_v2020.1.zip文件包含："></a>burpsuite_pro_v2020.1.zip文件包含：</h4><p>+— burp-loader-keygen-2020_1.jar<br>+— burpsuite pro 2020.1.png<br>+— burpsuite pro 2020.1汉化.png<br>+— BurpSuiteChs.jar<br>+— burpsuite_pro_v2020.1.jar<br>+— Burp_start.bat<br>+— Burp_start_en.bat<br>+— Create-Desktop-Link.bat<br>+— Goescat-Macaron-Burp-suite.ico<br>+— jython.jar<br>+— 创建桌面快捷方式.bat<br>+— 汉化破解说明.txt</p>
-<h3 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h3><p>——<a href="http://tmp.link/f/5e53630ba1fdd" target="_blank" rel="noopener">http://tmp.link/f/5e53630ba1fdd</a></p>
-<p>——<a href="http://www79.zippyshare.com/v/d0pMoYPg/file.html" target="_blank" rel="noopener">http://www79.zippyshare.com/v/d0pMoYPg/file.html</a></p>
-<p>备用地址，如果速度慢需要代理：</p>
-<p>——<a href="https://mir.cr/1EFTTD3O" target="_blank" rel="noopener">https://mir.cr/1EFTTD3O</a></p>
-<p>——<a href="https://tusfiles.com/yfhl5gdgwyu0" target="_blank" rel="noopener">https://tusfiles.com/yfhl5gdgwyu0</a></p>
-<p>——<a href="https://userscloud.com/w0760j7n2wct" target="_blank" rel="noopener">https://userscloud.com/w0760j7n2wct</a></p>
-<p>——<a href="https://uptobox.com/v65hsq7l6le8" target="_blank" rel="noopener">https://uptobox.com/v65hsq7l6le8</a></p>
-<p><img src="https://i.imgur.com/CtuIx73.jpg" alt=""></p>
-<p> &lt;今天是二月二十九号，可我浑浑噩噩，百无聊赖&gt;</p>
-<p> &lt;好想拜访这灿烂盛世&gt;</p>
-<p> &lt;安&gt;</p>
-<p>参考<a href="https://mrxn.net/hacktools/burpsuite_pro_v2020_1.html" target="_blank" rel="noopener">Mrxn’s Blog</a></p>
-<p>鸣谢Mrxn</p>
-]]></content>
-      <categories>
-        <category>Merlin</category>
-      </categories>
-      <tags>
-        <tag>Download</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kali-2020.1更新汉化配置</title>
-    <url>/2020/02/18/Kali-2020-1%E6%9B%B4%E6%96%B0%E6%B1%89%E5%8C%96%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/dRpyOSH.png" alt=""></p>
-<h2 id="开始操作"><a href="#开始操作" class="headerlink" title="开始操作"></a>开始操作</h2><p>首先了解一下apt和apt-get之间的区别</p>
-<p><a href="https://www.sysgeek.cn/apt-vs-apt-get/" target="_blank" rel="noopener">https://www.sysgeek.cn/apt-vs-apt-get/</a></p>
-<p>感兴趣的话可以深入探究</p>
-<p>One</p>
-<pre><code>apt update</code></pre><p>这个操作并没有开始更新软件，类似于将远程源中的最新版本信息更新到本地</p>
-<p>接下来才开始更新软件：</p>
-<pre><code>apt upgrade</code></pre><p>更新系统：</p>
-<pre><code>apt full-upgrade</code></pre><p>或者：</p>
-<pre><code>apt-get dist-upgrade</code></pre><p>清理安装包：</p>
-<pre><code>apt-get clean
-apt-get autoclean</code></pre><p>Two</p>
-<h3 id="推荐使用"><a href="#推荐使用" class="headerlink" title="推荐使用"></a>推荐使用</h3><pre><code>apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get clean</code></pre><h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><p>如果已会科学上网，不需要更新源文件，自我感觉Kali官方源可行。(￣▽￣)”</p>
-<p>Linux 更新源文件位于 /etc/apt/sources.list ，系统就是从这个文件中读取一些网址参数下载安装软件，默认的是 kali 官方源，我们可以修改为国内一些较快的源，例如阿里、中科大、网易等，加快下载速度。</p>
-<pre><code>vim /etc/apt/sources.list</code></pre><p>vim相关操作请自行学习</p>
-<p>找到并编辑上述 sources.list 源文件，替换为以下内容：</p>
-<h4 id="aliyun-阿里云"><a href="#aliyun-阿里云" class="headerlink" title="aliyun 阿里云"></a>aliyun 阿里云</h4><p>deb <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib</p>
-<h4 id="ustc-中科大"><a href="#ustc-中科大" class="headerlink" title="ustc 中科大"></a>ustc 中科大</h4><p>deb <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>    deb <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free<br>    deb-src <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free</p>
-<h4 id="kali-官方源"><a href="#kali-官方源" class="headerlink" title="kali 官方源"></a>kali 官方源</h4><p>​    deb <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib<br>​    deb-src <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib </p>
-<h5 id="默认的，可以注释掉不用管"><a href="#默认的，可以注释掉不用管" class="headerlink" title="默认的，可以注释掉不用管"></a>默认的，可以注释掉不用管</h5><p>​    deb <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>​    deb-src <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>————————————————</p>
-<h3 id="kali源更新失败（数字签名无效或没有数字签名）"><a href="#kali源更新失败（数字签名无效或没有数字签名）" class="headerlink" title="kali源更新失败（数字签名无效或没有数字签名）"></a>kali源更新失败（数字签名无效或没有数字签名）</h3><p><img src="https://i.imgur.com/u8V81To.png" alt=""></p>
-<p>西文硬伤，根据提示，可参考： man 8 apt-secure</p>
-<p>解决方法：</p>
-<p>wget archive.kali.org/archive-key.asc   //下载签名</p>
-<p>apt-key add archive-key.asc   //安装签名</p>
-<h5 id="其他：已安装的签名列表：apt-key-list"><a href="#其他：已安装的签名列表：apt-key-list" class="headerlink" title="其他：已安装的签名列表：apt-key list"></a>其他：已安装的签名列表：apt-key list</h5><hr>
-<h2 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h2><p>首先终端输入：</p>
-<pre><code>apt-get install xfonts-intl-chinese ttf-wqy-microhei </code></pre><p>来安装中文字体</p>
-<p><img src="https://i.imgur.com/Nxu091u.jpg" alt=""></p>
-<p>做完这些后再输入：</p>
-<p>在命令行输入”dpkg-reconfigure locales”。（root用户）进入图形化界面之后，（空格是选择，Tab是切换，带*是选中），选中zh_CN.UTF-8，确定后，将zh_CN.UTF-8选为默认。</p>
-<p>界面下选项，上下键可以下拉，排序为从a-z排序，空格选中语言，tab键切换到ok，再回车确认进入下一步</p>
-<p><img src="https://i.imgur.com/iaJtybB.jpg" alt=""></p>
-<p>在这里我们用上下键选择语言zh_CN.UTF-8后tab切换到确认直接回车</p>
-<p><img src="https://i.imgur.com/A5fcVqv.jpg" alt=""></p>
-<p>终端输入：reboot重启 系统，到登录界面，右上角语言列表注意是否为zh_CN.utf8,点开列表，确定选中的为中文-中国</p>
-<p>（默认没有问题，重启已经是中文）</p>
-<h3 id="安装输入法"><a href="#安装输入法" class="headerlink" title="安装输入法"></a>安装输入法</h3><p>这里采取的是Google的输入法 </p>
-<pre><code>apt-get update
-apt-get install fcitx
-apt-get install fcitx-googlepinyin</code></pre><p>然后重启，就会出现新的输入法，不用再像原先的一样需要配置，点击右上角输入法就可以切换，也可以自己配置快捷键。</p>
-<h5 id="注：若安装后输入中文显示为乱码，请卸载后重新安装"><a href="#注：若安装后输入中文显示为乱码，请卸载后重新安装" class="headerlink" title="注：若安装后输入中文显示为乱码，请卸载后重新安装"></a>注：若安装后输入中文显示为乱码，请卸载后重新安装</h5><h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="https://knightyun.github.io/2018/04/21/linux-sources-list" target="_blank" rel="noopener">黄琦雲的博客</a> </p>
-<p><a href="https://blog.csdn.net/ayatou666/article/details/80092529" target="_blank" rel="noopener">ayatou666的博客</a></p>
-<p><a href="https://blog.csdn.net/Jack0610/article/details/103931466" target="_blank" rel="noopener">Jeromeyoungh的博客</a></p>
-<h3 id="在此鸣谢"><a href="#在此鸣谢" class="headerlink" title="在此鸣谢"></a>在此鸣谢</h3>]]></content>
-      <categories>
-        <category>Kali</category>
-      </categories>
-      <tags>
-        <tag>Kali</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>You jump,I jump!If you jump,I will not jump with you.</title>
-    <url>/2019/12/31/CTF-Web%E6%8A%80%E8%83%BD%E6%A0%91/</url>
-    <content><![CDATA[<h1 id="CTF-WEB技能树"><a href="#CTF-WEB技能树" class="headerlink" title="CTF WEB技能树"></a>CTF WEB技能树</h1><p>虽然是分类写的但是知识都是成体系的要学会联系不同漏洞</p>
-<h2 id="基础内容"><a href="#基础内容" class="headerlink" title="基础内容"></a>基础内容</h2><p>php基本代码能力python写requests库脚本的能力<br>sql查询语句的基本应用后续再接触insert update之类的注入原理都是一样的<br>了解http协议 web服务的搭建过程和基本结构</p>
-<h2 id="文件包含（LFI）"><a href="#文件包含（LFI）" class="headerlink" title="文件包含（LFI）"></a>文件包含（LFI）</h2><p>会用伪协议读取源码php:/filter/read=convert.base64-encode/resource=index.php 了解过滤情况下基本的变形php://filter/read=string.rot13/resource=index.php<br>包含上传的图片马getshell<br>日志污染getshell（典型：ssrf打smtp日志污染+include文件包含）<br>在allow_url_include=On的情况下可以包含远程文件</p>
-<h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><p>了解基本的闭合逃逸语句原理<br>了解万能密码在代码层次的原理</p>
-<h4 id="sql注入的三种基本类型："><a href="#sql注入的三种基本类型：" class="headerlink" title="sql注入的三种基本类型："></a>sql注入的三种基本类型：</h4><ul>
-<li><p>直接回显</p>
-</li>
-<li><p>布尔盲注时间盲注</p>
-</li>
-<li><p>报错注入</p>
-<h4 id="sql注入的进阶类型："><a href="#sql注入的进阶类型：" class="headerlink" title="sql注入的进阶类型："></a>sql注入的进阶类型：</h4></li>
-<li><p>堆叠注入（PDO、mysqli-&gt;mutiquery）</p>
-</li>
-<li><p>regexp盲注（布尔或时间，根据具体情况判断）</p>
-</li>
-<li><p>利用mysql特性的注入如handler</p>
-</li>
-<li><p>无列名注入</p>
-</li>
-<li><p>bypass information_schema过滤经常跟无列名注入一起出</p>
-</li>
-<li><p>大小写比较盲注</p>
-</li>
-<li><p>load_file读取文件</p>
-</li>
-<li><p>dnslog外带</p>
-</li>
-<li><p>rollup with having构造空密码</p>
-</li>
-<li><p>会编写盲注脚本</p>
-</li>
-<li><p>二次注入</p>
-</li>
-</ul>
-<h4 id="udf提权"><a href="#udf提权" class="headerlink" title="udf提权"></a>udf提权</h4><h4 id="sql注入写webshell（要求有写入权限并且得知web目录绝对路径）"><a href="#sql注入写webshell（要求有写入权限并且得知web目录绝对路径）" class="headerlink" title="sql注入写webshell（要求有写入权限并且得知web目录绝对路径）"></a>sql注入写webshell（要求有写入权限并且得知web目录绝对路径）</h4><h2 id="远程命令执行RCE"><a href="#远程命令执行RCE" class="headerlink" title="远程命令执行RCE"></a>远程命令执行RCE</h2><p>了解linux基本的命令和php执行命令的函数<br>学会基本的绕过（反引号执行命令、$IFS绕过空格过滤、变量绕过正则）<br>无字母数字webshell<br>无参数rce<br>linux反弹shell windows反弹shell<br>curl外带数据<br>dnslog外带数据</p>
-<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><p>基本的绕过php3 php4 php5 phtml%00截断<br>文件包含解析webshell<br>上传.user.ini解析webshell（要求上传的目录内有php文件并且是nginx环境下）<br>上传.htaccess解析webshell（要求Apache）</p>
-<h2 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化"></a>反序列化</h2><p>了解常见的魔术方法以及跳类的技巧（_destruct是所有反序列化的入口，跳类可以利用调用别的魔术方法或者是调用不同类的同名方法）<br>学会pop链构造（需要有面向对象基础以及一个思维的转变）<br>phar反序列化<br>session反序列化<br>反序列化字符逃逸（变多或者变少）<br>php内置类soapclient反序列化打ssrf</p>
-<h2 id="SSRF"><a href="#SSRF" class="headerlink" title="SSRF"></a>SSRF</h2><p>了解ssrf常用协议 gopher dict file<br>了解parse_url和curl在解析url时候的差别<br>gopher打内网mysql<br>ssrf打redis未授权<br>ssrf经典案例：weblogic（布尔值探测内网服务+打内网redis）<br>xxe的ssrf</p>
-<h2 id="XXE"><a href="#XXE" class="headerlink" title="XXE"></a>XXE</h2><p>基本读取文件<br>xxe触发phar反序列化<br>xxe ssrf<br>xxe EXPECT RCE<br>blindxxe外带数据<br>zib流压缩xxe数据外带<br>php://filter/zlib.deflate/convert.base64-encode/resource=<br>解压：<br>php://filter/read=convert.base64-decode/zlib.inflate/resource=<br>CDATA</p>
-<h2 id="PythonWeb相关"><a href="#PythonWeb相关" class="headerlink" title="PythonWeb相关"></a>PythonWeb相关</h2><p>Django伪造cookie<br>yaml反序列化<br>pickle反序列化rce<br>flask ssti模板注入<br>flask伪造cookie</p>
-<h2 id="一些杂类知识"><a href="#一些杂类知识" class="headerlink" title="一些杂类知识"></a>一些杂类知识</h2><p>rogue mysqlsever读取客户端文件（可以触发phar反序列化）<br>padding oracle和CBC字节翻转密码学算法应用层面的攻击<br>ssi漏洞rce<br>伪随机数算法的攻击</p>
-]]></content>
-      <categories>
-        <category>资料</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>cookie</title>
-    <url>/2020/03/06/cookie/</url>
-    <content><![CDATA[<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><img src="https://i.imgur.com/Jrb5zzg.png" alt=""></p>
-<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
-<li>α</li>
-</ul>
-<h4 id="使用Burpsuit进行抓包"><a href="#使用Burpsuit进行抓包" class="headerlink" title="使用Burpsuit进行抓包"></a>使用Burpsuit进行抓包</h4><p><img src="https://i.imgur.com/BBo9qRc.png" alt=""></p>
-<p><img src="https://i.imgur.com/tcIoxDK.png" alt=""></p>
-<p><img src="https://i.imgur.com/6SillS2.png" alt=""></p>
-<p><img src="https://i.imgur.com/yVu20RK.png" alt=""></p>
-<ul>
-<li>β</li>
-</ul>
-<h4 id="使用-HTTP-Header-Live-拓展"><a href="#使用-HTTP-Header-Live-拓展" class="headerlink" title="使用 HTTP Header Live 拓展"></a>使用 HTTP Header Live 拓展</h4><p><img src="https://i.imgur.com/DpPsVxr.png" alt=""></p>
-<p><img src="https://i.imgur.com/6y6f0hR.png" alt=""></p>
-<p>flag=cyberpeace{34275870cbf633cfcc2f07a54fe5b16e}</p>
-<h2 id="了解cookie"><a href="#了解cookie" class="headerlink" title="了解cookie"></a>了解cookie</h2><p>Cookie 并不是它的原意“甜饼”的意思, 而是一个保存在客户机中的简单的文本文件, 这个文件与特定的 Web文档关联在一起, 保存了该客户机访问这个Web 文档时的信息, 当客户机再次访问这个 Web 文档时这些信息可供该文档使用。由于“Cookie”具有可以保存在客户机上的神奇特性, 因此它可以帮助我们实现记录用户个人信息的功能, 而这一切都不必使用复杂的CGI等程序 。举例来说, 一个 Web 站点可能会为每一个访问者产生一个唯一的ID, 然后以 Cookie 文件的形式保存在每个用户的机器上。如果使用浏览器访问 Web, 会看到所有保存在硬盘上的  Cookie。在这个文件夹里每一个文件都是一个由“名/值”对组成的文本文件,另外还有一个文件保存有所有对应的 Web 站点的信息。在这里的每个  Cookie 文件都是一个简单而又普通的文本文件。透过文件名, 就可以看到是哪个 Web  站点在机器上放置了Cookie(当然站点信息在文件里也有保存)</p>
-<p><a href="https://segmentfault.com/a/1190000016248401" target="_blank" rel="noopener">资料1</a></p>
-<p><a href="https://www.jianshu.com/p/6fc9cea6daa2" target="_blank" rel="noopener">资料2</a></p>
-]]></content>
-      <categories>
-        <category>Writeup</category>
-      </categories>
-      <tags>
-        <tag>新手练习区</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Alan Mathison Turing</title>
     <url>/2020/03/08/Alan%20Mathison%20Turing/</url>
     <content><![CDATA[<p><img src="https://i.imgur.com/YTDnulG.jpg" alt=""></p>
@@ -241,101 +71,145 @@ apt-get install fcitx-googlepinyin</code></pre><p>然后重启，就会出现新
       </tags>
   </entry>
   <entry>
-    <title>robots</title>
-    <url>/2020/03/06/robots/</url>
-    <content><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p>
-<p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p>
-<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
-<li>α</li>
+    <title>You jump,I jump!If you jump,I will not jump with you.</title>
+    <url>/2019/12/31/CTF-Web%E6%8A%80%E8%83%BD%E6%A0%91/</url>
+    <content><![CDATA[<h1 id="CTF-WEB技能树"><a href="#CTF-WEB技能树" class="headerlink" title="CTF WEB技能树"></a>CTF WEB技能树</h1><p>虽然是分类写的但是知识都是成体系的要学会联系不同漏洞</p>
+<h2 id="基础内容"><a href="#基础内容" class="headerlink" title="基础内容"></a>基础内容</h2><p>php基本代码能力python写requests库脚本的能力<br>sql查询语句的基本应用后续再接触insert update之类的注入原理都是一样的<br>了解http协议 web服务的搭建过程和基本结构</p>
+<h2 id="文件包含（LFI）"><a href="#文件包含（LFI）" class="headerlink" title="文件包含（LFI）"></a>文件包含（LFI）</h2><p>会用伪协议读取源码php:/filter/read=convert.base64-encode/resource=index.php 了解过滤情况下基本的变形php://filter/read=string.rot13/resource=index.php<br>包含上传的图片马getshell<br>日志污染getshell（典型：ssrf打smtp日志污染+include文件包含）<br>在allow_url_include=On的情况下可以包含远程文件</p>
+<h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><p>了解基本的闭合逃逸语句原理<br>了解万能密码在代码层次的原理</p>
+<h4 id="sql注入的三种基本类型："><a href="#sql注入的三种基本类型：" class="headerlink" title="sql注入的三种基本类型："></a>sql注入的三种基本类型：</h4><ul>
+<li><p>直接回显</p>
+</li>
+<li><p>布尔盲注时间盲注</p>
+</li>
+<li><p>报错注入</p>
+<h4 id="sql注入的进阶类型："><a href="#sql注入的进阶类型：" class="headerlink" title="sql注入的进阶类型："></a>sql注入的进阶类型：</h4></li>
+<li><p>堆叠注入（PDO、mysqli-&gt;mutiquery）</p>
+</li>
+<li><p>regexp盲注（布尔或时间，根据具体情况判断）</p>
+</li>
+<li><p>利用mysql特性的注入如handler</p>
+</li>
+<li><p>无列名注入</p>
+</li>
+<li><p>bypass information_schema过滤经常跟无列名注入一起出</p>
+</li>
+<li><p>大小写比较盲注</p>
+</li>
+<li><p>load_file读取文件</p>
+</li>
+<li><p>dnslog外带</p>
+</li>
+<li><p>rollup with having构造空密码</p>
+</li>
+<li><p>会编写盲注脚本</p>
+</li>
+<li><p>二次注入</p>
+</li>
 </ul>
-<h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p>
-<p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p>
-<p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p>
-<ul>
-<li>β</li>
-</ul>
-<h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p>
-<pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p>
-<p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p>
-<h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *
-
-Disallow:  /
-
-Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p>
-<p>配置项详解:</p>
-<p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p>
-<p>Disallow:不允许爬取的目录。 </p>
-<p>Allow:一般配合Disallow使用，用于排除限制。 </p>
-<p>常见的爬虫名: </p>
-<pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符
-
-Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录
-
-Disallow: /require/  这里定义是禁止爬寻require目录下面的目录
-
-Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录
-
-Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。
-
-Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址
-
-Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片
-
-Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。
-
-Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录
-
-Allow: /tmp  这里定义是允许爬寻tmp的整个目录
-
-Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。
-
-Allow: .gif$  允许抓取网页和gif格式图片
-
-Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
+<h4 id="udf提权"><a href="#udf提权" class="headerlink" title="udf提权"></a>udf提权</h4><h4 id="sql注入写webshell（要求有写入权限并且得知web目录绝对路径）"><a href="#sql注入写webshell（要求有写入权限并且得知web目录绝对路径）" class="headerlink" title="sql注入写webshell（要求有写入权限并且得知web目录绝对路径）"></a>sql注入写webshell（要求有写入权限并且得知web目录绝对路径）</h4><h2 id="远程命令执行RCE"><a href="#远程命令执行RCE" class="headerlink" title="远程命令执行RCE"></a>远程命令执行RCE</h2><p>了解linux基本的命令和php执行命令的函数<br>学会基本的绕过（反引号执行命令、$IFS绕过空格过滤、变量绕过正则）<br>无字母数字webshell<br>无参数rce<br>linux反弹shell windows反弹shell<br>curl外带数据<br>dnslog外带数据</p>
+<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><p>基本的绕过php3 php4 php5 phtml%00截断<br>文件包含解析webshell<br>上传.user.ini解析webshell（要求上传的目录内有php文件并且是nginx环境下）<br>上传.htaccess解析webshell（要求Apache）</p>
+<h2 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化"></a>反序列化</h2><p>了解常见的魔术方法以及跳类的技巧（_destruct是所有反序列化的入口，跳类可以利用调用别的魔术方法或者是调用不同类的同名方法）<br>学会pop链构造（需要有面向对象基础以及一个思维的转变）<br>phar反序列化<br>session反序列化<br>反序列化字符逃逸（变多或者变少）<br>php内置类soapclient反序列化打ssrf</p>
+<h2 id="SSRF"><a href="#SSRF" class="headerlink" title="SSRF"></a>SSRF</h2><p>了解ssrf常用协议 gopher dict file<br>了解parse_url和curl在解析url时候的差别<br>gopher打内网mysql<br>ssrf打redis未授权<br>ssrf经典案例：weblogic（布尔值探测内网服务+打内网redis）<br>xxe的ssrf</p>
+<h2 id="XXE"><a href="#XXE" class="headerlink" title="XXE"></a>XXE</h2><p>基本读取文件<br>xxe触发phar反序列化<br>xxe ssrf<br>xxe EXPECT RCE<br>blindxxe外带数据<br>zib流压缩xxe数据外带<br>php://filter/zlib.deflate/convert.base64-encode/resource=<br>解压：<br>php://filter/read=convert.base64-decode/zlib.inflate/resource=<br>CDATA</p>
+<h2 id="PythonWeb相关"><a href="#PythonWeb相关" class="headerlink" title="PythonWeb相关"></a>PythonWeb相关</h2><p>Django伪造cookie<br>yaml反序列化<br>pickle反序列化rce<br>flask ssti模板注入<br>flask伪造cookie</p>
+<h2 id="一些杂类知识"><a href="#一些杂类知识" class="headerlink" title="一些杂类知识"></a>一些杂类知识</h2><p>rogue mysqlsever读取客户端文件（可以触发phar反序列化）<br>padding oracle和CBC字节翻转密码学算法应用层面的攻击<br>ssi漏洞rce<br>伪随机数算法的攻击</p>
 ]]></content>
       <categories>
-        <category>Writeup</category>
+        <category>资料</category>
       </categories>
       <tags>
-        <tag>新手练习区</tag>
+        <tag>CTF</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
-    <title>backup</title>
-    <url>/2020/03/06/backup/</url>
-    <content><![CDATA[<h1 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h1><p><img src="https://i.imgur.com/eQ1rXd0.png" alt=""></p>
-<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><h3 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h3><h4 id="index-php-save"><a href="#index-php-save" class="headerlink" title="index.php.save"></a>index.php.save</h4><p><img src="https://i.imgur.com/hIYytPH.png" alt=""></p>
-<h4 id="index-php-bak"><a href="#index-php-bak" class="headerlink" title="index.php.bak"></a>index.php.bak</h4><p><img src="https://i.imgur.com/XcLdGfj.png" alt=""></p>
-<p><img src="https://i.imgur.com/VcHw2Yq.png" alt=""></p>
-<pre><code>Flag=Cyberpeace{855A1C4B3401294CB6604CCC98BDE334}</code></pre><h2 id="备份文件"><a href="#备份文件" class="headerlink" title="备份文件"></a>备份文件</h2><p>很多开发人员在编辑文件前，都会先进行一次备份，同时会把备份文件和源文件放在服务器上的同一个地方。这样的话，如果存在绕过身份验证，就可以直接下载到这个备份文件，从而得到网站源代码。</p>
-<h4 id="有关备份文件的可以利用的情况主要有3种"><a href="#有关备份文件的可以利用的情况主要有3种" class="headerlink" title="有关备份文件的可以利用的情况主要有3种"></a>有关备份文件的可以利用的情况主要有3种</h4><ol>
-<li><p>代码编辑器产生的备份文件</p>
-</li>
-<li><p>没有删除版本控制系统（VCS）产生的备份文件</p>
-</li>
-<li><p>没有删除开发人员手动备份的文件</p>
-</li>
-</ol>
-<h4 id="php的备份有两种"><a href="#php的备份有两种" class="headerlink" title="php的备份有两种"></a>php的备份有两种</h4><pre><code>.php~
-
-.php.bak</code></pre><h4 id="常见的备份文件后缀名"><a href="#常见的备份文件后缀名" class="headerlink" title="常见的备份文件后缀名"></a>常见的备份文件后缀名</h4><pre><code>.git
-
-.svn 
-
-.swp
-
-.svn 
-
-.~ 
-
-.bak 
-
-.bash_history</code></pre>]]></content>
+    <title>Kali-2020.1更新汉化配置</title>
+    <url>/2020/02/18/Kali-2020-1%E6%9B%B4%E6%96%B0%E6%B1%89%E5%8C%96%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/dRpyOSH.png" alt=""></p>
+<h2 id="开始操作"><a href="#开始操作" class="headerlink" title="开始操作"></a>开始操作</h2><p>首先了解一下apt和apt-get之间的区别</p>
+<p><a href="https://www.sysgeek.cn/apt-vs-apt-get/" target="_blank" rel="noopener">https://www.sysgeek.cn/apt-vs-apt-get/</a></p>
+<p>感兴趣的话可以深入探究</p>
+<p>One</p>
+<pre><code>apt update</code></pre><p>这个操作并没有开始更新软件，类似于将远程源中的最新版本信息更新到本地</p>
+<p>接下来才开始更新软件：</p>
+<pre><code>apt upgrade</code></pre><p>更新系统：</p>
+<pre><code>apt full-upgrade</code></pre><p>或者：</p>
+<pre><code>apt-get dist-upgrade</code></pre><p>清理安装包：</p>
+<pre><code>apt-get clean
+apt-get autoclean</code></pre><p>Two</p>
+<h3 id="推荐使用"><a href="#推荐使用" class="headerlink" title="推荐使用"></a>推荐使用</h3><pre><code>apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get clean</code></pre><h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><p>如果已会科学上网，不需要更新源文件，自我感觉Kali官方源可行。(￣▽￣)”</p>
+<p>Linux 更新源文件位于 /etc/apt/sources.list ，系统就是从这个文件中读取一些网址参数下载安装软件，默认的是 kali 官方源，我们可以修改为国内一些较快的源，例如阿里、中科大、网易等，加快下载速度。</p>
+<pre><code>vim /etc/apt/sources.list</code></pre><p>vim相关操作请自行学习</p>
+<p>找到并编辑上述 sources.list 源文件，替换为以下内容：</p>
+<h4 id="aliyun-阿里云"><a href="#aliyun-阿里云" class="headerlink" title="aliyun 阿里云"></a>aliyun 阿里云</h4><p>deb <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.aliyun.com/kali" target="_blank" rel="noopener">http://mirrors.aliyun.com/kali</a> kali-rolling main non-free contrib</p>
+<h4 id="ustc-中科大"><a href="#ustc-中科大" class="headerlink" title="ustc 中科大"></a>ustc 中科大</h4><p>deb <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.ustc.edu.cn/kali" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>    deb <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free<br>    deb-src <a href="http://mirrors.ustc.edu.cn/kali-security" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/kali-security</a> kali-current/updates main contrib non-free</p>
+<h4 id="kali-官方源"><a href="#kali-官方源" class="headerlink" title="kali 官方源"></a>kali 官方源</h4><p>​    deb <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib<br>​    deb-src <a href="http://http.kali.org/kali" target="_blank" rel="noopener">http://http.kali.org/kali</a> kali-rolling main non-free contrib </p>
+<h5 id="默认的，可以注释掉不用管"><a href="#默认的，可以注释掉不用管" class="headerlink" title="默认的，可以注释掉不用管"></a>默认的，可以注释掉不用管</h5><p>​    deb <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>​    deb-src <a href="http://security.kali.org/kali-security" target="_blank" rel="noopener">http://security.kali.org/kali-security</a> kali-rolling/updates main contrib non-free<br>————————————————</p>
+<h3 id="kali源更新失败（数字签名无效或没有数字签名）"><a href="#kali源更新失败（数字签名无效或没有数字签名）" class="headerlink" title="kali源更新失败（数字签名无效或没有数字签名）"></a>kali源更新失败（数字签名无效或没有数字签名）</h3><p><img src="https://i.imgur.com/u8V81To.png" alt=""></p>
+<p>西文硬伤，根据提示，可参考： man 8 apt-secure</p>
+<p>解决方法：</p>
+<p>wget archive.kali.org/archive-key.asc   //下载签名</p>
+<p>apt-key add archive-key.asc   //安装签名</p>
+<h5 id="其他：已安装的签名列表：apt-key-list"><a href="#其他：已安装的签名列表：apt-key-list" class="headerlink" title="其他：已安装的签名列表：apt-key list"></a>其他：已安装的签名列表：apt-key list</h5><hr>
+<h2 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h2><p>首先终端输入：</p>
+<pre><code>apt-get install xfonts-intl-chinese ttf-wqy-microhei </code></pre><p>来安装中文字体</p>
+<p><img src="https://i.imgur.com/Nxu091u.jpg" alt=""></p>
+<p>做完这些后再输入：</p>
+<p>在命令行输入”dpkg-reconfigure locales”。（root用户）进入图形化界面之后，（空格是选择，Tab是切换，带*是选中），选中zh_CN.UTF-8，确定后，将zh_CN.UTF-8选为默认。</p>
+<p>界面下选项，上下键可以下拉，排序为从a-z排序，空格选中语言，tab键切换到ok，再回车确认进入下一步</p>
+<p><img src="https://i.imgur.com/iaJtybB.jpg" alt=""></p>
+<p>在这里我们用上下键选择语言zh_CN.UTF-8后tab切换到确认直接回车</p>
+<p><img src="https://i.imgur.com/A5fcVqv.jpg" alt=""></p>
+<p>终端输入：reboot重启 系统，到登录界面，右上角语言列表注意是否为zh_CN.utf8,点开列表，确定选中的为中文-中国</p>
+<p>（默认没有问题，重启已经是中文）</p>
+<h3 id="安装输入法"><a href="#安装输入法" class="headerlink" title="安装输入法"></a>安装输入法</h3><p>这里采取的是Google的输入法 </p>
+<pre><code>apt-get update
+apt-get install fcitx
+apt-get install fcitx-googlepinyin</code></pre><p>然后重启，就会出现新的输入法，不用再像原先的一样需要配置，点击右上角输入法就可以切换，也可以自己配置快捷键。</p>
+<h5 id="注：若安装后输入中文显示为乱码，请卸载后重新安装"><a href="#注：若安装后输入中文显示为乱码，请卸载后重新安装" class="headerlink" title="注：若安装后输入中文显示为乱码，请卸载后重新安装"></a>注：若安装后输入中文显示为乱码，请卸载后重新安装</h5><h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="https://knightyun.github.io/2018/04/21/linux-sources-list" target="_blank" rel="noopener">黄琦雲的博客</a> </p>
+<p><a href="https://blog.csdn.net/ayatou666/article/details/80092529" target="_blank" rel="noopener">ayatou666的博客</a></p>
+<p><a href="https://blog.csdn.net/Jack0610/article/details/103931466" target="_blank" rel="noopener">Jeromeyoungh的博客</a></p>
+<h3 id="在此鸣谢"><a href="#在此鸣谢" class="headerlink" title="在此鸣谢"></a>在此鸣谢</h3>]]></content>
       <categories>
-        <category>Writeup</category>
+        <category>Kali</category>
       </categories>
       <tags>
-        <tag>新手练习区</tag>
+        <tag>Kali</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BurpSuite_pro下载</title>
+    <url>/2020/02/29/BurpSuite-pro%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<h1 id="burpsuite-pro"><a href="#burpsuite-pro" class="headerlink" title="burpsuite pro"></a>burpsuite pro</h1><p>burpsuite pro v2020.1 破解后的许可界面：<br><img src="https://i.imgur.com/MdyZA4f.png" alt=""></p>
+<p>burpsuite pro v2020.1 汉化后的许可界面:<br><img src="https://i.imgur.com/boF3cB9.png" alt=""></p>
+<p>注：所有的汉化破解教程都需要在你安装好Java环境的前提下</p>
+<p>推荐使用Java8即可适配burprsuite1.7或2.0+。</p>
+<p>汉化破解教程：</p>
+<p><a href="https://mrxn.net/hacktools/Burp_Suite_Pro_v1_7_3_2_Loader_Keygen_Cracked_Share.html" target="_blank" rel="noopener">破解教程</a></p>
+<p>先按照这个教程破解后</p>
+<p>再去执行 【创建桌面快捷方式.bat】即可在桌面创建汉化的快捷方式。</p>
+<p>执行【Create-Desktop-Link.bat】即可在桌面创建英文原版的快捷方式。</p>
+<h4 id="burpsuite-pro-v2020-1-zip文件包含："><a href="#burpsuite-pro-v2020-1-zip文件包含：" class="headerlink" title="burpsuite_pro_v2020.1.zip文件包含："></a>burpsuite_pro_v2020.1.zip文件包含：</h4><p>+— burp-loader-keygen-2020_1.jar<br>+— burpsuite pro 2020.1.png<br>+— burpsuite pro 2020.1汉化.png<br>+— BurpSuiteChs.jar<br>+— burpsuite_pro_v2020.1.jar<br>+— Burp_start.bat<br>+— Burp_start_en.bat<br>+— Create-Desktop-Link.bat<br>+— Goescat-Macaron-Burp-suite.ico<br>+— jython.jar<br>+— 创建桌面快捷方式.bat<br>+— 汉化破解说明.txt</p>
+<h3 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h3><p>——<a href="http://tmp.link/f/5e53630ba1fdd" target="_blank" rel="noopener">http://tmp.link/f/5e53630ba1fdd</a></p>
+<p>——<a href="http://www79.zippyshare.com/v/d0pMoYPg/file.html" target="_blank" rel="noopener">http://www79.zippyshare.com/v/d0pMoYPg/file.html</a></p>
+<p>备用地址，如果速度慢需要代理：</p>
+<p>——<a href="https://mir.cr/1EFTTD3O" target="_blank" rel="noopener">https://mir.cr/1EFTTD3O</a></p>
+<p>——<a href="https://tusfiles.com/yfhl5gdgwyu0" target="_blank" rel="noopener">https://tusfiles.com/yfhl5gdgwyu0</a></p>
+<p>——<a href="https://userscloud.com/w0760j7n2wct" target="_blank" rel="noopener">https://userscloud.com/w0760j7n2wct</a></p>
+<p>——<a href="https://uptobox.com/v65hsq7l6le8" target="_blank" rel="noopener">https://uptobox.com/v65hsq7l6le8</a></p>
+<p><img src="https://i.imgur.com/CtuIx73.jpg" alt=""></p>
+<p> &lt;今天是二月二十九号，可我浑浑噩噩，百无聊赖&gt;</p>
+<p> &lt;好想拜访这灿烂盛世&gt;</p>
+<p> &lt;安&gt;</p>
+<p>参考<a href="https://mrxn.net/hacktools/burpsuite_pro_v2020_1.html" target="_blank" rel="noopener">Mrxn’s Blog</a></p>
+<p>鸣谢Mrxn</p>
+]]></content>
+      <categories>
+        <category>Merlin</category>
+      </categories>
+      <tags>
+        <tag>Download</tag>
       </tags>
   </entry>
   <entry>
@@ -482,6 +356,132 @@ rm *.apk</code></pre><p>其实吧，没必要耗费精力搞这么个伪Android�
       </categories>
       <tags>
         <tag>Android X86</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>backup</title>
+    <url>/2020/03/06/backup/</url>
+    <content><![CDATA[<h1 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h1><p><img src="https://i.imgur.com/eQ1rXd0.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><h3 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h3><h4 id="index-php-save"><a href="#index-php-save" class="headerlink" title="index.php.save"></a>index.php.save</h4><p><img src="https://i.imgur.com/hIYytPH.png" alt=""></p>
+<h4 id="index-php-bak"><a href="#index-php-bak" class="headerlink" title="index.php.bak"></a>index.php.bak</h4><p><img src="https://i.imgur.com/XcLdGfj.png" alt=""></p>
+<p><img src="https://i.imgur.com/VcHw2Yq.png" alt=""></p>
+<pre><code>Flag=Cyberpeace{855A1C4B3401294CB6604CCC98BDE334}</code></pre><h2 id="备份文件"><a href="#备份文件" class="headerlink" title="备份文件"></a>备份文件</h2><p>很多开发人员在编辑文件前，都会先进行一次备份，同时会把备份文件和源文件放在服务器上的同一个地方。这样的话，如果存在绕过身份验证，就可以直接下载到这个备份文件，从而得到网站源代码。</p>
+<h4 id="有关备份文件的可以利用的情况主要有3种"><a href="#有关备份文件的可以利用的情况主要有3种" class="headerlink" title="有关备份文件的可以利用的情况主要有3种"></a>有关备份文件的可以利用的情况主要有3种</h4><ol>
+<li><p>代码编辑器产生的备份文件</p>
+</li>
+<li><p>没有删除版本控制系统（VCS）产生的备份文件</p>
+</li>
+<li><p>没有删除开发人员手动备份的文件</p>
+</li>
+</ol>
+<h4 id="php的备份有两种"><a href="#php的备份有两种" class="headerlink" title="php的备份有两种"></a>php的备份有两种</h4><pre><code>.php~
+
+.php.bak</code></pre><h4 id="常见的备份文件后缀名"><a href="#常见的备份文件后缀名" class="headerlink" title="常见的备份文件后缀名"></a>常见的备份文件后缀名</h4><pre><code>.git
+
+.svn 
+
+.swp
+
+.svn 
+
+.~ 
+
+.bak 
+
+.bash_history</code></pre>]]></content>
+      <categories>
+        <category>Writeup</category>
+      </categories>
+      <tags>
+        <tag>新手练习区</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cookie</title>
+    <url>/2020/03/06/cookie/</url>
+    <content><![CDATA[<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><img src="https://i.imgur.com/Jrb5zzg.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
+<li>α</li>
+</ul>
+<h4 id="使用Burpsuit进行抓包"><a href="#使用Burpsuit进行抓包" class="headerlink" title="使用Burpsuit进行抓包"></a>使用Burpsuit进行抓包</h4><p><img src="https://i.imgur.com/BBo9qRc.png" alt=""></p>
+<p><img src="https://i.imgur.com/tcIoxDK.png" alt=""></p>
+<p><img src="https://i.imgur.com/6SillS2.png" alt=""></p>
+<p><img src="https://i.imgur.com/yVu20RK.png" alt=""></p>
+<ul>
+<li>β</li>
+</ul>
+<h4 id="使用-HTTP-Header-Live-拓展"><a href="#使用-HTTP-Header-Live-拓展" class="headerlink" title="使用 HTTP Header Live 拓展"></a>使用 HTTP Header Live 拓展</h4><p><img src="https://i.imgur.com/DpPsVxr.png" alt=""></p>
+<p><img src="https://i.imgur.com/6y6f0hR.png" alt=""></p>
+<p>flag=cyberpeace{34275870cbf633cfcc2f07a54fe5b16e}</p>
+<h2 id="了解cookie"><a href="#了解cookie" class="headerlink" title="了解cookie"></a>了解cookie</h2><p>Cookie 并不是它的原意“甜饼”的意思, 而是一个保存在客户机中的简单的文本文件, 这个文件与特定的 Web文档关联在一起, 保存了该客户机访问这个Web 文档时的信息, 当客户机再次访问这个 Web 文档时这些信息可供该文档使用。由于“Cookie”具有可以保存在客户机上的神奇特性, 因此它可以帮助我们实现记录用户个人信息的功能, 而这一切都不必使用复杂的CGI等程序 。举例来说, 一个 Web 站点可能会为每一个访问者产生一个唯一的ID, 然后以 Cookie 文件的形式保存在每个用户的机器上。如果使用浏览器访问 Web, 会看到所有保存在硬盘上的  Cookie。在这个文件夹里每一个文件都是一个由“名/值”对组成的文本文件,另外还有一个文件保存有所有对应的 Web 站点的信息。在这里的每个  Cookie 文件都是一个简单而又普通的文本文件。透过文件名, 就可以看到是哪个 Web  站点在机器上放置了Cookie(当然站点信息在文件里也有保存)</p>
+<p><a href="https://segmentfault.com/a/1190000016248401" target="_blank" rel="noopener">资料1</a></p>
+<p><a href="https://www.jianshu.com/p/6fc9cea6daa2" target="_blank" rel="noopener">资料2</a></p>
+]]></content>
+      <categories>
+        <category>Writeup</category>
+      </categories>
+      <tags>
+        <tag>新手练习区</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>robots</title>
+    <url>/2020/03/06/robots/</url>
+    <content><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p>
+<p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
+<li>α</li>
+</ul>
+<h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p>
+<p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p>
+<p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p>
+<ul>
+<li>β</li>
+</ul>
+<h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p>
+<pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p>
+<p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p>
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *
+
+Disallow:  /
+
+Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p>
+<p>配置项详解:</p>
+<p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p>
+<p>Disallow:不允许爬取的目录。 </p>
+<p>Allow:一般配合Disallow使用，用于排除限制。 </p>
+<p>常见的爬虫名: </p>
+<pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符
+
+Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录
+
+Disallow: /require/  这里定义是禁止爬寻require目录下面的目录
+
+Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录
+
+Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。
+
+Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址
+
+Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片
+
+Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。
+
+Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录
+
+Allow: /tmp  这里定义是允许爬寻tmp的整个目录
+
+Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。
+
+Allow: .gif$  允许抓取网页和gif格式图片
+
+Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
+]]></content>
+      <categories>
+        <category>Writeup</category>
+      </categories>
+      <tags>
+        <tag>新手练习区</tag>
       </tags>
   </entry>
   <entry>
