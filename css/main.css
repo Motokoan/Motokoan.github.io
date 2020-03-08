@@ -2111,7 +2111,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff524b;
+  background: #852547;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3218,4 +3218,17 @@ pre {
 }
 .headband {
   display: none;
+}
+.post-toc ol a {
+  color: #c0c0c0;
+}
+.post-toc ol a:hover {
+  color: #fff;
+}
+.post-toc .nav .active > a {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+.post-toc .nav .active > a:hover {
+  color: #fff;
 }
