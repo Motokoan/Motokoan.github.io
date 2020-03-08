@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vuitton-motoko.github.io/"/>
-  <updated>2020-03-07T09:10:30.993Z</updated>
+  <updated>2020-03-07T13:20:43.058Z</updated>
   <id>https://vuitton-motoko.github.io/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>robots</title>
-    <link href="https://vuitton-motoko.github.io/2020/03/06/robots/"/>
-    <id>https://vuitton-motoko.github.io/2020/03/06/robots/</id>
-    <published>2020-03-05T16:00:00.000Z</published>
-    <updated>2020-03-07T09:10:30.993Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p><p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p><h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul><li>α</li></ul><h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p><p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p><p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p><ul><li>β</li></ul><h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p><pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p><p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p><h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *Disallow:  /Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p><p>配置项详解:</p><p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p><p>Disallow:不允许爬取的目录。 </p><p>Allow:一般配合Disallow使用，用于排除限制。 </p><p>常见的爬虫名: </p><pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录Disallow: /require/  这里定义是禁止爬寻require目录下面的目录Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录Allow: /tmp  这里定义是允许爬寻tmp的整个目录Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。Allow: .gif$  允许抓取网页和gif格式图片Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;robots&quot;&gt;&lt;a href=&quot;#robots&quot; class=&quot;headerlink&quot; title=&quot;robots&quot;&gt;&lt;/a&gt;robots&lt;/h1&gt;&lt;p&gt;是的，一片空白，，，&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/XdXAIT
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Writeup" scheme="https://vuitton-motoko.github.io/tags/Writeup/"/>
-    
-  </entry>
   
   <entry>
     <title>backup</title>
@@ -79,6 +54,31 @@
       
       
         &lt;h1 id=&quot;cookie&quot;&gt;&lt;a href=&quot;#cookie&quot; class=&quot;headerlink&quot; title=&quot;cookie&quot;&gt;&lt;/a&gt;cookie&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Jrb5zzg.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Writeup" scheme="https://vuitton-motoko.github.io/tags/Writeup/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>robots</title>
+    <link href="https://vuitton-motoko.github.io/2020/03/06/robots/"/>
+    <id>https://vuitton-motoko.github.io/2020/03/06/robots/</id>
+    <published>2020-03-05T16:00:00.000Z</published>
+    <updated>2020-03-07T09:10:30.993Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p><p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p><h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul><li>α</li></ul><h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p><p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p><p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p><ul><li>β</li></ul><h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p><pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p><p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p><h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *Disallow:  /Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p><p>配置项详解:</p><p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p><p>Disallow:不允许爬取的目录。 </p><p>Allow:一般配合Disallow使用，用于排除限制。 </p><p>常见的爬虫名: </p><pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录Disallow: /require/  这里定义是禁止爬寻require目录下面的目录Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录Allow: /tmp  这里定义是允许爬寻tmp的整个目录Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。Allow: .gif$  允许抓取网页和gif格式图片Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;robots&quot;&gt;&lt;a href=&quot;#robots&quot; class=&quot;headerlink&quot; title=&quot;robots&quot;&gt;&lt;/a&gt;robots&lt;/h1&gt;&lt;p&gt;是的，一片空白，，，&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/XdXAIT
       
     
     </summary>
