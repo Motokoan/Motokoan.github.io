@@ -84,156 +84,6 @@ apt-get install fcitx-googlepinyin</code></pre><p>然后重启，就会出现新
       </tags>
   </entry>
   <entry>
-    <title>backup</title>
-    <url>/2020/03/06/backup/</url>
-    <content><![CDATA[<h1 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h1><p><img src="https://i.imgur.com/eQ1rXd0.png" alt=""></p>
-<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><h3 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h3><h4 id="index-php-save"><a href="#index-php-save" class="headerlink" title="index.php.save"></a>index.php.save</h4><p><img src="https://i.imgur.com/hIYytPH.png" alt=""></p>
-<h4 id="index-php-bak"><a href="#index-php-bak" class="headerlink" title="index.php.bak"></a>index.php.bak</h4><p><img src="https://i.imgur.com/XcLdGfj.png" alt=""></p>
-<p><img src="https://i.imgur.com/VcHw2Yq.png" alt=""></p>
-<pre><code>Flag=Cyberpeace{855A1C4B3401294CB6604CCC98BDE334}</code></pre><h2 id="备份文件"><a href="#备份文件" class="headerlink" title="备份文件"></a>备份文件</h2><p>很多开发人员在编辑文件前，都会先进行一次备份，同时会把备份文件和源文件放在服务器上的同一个地方。这样的话，如果存在绕过身份验证，就可以直接下载到这个备份文件，从而得到网站源代码。</p>
-<h4 id="有关备份文件的可以利用的情况主要有3种"><a href="#有关备份文件的可以利用的情况主要有3种" class="headerlink" title="有关备份文件的可以利用的情况主要有3种"></a>有关备份文件的可以利用的情况主要有3种</h4><ol>
-<li><p>代码编辑器产生的备份文件</p>
-</li>
-<li><p>没有删除版本控制系统（VCS）产生的备份文件</p>
-</li>
-<li><p>没有删除开发人员手动备份的文件</p>
-</li>
-</ol>
-<h4 id="php的备份有两种"><a href="#php的备份有两种" class="headerlink" title="php的备份有两种"></a>php的备份有两种</h4><pre><code>.php~
-
-.php.bak</code></pre><h4 id="常见的备份文件后缀名"><a href="#常见的备份文件后缀名" class="headerlink" title="常见的备份文件后缀名"></a>常见的备份文件后缀名</h4><pre><code>.git
-
-.svn 
-
-.swp
-
-.svn 
-
-.~ 
-
-.bak 
-
-.bash_history</code></pre>]]></content>
-      <tags>
-        <tag>Writeup</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>robots</title>
-    <url>/2020/03/06/robots/</url>
-    <content><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p>
-<p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p>
-<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
-<li>α</li>
-</ul>
-<h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p>
-<p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p>
-<p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p>
-<ul>
-<li>β</li>
-</ul>
-<h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p>
-<pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p>
-<p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p>
-<h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *
-
-Disallow:  /
-
-Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p>
-<p>配置项详解:</p>
-<p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p>
-<p>Disallow:不允许爬取的目录。 </p>
-<p>Allow:一般配合Disallow使用，用于排除限制。 </p>
-<p>常见的爬虫名: </p>
-<pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符
-
-Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录
-
-Disallow: /require/  这里定义是禁止爬寻require目录下面的目录
-
-Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录
-
-Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。
-
-Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址
-
-Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片
-
-Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。
-
-Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录
-
-Allow: /tmp  这里定义是允许爬寻tmp的整个目录
-
-Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。
-
-Allow: .gif$  允许抓取网页和gif格式图片
-
-Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
-]]></content>
-      <tags>
-        <tag>Writeup</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建:Github Pages+Hexo</title>
-    <url>/2020/02/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%9AHexo/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/UIIq7FV.png" alt=""></p>
-<h1 id="Hexo-博客框架"><a href="#Hexo-博客框架" class="headerlink" title="Hexo 博客框架"></a>Hexo 博客框架</h1><p>00 安装 Node.js  </p>
-<pre><code>https://nodejs.org/zh-cn/</code></pre><p>选择 LTS（长期支持版）</p>
-<h2 id="以管理员方式打开cmd"><a href="#以管理员方式打开cmd" class="headerlink" title="以管理员方式打开cmd"></a>以管理员方式打开cmd</h2><pre><code>注：runas /user:administrator &quot;cmd/k&quot;</code></pre><p>01 查看版本</p>
-<pre><code>node -v
-npm -v</code></pre><p>02 安装cnpm<br>    npm install -g cnpm –reistry=<a href="https://registry.npm.taobo.org" target="_blank" rel="noopener">https://registry.npm.taobo.org</a></p>
-<p>注：淘宝镜像源</p>
-<pre><code>cnpm -v</code></pre><p>03 全局安装hexo-cli</p>
-<pre><code>cnpm install -g hexo-cli
-
-hexo -v            查看  hexo-cli项 与 node项</code></pre><h2 id="C-Users-administertor路径下新建文件夹blog"><a href="#C-Users-administertor路径下新建文件夹blog" class="headerlink" title="C:\Users\administertor路径下新建文件夹blog"></a>C:\Users\administertor路径下新建文件夹blog</h2><p>如果将来出错，干掉它！</p>
-<p>重新来过</p>
-<p>04 cd blog</p>
-<pre><code>hexo init      初始化博客
-
-hexo server    启动博客</code></pre><p>###本地预览###</p>
-<pre><code>http://localhost:4000</code></pre><p>操作成功之后会出现博客界面</p>
-<p><img src="https://i.imgur.com/QDN9AwO.png" alt=""></p>
-<p>恭喜你，即将成功</p>
-<p>###新建博文###<br>    hexo new “新建文章名称”</p>
-<p>05 接下来就需要创作和编辑内容了（请自行学习）</p>
-<pre><code> cd ../..    重新生成，退回至blog 目录
-
-
-hexo clean
-
-hexo generate
-
-hexo server （重新启动）</code></pre><p>本地启动完成</p>
-<pre><code>Ctrl+c 结束</code></pre><h2 id="通过Github部署至远端"><a href="#通过Github部署至远端" class="headerlink" title="通过Github部署至远端"></a>通过Github部署至远端</h2><p>06 新建一个仓库  New repository</p>
-<pre><code>Repository name   用户名.github.io</code></pre><p>Create repository</p>
-<p>07 blog目录下安装Git部署插件</p>
-<pre><code>cnpm install hexo-deployer-git --save</code></pre><p>08 设置_config.yml文件</p>
-<pre><code>notepad _config.yml
-
-type: git
-repo: 仓库地址
-branch: master</code></pre><h2 id="部署至远端"><a href="#部署至远端" class="headerlink" title="部署至远端"></a>部署至远端</h2><pre><code>hexo d</code></pre><p>09 输入Github账号，密码</p>
-<p>注意：需提前git设置用户名和邮箱地址</p>
-<pre><code>$ git config --global user.name &quot;John Doe&quot;
-$ git config --global user.email &quot;johndoe@example.com&quot;</code></pre><p>###拓展——更换博客主题###</p>
-<p>例：在blog目录中下载主题</p>
-<pre><code>git clone https://github.com/litten/hexo-yilia.git themes/yilia</code></pre><p>  哎，clone的贼慢，太难了</p>
-<p>10 修改_config.yml文件</p>
-<pre><code>notepad _config.yml</code></pre><p>theme: landscape&gt;&gt;&gt;yilia 更改主题名称</p>
-<pre><code>hexo clean
-hexo generate
-hexo server    
-
-hexo deploy</code></pre><h2 id="感谢-codesheep-cn"><a href="#感谢-codesheep-cn" class="headerlink" title="感谢 codesheep.cn"></a>感谢 <a href="www.codesheep.cn">codesheep.cn</a></h2><p> <a href="https://www.bilibili.com/video/av44544186?t=1644" target="_blank" rel="noopener">视频教程链接</a></p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VMware安装Android X86</title>
     <url>/2020/02/05/Vmware%E5%AE%89%E8%A3%85Android-X86/</url>
     <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>废话不多，淦它！</p>
@@ -377,6 +227,63 @@ rm *.apk</code></pre><p>其实吧，没必要耗费精力搞这么个伪Android�
       </tags>
   </entry>
   <entry>
+    <title>robots</title>
+    <url>/2020/03/06/robots/</url>
+    <content><![CDATA[<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>是的，一片空白，，，</p>
+<p><img src="https://i.imgur.com/XdXAITL.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul>
+<li>α</li>
+</ul>
+<h4 id="利用URL访问该网页的robots-txt文件"><a href="#利用URL访问该网页的robots-txt文件" class="headerlink" title="利用URL访问该网页的robots.txt文件"></a>利用URL访问该网页的robots.txt文件</h4><p> url/robots.txt</p>
+<p><img src="https://i.imgur.com/znnvfA6.png" alt=""></p>
+<p>禁止网页爬虫爬取f1ag_1s_h3re.php文件</p>
+<ul>
+<li>β</li>
+</ul>
+<h4 id="利用URL访问该文件得出Flag"><a href="#利用URL访问该文件得出Flag" class="headerlink" title="利用URL访问该文件得出Flag"></a>利用URL访问该文件得出Flag</h4><p><img src="https://i.imgur.com/nnTfOU9.png" alt=""></p>
+<pre><code>Flag=cyberpeace{43c9f9fbbb97040ca31aa25c7ef74811}</code></pre><h2 id="什么是Robots协议？"><a href="#什么是Robots协议？" class="headerlink" title="什么是Robots协议？"></a>什么是Robots协议？</h2><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。</p>
+<p>robots.txt文件是一个文本文件, 是一个协议而不是一个命令.  当爬虫访问一个站点时， 它会首先检查该站点根目录下是否存在robots.txt，如果存在，爬虫就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的爬虫将能够访问网站上所有没有被口令保护的页面。 </p>
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例:"></a>样例:</h4><pre><code>User-agent: *
+
+Disallow:  /
+
+Allow: /public/</code></pre><p>以上表明爬虫只充许爬取public目录，将上面的内容保存为robots.txt文件，放在网站的根目录下，和网站的入口文件(  index.html,index.htm等)在一起即可. </p>
+<p>配置项详解:</p>
+<p>User-agent 指定爬虫名, *代表任何爬虫。 如有多条User-agent记录，则可以限制多个爬虫，但至少需要指定一条. </p>
+<p>Disallow:不允许爬取的目录。 </p>
+<p>Allow:一般配合Disallow使用，用于排除限制。 </p>
+<p>常见的爬虫名: </p>
+<pre><code>BaiduSpider       Googlebot     360Spider     YodaoBot       ia_archiver     </code></pre><h4 id="robots-txt文件写法："><a href="#robots-txt文件写法：" class="headerlink" title="robots.txt文件写法："></a>robots.txt文件写法：</h4><pre><code>User-agent: *  这里的*代表的所有的搜索引擎种类，*是一个通配符
+
+Disallow: /admin/  这里定义是禁止爬寻admin目录下面的目录
+
+Disallow: /require/  这里定义是禁止爬寻require目录下面的目录
+
+Disallow: /ABC/  这里定义是禁止爬寻ABC目录下面的目录
+
+Disallow: /cgi-bin/.htm  禁止访问/cgi-bin/目录下的所有以&quot;.htm&quot;为后缀的URL(包含子目录)。
+
+Disallow: /?*  禁止访问网站中所有包含问号 (?) 的网址
+
+Disallow: /.jpg$  禁止抓取网页所有的.jpg格式的图片
+
+Disallow:/ab/adc.html  禁止爬取ab文件夹下面的adc.html文件。
+
+Allow: /cgi-bin/　 这里定义是允许爬寻cgi-bin目录下面的目录
+
+Allow: /tmp  这里定义是允许爬寻tmp的整个目录
+
+Allow: .htm$  仅允许访问以&quot;.htm&quot;为后缀的URL。
+
+Allow: .gif$  允许抓取网页和gif格式图片
+
+Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
+]]></content>
+      <tags>
+        <tag>Writeup</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>cookie</title>
     <url>/2020/03/06/cookie/</url>
     <content><![CDATA[<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><img src="https://i.imgur.com/Jrb5zzg.png" alt=""></p>
@@ -399,6 +306,64 @@ rm *.apk</code></pre><p>其实吧，没必要耗费精力搞这么个伪Android�
 ]]></content>
       <tags>
         <tag>Writeup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建:Github Pages+Hexo</title>
+    <url>/2020/02/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%9AHexo/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/UIIq7FV.png" alt=""></p>
+<h1 id="Hexo-博客框架"><a href="#Hexo-博客框架" class="headerlink" title="Hexo 博客框架"></a>Hexo 博客框架</h1><p>00 安装 Node.js  </p>
+<pre><code>https://nodejs.org/zh-cn/</code></pre><p>选择 LTS（长期支持版）</p>
+<h2 id="以管理员方式打开cmd"><a href="#以管理员方式打开cmd" class="headerlink" title="以管理员方式打开cmd"></a>以管理员方式打开cmd</h2><pre><code>注：runas /user:administrator &quot;cmd/k&quot;</code></pre><p>01 查看版本</p>
+<pre><code>node -v
+npm -v</code></pre><p>02 安装cnpm<br>    npm install -g cnpm –reistry=<a href="https://registry.npm.taobo.org" target="_blank" rel="noopener">https://registry.npm.taobo.org</a></p>
+<p>注：淘宝镜像源</p>
+<pre><code>cnpm -v</code></pre><p>03 全局安装hexo-cli</p>
+<pre><code>cnpm install -g hexo-cli
+
+hexo -v            查看  hexo-cli项 与 node项</code></pre><h2 id="C-Users-administertor路径下新建文件夹blog"><a href="#C-Users-administertor路径下新建文件夹blog" class="headerlink" title="C:\Users\administertor路径下新建文件夹blog"></a>C:\Users\administertor路径下新建文件夹blog</h2><p>如果将来出错，干掉它！</p>
+<p>重新来过</p>
+<p>04 cd blog</p>
+<pre><code>hexo init      初始化博客
+
+hexo server    启动博客</code></pre><p>###本地预览###</p>
+<pre><code>http://localhost:4000</code></pre><p>操作成功之后会出现博客界面</p>
+<p><img src="https://i.imgur.com/QDN9AwO.png" alt=""></p>
+<p>恭喜你，即将成功</p>
+<p>###新建博文###<br>    hexo new “新建文章名称”</p>
+<p>05 接下来就需要创作和编辑内容了（请自行学习）</p>
+<pre><code> cd ../..    重新生成，退回至blog 目录
+
+
+hexo clean
+
+hexo generate
+
+hexo server （重新启动）</code></pre><p>本地启动完成</p>
+<pre><code>Ctrl+c 结束</code></pre><h2 id="通过Github部署至远端"><a href="#通过Github部署至远端" class="headerlink" title="通过Github部署至远端"></a>通过Github部署至远端</h2><p>06 新建一个仓库  New repository</p>
+<pre><code>Repository name   用户名.github.io</code></pre><p>Create repository</p>
+<p>07 blog目录下安装Git部署插件</p>
+<pre><code>cnpm install hexo-deployer-git --save</code></pre><p>08 设置_config.yml文件</p>
+<pre><code>notepad _config.yml
+
+type: git
+repo: 仓库地址
+branch: master</code></pre><h2 id="部署至远端"><a href="#部署至远端" class="headerlink" title="部署至远端"></a>部署至远端</h2><pre><code>hexo d</code></pre><p>09 输入Github账号，密码</p>
+<p>注意：需提前git设置用户名和邮箱地址</p>
+<pre><code>$ git config --global user.name &quot;John Doe&quot;
+$ git config --global user.email &quot;johndoe@example.com&quot;</code></pre><p>###拓展——更换博客主题###</p>
+<p>例：在blog目录中下载主题</p>
+<pre><code>git clone https://github.com/litten/hexo-yilia.git themes/yilia</code></pre><p>  哎，clone的贼慢，太难了</p>
+<p>10 修改_config.yml文件</p>
+<pre><code>notepad _config.yml</code></pre><p>theme: landscape&gt;&gt;&gt;yilia 更改主题名称</p>
+<pre><code>hexo clean
+hexo generate
+hexo server    
+
+hexo deploy</code></pre><h2 id="感谢-codesheep-cn"><a href="#感谢-codesheep-cn" class="headerlink" title="感谢 codesheep.cn"></a>感谢 <a href="www.codesheep.cn">codesheep.cn</a></h2><p> <a href="https://www.bilibili.com/video/av44544186?t=1644" target="_blank" rel="noopener">视频教程链接</a></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -428,6 +393,41 @@ rm *.apk</code></pre><p>其实吧，没必要耗费精力搞这么个伪Android�
 <h4 id="以前的使用方法："><a href="#以前的使用方法：" class="headerlink" title="以前的使用方法："></a>以前的使用方法：</h4><p>在浏览器地址栏中输入</p>
 <pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
 <h4 id="JS用法"><a href="#JS用法" class="headerlink" title="JS用法:"></a>JS用法:</h4><pre><code>window.location=&quot;view-source:&quot; + window.location</code></pre>]]></content>
+      <tags>
+        <tag>Writeup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>backup</title>
+    <url>/2020/03/06/backup/</url>
+    <content><![CDATA[<h1 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h1><p><img src="https://i.imgur.com/eQ1rXd0.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><h3 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h3><h4 id="index-php-save"><a href="#index-php-save" class="headerlink" title="index.php.save"></a>index.php.save</h4><p><img src="https://i.imgur.com/hIYytPH.png" alt=""></p>
+<h4 id="index-php-bak"><a href="#index-php-bak" class="headerlink" title="index.php.bak"></a>index.php.bak</h4><p><img src="https://i.imgur.com/XcLdGfj.png" alt=""></p>
+<p><img src="https://i.imgur.com/VcHw2Yq.png" alt=""></p>
+<pre><code>Flag=Cyberpeace{855A1C4B3401294CB6604CCC98BDE334}</code></pre><h2 id="备份文件"><a href="#备份文件" class="headerlink" title="备份文件"></a>备份文件</h2><p>很多开发人员在编辑文件前，都会先进行一次备份，同时会把备份文件和源文件放在服务器上的同一个地方。这样的话，如果存在绕过身份验证，就可以直接下载到这个备份文件，从而得到网站源代码。</p>
+<h4 id="有关备份文件的可以利用的情况主要有3种"><a href="#有关备份文件的可以利用的情况主要有3种" class="headerlink" title="有关备份文件的可以利用的情况主要有3种"></a>有关备份文件的可以利用的情况主要有3种</h4><ol>
+<li><p>代码编辑器产生的备份文件</p>
+</li>
+<li><p>没有删除版本控制系统（VCS）产生的备份文件</p>
+</li>
+<li><p>没有删除开发人员手动备份的文件</p>
+</li>
+</ol>
+<h4 id="php的备份有两种"><a href="#php的备份有两种" class="headerlink" title="php的备份有两种"></a>php的备份有两种</h4><pre><code>.php~
+
+.php.bak</code></pre><h4 id="常见的备份文件后缀名"><a href="#常见的备份文件后缀名" class="headerlink" title="常见的备份文件后缀名"></a>常见的备份文件后缀名</h4><pre><code>.git
+
+.svn 
+
+.swp
+
+.svn 
+
+.~ 
+
+.bak 
+
+.bash_history</code></pre>]]></content>
       <tags>
         <tag>Writeup</tag>
       </tags>
