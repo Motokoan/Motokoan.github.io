@@ -601,8 +601,8 @@ Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a 
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/06/view_source/" rel="next" title="view_source">
-                <i class="fa fa-chevron-left"></i> view_source
+              <a href="/2020/03/06/cookie/" rel="next" title="cookie">
+                <i class="fa fa-chevron-left"></i> cookie
               </a>
             
           </div>
@@ -692,6 +692,24 @@ Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a 
               <p class="site-author-name" itemprop="name">Ba2in9a</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
+        <!-- 现代写法，推荐 -->
+        <!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
+        <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+        <!--End-->
+        <script>
+          fetch('https://v1.hitokoto.cn')
+            .then(function (res){
+              return res.json();
+            })
+            .then(function (data) {
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto; 
+            })
+            .catch(function (err) {
+              console.error(err);
+            })
+        </script>
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=50 src="//music.163.com/outchain/player?type=2&id=1317422762&auto=0&height=66"></iframe>
           <nav class="site-state motion-element">
 
