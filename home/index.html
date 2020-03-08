@@ -120,12 +120,14 @@
 
 
 
+<meta name="description" content="CTF WEB技能树虽然是分类写的但是知识都是成体系的要学会联系不同漏洞 基础内容php基本代码能力python写requests库脚本的能力sql查询语句的基本应用后续再接触insert update之类的注入原理都是一样的了解http协议 web服务的搭建过程和基本结构 文件包含（LFI）会用伪协议读取源码php:&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resou">
 <meta property="og:type" content="website">
-<meta property="og:title" content="home">
+<meta property="og:title" content="主页">
 <meta property="og:url" content="https://vuitton-motoko.github.io/home/index.html">
 <meta property="og:site_name" content="Ba2in9a&#39;s Blog">
+<meta property="og:description" content="CTF WEB技能树虽然是分类写的但是知识都是成体系的要学会联系不同漏洞 基础内容php基本代码能力python写requests库脚本的能力sql查询语句的基本应用后续再接触insert update之类的注入原理都是一样的了解http协议 web服务的搭建过程和基本结构 文件包含（LFI）会用伪协议读取源码php:&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resou">
 <meta property="article:published_time" content="2020-03-08T02:48:23.000Z">
-<meta property="article:modified_time" content="2020-03-08T02:48:23.861Z">
+<meta property="article:modified_time" content="2020-03-08T05:06:20.869Z">
 <meta property="article:author" content="Ba2in9a">
 <meta name="twitter:card" content="summary">
 
@@ -172,7 +174,7 @@
   daovoice('update');
   </script>
 
-  <title>home | Ba2in9a's Blog</title>
+  <title>主页 | Ba2in9a's Blog</title>
   
 
 
@@ -188,6 +190,8 @@
   
     <script src="/js/cursor/text.js"></script>
   
+
+
 
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -342,7 +346,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">home</h1>
+	<h1 class="post-title" itemprop="name headline">主页</h1>
 
 
 
@@ -354,7 +358,48 @@
       <div class="post-body">
         
         
-          
+          <h1 id="CTF-WEB技能树"><a href="#CTF-WEB技能树" class="headerlink" title="CTF WEB技能树"></a>CTF WEB技能树</h1><p>虽然是分类写的但是知识都是成体系的要学会联系不同漏洞</p>
+<h2 id="基础内容"><a href="#基础内容" class="headerlink" title="基础内容"></a>基础内容</h2><p>php基本代码能力python写requests库脚本的能力<br>sql查询语句的基本应用后续再接触insert update之类的注入原理都是一样的<br>了解http协议 web服务的搭建过程和基本结构</p>
+<h2 id="文件包含（LFI）"><a href="#文件包含（LFI）" class="headerlink" title="文件包含（LFI）"></a>文件包含（LFI）</h2><p>会用伪协议读取源码php:/filter/read=convert.base64-encode/resource=index.php 了解过滤情况下基本的变形php://filter/read=string.rot13/resource=index.php<br>包含上传的图片马getshell<br>日志污染getshell（典型：ssrf打smtp日志污染+include文件包含）<br>在allow_url_include=On的情况下可以包含远程文件</p>
+<h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><p>了解基本的闭合逃逸语句原理<br>了解万能密码在代码层次的原理</p>
+<h4 id="sql注入的三种基本类型："><a href="#sql注入的三种基本类型：" class="headerlink" title="sql注入的三种基本类型："></a>sql注入的三种基本类型：</h4><ul>
+<li><p>直接回显</p>
+</li>
+<li><p>布尔盲注时间盲注</p>
+</li>
+<li><p>报错注入</p>
+<h4 id="sql注入的进阶类型："><a href="#sql注入的进阶类型：" class="headerlink" title="sql注入的进阶类型："></a>sql注入的进阶类型：</h4></li>
+<li><p>堆叠注入（PDO、mysqli-&gt;mutiquery）</p>
+</li>
+<li><p>regexp盲注（布尔或时间，根据具体情况判断）</p>
+</li>
+<li><p>利用mysql特性的注入如handler</p>
+</li>
+<li><p>无列名注入</p>
+</li>
+<li><p>bypass information_schema过滤经常跟无列名注入一起出</p>
+</li>
+<li><p>大小写比较盲注</p>
+</li>
+<li><p>load_file读取文件</p>
+</li>
+<li><p>dnslog外带</p>
+</li>
+<li><p>rollup with having构造空密码</p>
+</li>
+<li><p>会编写盲注脚本</p>
+</li>
+<li><p>二次注入</p>
+</li>
+</ul>
+<h4 id="udf提权"><a href="#udf提权" class="headerlink" title="udf提权"></a>udf提权</h4><h4 id="sql注入写webshell（要求有写入权限并且得知web目录绝对路径）"><a href="#sql注入写webshell（要求有写入权限并且得知web目录绝对路径）" class="headerlink" title="sql注入写webshell（要求有写入权限并且得知web目录绝对路径）"></a>sql注入写webshell（要求有写入权限并且得知web目录绝对路径）</h4><h2 id="远程命令执行RCE"><a href="#远程命令执行RCE" class="headerlink" title="远程命令执行RCE"></a>远程命令执行RCE</h2><p>了解linux基本的命令和php执行命令的函数<br>学会基本的绕过（反引号执行命令、$IFS绕过空格过滤、变量绕过正则）<br>无字母数字webshell<br>无参数rce<br>linux反弹shell windows反弹shell<br>curl外带数据<br>dnslog外带数据</p>
+<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><p>基本的绕过php3 php4 php5 phtml%00截断<br>文件包含解析webshell<br>上传.user.ini解析webshell（要求上传的目录内有php文件并且是nginx环境下）<br>上传.htaccess解析webshell（要求Apache）</p>
+<h2 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化"></a>反序列化</h2><p>了解常见的魔术方法以及跳类的技巧（_destruct是所有反序列化的入口，跳类可以利用调用别的魔术方法或者是调用不同类的同名方法）<br>学会pop链构造（需要有面向对象基础以及一个思维的转变）<br>phar反序列化<br>session反序列化<br>反序列化字符逃逸（变多或者变少）<br>php内置类soapclient反序列化打ssrf</p>
+<h2 id="SSRF"><a href="#SSRF" class="headerlink" title="SSRF"></a>SSRF</h2><p>了解ssrf常用协议 gopher dict file<br>了解parse_url和curl在解析url时候的差别<br>gopher打内网mysql<br>ssrf打redis未授权<br>ssrf经典案例：weblogic（布尔值探测内网服务+打内网redis）<br>xxe的ssrf</p>
+<h2 id="XXE"><a href="#XXE" class="headerlink" title="XXE"></a>XXE</h2><p>基本读取文件<br>xxe触发phar反序列化<br>xxe ssrf<br>xxe EXPECT RCE<br>blindxxe外带数据<br>zib流压缩xxe数据外带<br>php://filter/zlib.deflate/convert.base64-encode/resource=<br>解压：<br>php://filter/read=convert.base64-decode/zlib.inflate/resource=<br>CDATA</p>
+<h2 id="PythonWeb相关"><a href="#PythonWeb相关" class="headerlink" title="PythonWeb相关"></a>PythonWeb相关</h2><p>Django伪造cookie<br>yaml反序列化<br>pickle反序列化rce<br>flask ssti模板注入<br>flask伪造cookie</p>
+<h2 id="一些杂类知识"><a href="#一些杂类知识" class="headerlink" title="一些杂类知识"></a>一些杂类知识</h2><p>rogue mysqlsever读取客户端文件（可以触发phar反序列化）<br>padding oracle和CBC字节翻转密码学算法应用层面的攻击<br>ssi漏洞rce<br>伪随机数算法的攻击</p>
+
         
       </div>
       
@@ -372,15 +417,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80ODk3Ni8yNTQ3MA=="></div>
-    </div>
-
-  
-
-
 
         </div>
         
@@ -402,8 +438,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -429,6 +474,15 @@
               </div>
             
            
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
            
             
@@ -510,6 +564,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CTF-WEB技能树"><span class="nav-number">1.</span> <span class="nav-text">CTF WEB技能树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础内容"><span class="nav-number">1.1.</span> <span class="nav-text">基础内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件包含（LFI）"><span class="nav-number">1.2.</span> <span class="nav-text">文件包含（LFI）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL注入"><span class="nav-number">1.3.</span> <span class="nav-text">SQL注入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sql注入的三种基本类型："><span class="nav-number">1.3.0.1.</span> <span class="nav-text">sql注入的三种基本类型：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sql注入的进阶类型："><span class="nav-number">1.3.0.2.</span> <span class="nav-text">sql注入的进阶类型：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#udf提权"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">udf提权</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sql注入写webshell（要求有写入权限并且得知web目录绝对路径）"><span class="nav-number">1.3.0.4.</span> <span class="nav-text">sql注入写webshell（要求有写入权限并且得知web目录绝对路径）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程命令执行RCE"><span class="nav-number">1.4.</span> <span class="nav-text">远程命令执行RCE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件上传"><span class="nav-number">1.5.</span> <span class="nav-text">文件上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反序列化"><span class="nav-number">1.6.</span> <span class="nav-text">反序列化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSRF"><span class="nav-number">1.7.</span> <span class="nav-text">SSRF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XXE"><span class="nav-number">1.8.</span> <span class="nav-text">XXE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PythonWeb相关"><span class="nav-number">1.9.</span> <span class="nav-text">PythonWeb相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些杂类知识"><span class="nav-number">1.10.</span> <span class="nav-text">一些杂类知识</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -717,17 +787,6 @@ setTimeout(momxc, 1000);
 
 
 
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
   
 
 
