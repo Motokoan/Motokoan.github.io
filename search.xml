@@ -126,48 +126,47 @@
 <p><a href="https://www.jianshu.com/p/6fc9cea6daa2" target="_blank" rel="noopener">资料2</a></p>
 ]]></content>
       <categories>
-        <category>Writeup</category>
+        <category>α</category>
       </categories>
       <tags>
-        <tag>新手练习区</tag>
+        <tag>CTF</tag>
+        <tag>Web</tag>
+        <tag>Writeup</tag>
       </tags>
   </entry>
   <entry>
-    <title>backup</title>
-    <url>/backup.html</url>
-    <content><![CDATA[<h1 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h1><p><img src="https://i.imgur.com/eQ1rXd0.png" alt=""></p>
-<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><h3 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h3><h4 id="index-php-save"><a href="#index-php-save" class="headerlink" title="index.php.save"></a>index.php.save</h4><p><img src="https://i.imgur.com/hIYytPH.png" alt=""></p>
-<h4 id="index-php-bak"><a href="#index-php-bak" class="headerlink" title="index.php.bak"></a>index.php.bak</h4><p><img src="https://i.imgur.com/XcLdGfj.png" alt=""></p>
-<p><img src="https://i.imgur.com/VcHw2Yq.png" alt=""></p>
-<pre><code>Flag=Cyberpeace{855A1C4B3401294CB6604CCC98BDE334}</code></pre><h2 id="备份文件"><a href="#备份文件" class="headerlink" title="备份文件"></a>备份文件</h2><p>很多开发人员在编辑文件前，都会先进行一次备份，同时会把备份文件和源文件放在服务器上的同一个地方。这样的话，如果存在绕过身份验证，就可以直接下载到这个备份文件，从而得到网站源代码。</p>
-<h4 id="有关备份文件的可以利用的情况主要有3种"><a href="#有关备份文件的可以利用的情况主要有3种" class="headerlink" title="有关备份文件的可以利用的情况主要有3种"></a>有关备份文件的可以利用的情况主要有3种</h4><ol>
-<li><p>代码编辑器产生的备份文件</p>
-</li>
-<li><p>没有删除版本控制系统（VCS）产生的备份文件</p>
-</li>
-<li><p>没有删除开发人员手动备份的文件</p>
-</li>
-</ol>
-<h4 id="php的备份有两种"><a href="#php的备份有两种" class="headerlink" title="php的备份有两种"></a>php的备份有两种</h4><pre><code>.php~
-
-.php.bak</code></pre><h4 id="常见的备份文件后缀名"><a href="#常见的备份文件后缀名" class="headerlink" title="常见的备份文件后缀名"></a>常见的备份文件后缀名</h4><pre><code>.git
-
-.svn 
-
-.swp
-
-.svn 
-
-.~ 
-
-.bak 
-
-.bash_history</code></pre>]]></content>
+    <title>Git全局初始化</title>
+    <url>/Git%E5%85%A8%E5%B1%80%E5%88%9D%E5%A7%8B%E5%8C%96.html</url>
+    <content><![CDATA[<h1 id="修改用户名和邮箱"><a href="#修改用户名和邮箱" class="headerlink" title="修改用户名和邮箱"></a>修改用户名和邮箱</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$  git config --global user.name &quot;输入你的用户名&quot;</span><br><span class="line"></span><br><span class="line">$  git config --global user.email &quot;输入你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/pZXw86y.png" alt=""></p>
+<h3 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
+<p>git bash和git cmd的区别:<br>git cmd是git bash的子集。所以直接用git bash就行了。<br>git gui是图形界面。</p>
+<h3 id="相关资料："><a href="#相关资料：" class="headerlink" title="相关资料："></a>相关资料：</h3><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><p>版本控制工具，支持该工具的网站有Github、BitBucket、Gitorious、国内的osChina仓库、csdn仓库等等。</p>
+<h4 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h4><p>是Linux、unix系统的外壳，也可以理解为命令行，就是你输入并执行命令的地方，git通过命令行和图形界面两种方式使用shell。</p>
+<h4 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h4><p>是shell的一种，最常用的shell之一。</p>
+<h4 id="git-Bash"><a href="#git-Bash" class="headerlink" title="git Bash"></a>git Bash</h4><p>方便你在windows下使用git命令的模拟终端（windows自带的cmd功能太弱）linux、unix可以直接使用git。</p>
+<h4 id="git-shell"><a href="#git-shell" class="headerlink" title="git shell"></a>git shell</h4><p>它是安装了git的shell，bash是一种shell。 </p>
+<h1 id="git环境终端中切换用户和密码"><a href="#git环境终端中切换用户和密码" class="headerlink" title="git环境终端中切换用户和密码"></a>git环境终端中切换用户和密码</h1><p><strong>1.打开控制面板，进入凭据管理器</strong></p>
+<p><img src="https://i.imgur.com/t6UwJec.png" alt=""></p>
+<p><strong>2.选择 Windows 凭据</strong></p>
+<p><img src="https://i.imgur.com/dFB0xP7.png" alt=""></p>
+<p><strong>3.找到 git:<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></strong></p>
+<p><img src="https://i.imgur.com/ArXkJtq.png" alt=""></p>
+<p><strong>4.编辑凭证，更换用户名和密码</strong></p>
+<p><img src="https://i.imgur.com/vddGUh2.png" alt=""></p>
+<p><img src="https://i.imgur.com/jIlUolm.png" alt=""></p>
+<p>就这样，问题解决。</p>
+<ul>
+<li>参考博文：</li>
+</ul>
+<p><a href="https://blog.csdn.net/qq_27229113/article/details/73484258" target="_blank" rel="noopener">qq_27229113</a></p>
+<p><a href="https://www.cnblogs.com/murenziwei/p/9621599.html" target="_blank" rel="noopener">木人子韦</a></p>
+]]></content>
       <categories>
-        <category>Writeup</category>
+        <category>Git</category>
       </categories>
       <tags>
-        <tag>新手练习区</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -224,10 +223,52 @@ Allow: .gif$  允许抓取网页和gif格式图片
 Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a href="https://blog.csdn.net/zhangyingchengqi/article/details/83348900" target="_blank" rel="noopener">https://blog.csdn.net/zhangyingchengqi/article/details/83348900</a></p>
 ]]></content>
       <categories>
-        <category>Writeup</category>
+        <category>α</category>
       </categories>
       <tags>
-        <tag>新手练习区</tag>
+        <tag>CTF</tag>
+        <tag>Web</tag>
+        <tag>Writeup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>backup</title>
+    <url>/backup.html</url>
+    <content><![CDATA[<h1 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h1><p><img src="https://i.imgur.com/eQ1rXd0.png" alt=""></p>
+<h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><h3 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h3><h4 id="index-php-save"><a href="#index-php-save" class="headerlink" title="index.php.save"></a>index.php.save</h4><p><img src="https://i.imgur.com/hIYytPH.png" alt=""></p>
+<h4 id="index-php-bak"><a href="#index-php-bak" class="headerlink" title="index.php.bak"></a>index.php.bak</h4><p><img src="https://i.imgur.com/XcLdGfj.png" alt=""></p>
+<p><img src="https://i.imgur.com/VcHw2Yq.png" alt=""></p>
+<pre><code>Flag=Cyberpeace{855A1C4B3401294CB6604CCC98BDE334}</code></pre><h2 id="备份文件"><a href="#备份文件" class="headerlink" title="备份文件"></a>备份文件</h2><p>很多开发人员在编辑文件前，都会先进行一次备份，同时会把备份文件和源文件放在服务器上的同一个地方。这样的话，如果存在绕过身份验证，就可以直接下载到这个备份文件，从而得到网站源代码。</p>
+<h4 id="有关备份文件的可以利用的情况主要有3种"><a href="#有关备份文件的可以利用的情况主要有3种" class="headerlink" title="有关备份文件的可以利用的情况主要有3种"></a>有关备份文件的可以利用的情况主要有3种</h4><ol>
+<li><p>代码编辑器产生的备份文件</p>
+</li>
+<li><p>没有删除版本控制系统（VCS）产生的备份文件</p>
+</li>
+<li><p>没有删除开发人员手动备份的文件</p>
+</li>
+</ol>
+<h4 id="php的备份有两种"><a href="#php的备份有两种" class="headerlink" title="php的备份有两种"></a>php的备份有两种</h4><pre><code>.php~
+
+.php.bak</code></pre><h4 id="常见的备份文件后缀名"><a href="#常见的备份文件后缀名" class="headerlink" title="常见的备份文件后缀名"></a>常见的备份文件后缀名</h4><pre><code>.git
+
+.svn 
+
+.swp
+
+.svn 
+
+.~ 
+
+.bak 
+
+.bash_history</code></pre>]]></content>
+      <categories>
+        <category>α</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>Web</tag>
+        <tag>Writeup</tag>
       </tags>
   </entry>
   <entry>
@@ -258,10 +299,12 @@ Sitemap:网站地图  告诉爬虫这个页面是网站地图</code></pre><p><a 
 <pre><code>view-source: sURL</code></pre><p>回车即可看到当前网页的源代码了。</p>
 <h4 id="JS用法"><a href="#JS用法" class="headerlink" title="JS用法:"></a>JS用法:</h4><pre><code>window.location=&quot;view-source:&quot; + window.location</code></pre>]]></content>
       <categories>
-        <category>Writeup</category>
+        <category>α</category>
       </categories>
       <tags>
-        <tag>新手练习区</tag>
+        <tag>CTF</tag>
+        <tag>Web</tag>
+        <tag>Writeup</tag>
       </tags>
   </entry>
   <entry>
