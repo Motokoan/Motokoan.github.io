@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ba2in9a.top/"/>
-  <updated>2020-03-09T04:54:12.068Z</updated>
+  <updated>2020-03-19T15:08:34.460Z</updated>
   <id>http://ba2in9a.top/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://ba2in9a.top/Git%E5%85%A8%E5%B1%80%E5%88%9D%E5%A7%8B%E5%8C%96.html"/>
     <id>http://ba2in9a.top/Git%E5%85%A8%E5%B1%80%E5%88%9D%E5%A7%8B%E5%8C%96.html</id>
     <published>2020-03-08T16:00:00.000Z</published>
-    <updated>2020-03-09T04:54:12.068Z</updated>
+    <updated>2020-03-19T15:08:34.460Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="修改用户名和邮箱"><a href="#修改用户名和邮箱" class="headerlink" title="修改用户名和邮箱"></a>修改用户名和邮箱</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$  git config --global user.name &quot;输入你的用户名&quot;</span><br><span class="line"></span><br><span class="line">$  git config --global user.email &quot;输入你的邮箱&quot;</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/pZXw86y.png" alt=""></p><h3 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --list</span><br></pre></td></tr></table></figure><p>git bash和git cmd的区别:<br>git cmd是git bash的子集。所以直接用git bash就行了。<br>git gui是图形界面。</p><h3 id="相关资料："><a href="#相关资料：" class="headerlink" title="相关资料："></a>相关资料：</h3><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><p>版本控制工具，支持该工具的网站有Github、BitBucket、Gitorious、国内的osChina仓库、csdn仓库等等。</p><h4 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h4><p>是Linux、unix系统的外壳，也可以理解为命令行，就是你输入并执行命令的地方，git通过命令行和图形界面两种方式使用shell。</p><h4 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h4><p>是shell的一种，最常用的shell之一。</p><h4 id="git-Bash"><a href="#git-Bash" class="headerlink" title="git Bash"></a>git Bash</h4><p>方便你在windows下使用git命令的模拟终端（windows自带的cmd功能太弱）linux、unix可以直接使用git。</p><h4 id="git-shell"><a href="#git-shell" class="headerlink" title="git shell"></a>git shell</h4><p>它是安装了git的shell，bash是一种shell。 </p><h1 id="git环境终端中切换用户和密码"><a href="#git环境终端中切换用户和密码" class="headerlink" title="git环境终端中切换用户和密码"></a>git环境终端中切换用户和密码</h1><p><strong>1.打开控制面板，进入凭据管理器</strong></p><p><img src="https://i.imgur.com/t6UwJec.png" alt=""></p><p><strong>2.选择 Windows 凭据</strong></p><p><img src="https://i.imgur.com/dFB0xP7.png" alt=""></p><p><strong>3.找到 git:<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></strong></p><p><img src="https://i.imgur.com/ArXkJtq.png" alt=""></p><p><strong>4.编辑凭证，更换用户名和密码</strong></p><p><img src="https://i.imgur.com/vddGUh2.png" alt=""></p><p><img src="https://i.imgur.com/jIlUolm.png" alt=""></p><p>就这样，问题解决。</p><ul><li>参考博文：</li></ul><p><a href="https://blog.csdn.net/qq_27229113/article/details/73484258" target="_blank" rel="noopener">qq_27229113</a></p><p><a href="https://www.cnblogs.com/murenziwei/p/9621599.html" target="_blank" rel="noopener">木人子韦</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="修改用户名和邮箱"><a href="#修改用户名和邮箱" class="headerlink" title="修改用户名和邮箱"></a>修改用户名和邮箱</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$  git config --global user.name &quot;输入你的用户名&quot;</span><br><span class="line"></span><br><span class="line">$  git config --global user.email &quot;输入你的邮箱&quot;</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/pZXw86y.png" alt=""></p><h3 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --list</span><br></pre></td></tr></table></figure><p>注意：多次更改会报错</p><p>warning: user.name has multiple values<br>error: cannot overwrite multiple values with a single value<br>       Use a regexp, –add or –replace-all to change user.name.</p><p>原因：添加多个name值，出现重复的name值</p><p>解决方案：</p><p>git config –global –replace-all user.name “你的 git 的名称” ​</p><p>git config –global –replace-all uesr.email “你的 git 的邮箱”</p><p>git bash和git cmd的区别:<br>git cmd是git bash的子集。所以直接用git bash就行了。<br>git gui是图形界面。</p><h3 id="相关资料："><a href="#相关资料：" class="headerlink" title="相关资料："></a>相关资料：</h3><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><p>版本控制工具，支持该工具的网站有Github、BitBucket、Gitorious、国内的osChina仓库、csdn仓库等等。</p><h4 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h4><p>是Linux、unix系统的外壳，也可以理解为命令行，就是你输入并执行命令的地方，git通过命令行和图形界面两种方式使用shell。</p><h4 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h4><p>是shell的一种，最常用的shell之一。</p><h4 id="git-Bash"><a href="#git-Bash" class="headerlink" title="git Bash"></a>git Bash</h4><p>方便你在windows下使用git命令的模拟终端（windows自带的cmd功能太弱）linux、unix可以直接使用git。</p><h4 id="git-shell"><a href="#git-shell" class="headerlink" title="git shell"></a>git shell</h4><p>它是安装了git的shell，bash是一种shell。 </p><h1 id="git环境终端中切换用户和密码"><a href="#git环境终端中切换用户和密码" class="headerlink" title="git环境终端中切换用户和密码"></a>git环境终端中切换用户和密码</h1><p><strong>1.打开控制面板，进入凭据管理器</strong></p><p><img src="https://i.imgur.com/t6UwJec.png" alt=""></p><p><strong>2.选择 Windows 凭据</strong></p><p><img src="https://i.imgur.com/dFB0xP7.png" alt=""></p><p><strong>3.找到 git:<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></strong></p><p><img src="https://i.imgur.com/ArXkJtq.png" alt=""></p><p><strong>4.编辑凭证，更换用户名和密码</strong></p><p><img src="https://i.imgur.com/vddGUh2.png" alt=""></p><p><img src="https://i.imgur.com/jIlUolm.png" alt=""></p><p>就这样，问题解决。</p><ul><li>参考博文：</li></ul><p><a href="https://blog.csdn.net/qq_27229113/article/details/73484258" target="_blank" rel="noopener">qq_27229113</a></p><p><a href="https://www.cnblogs.com/murenziwei/p/9621599.html" target="_blank" rel="noopener">木人子韦</a></p>]]></content>
     
     <summary type="html">
     
@@ -66,6 +66,36 @@
     
     
       <category term="图灵" scheme="http://ba2in9a.top/tags/%E5%9B%BE%E7%81%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cookie</title>
+    <link href="http://ba2in9a.top/cookie.html"/>
+    <id>http://ba2in9a.top/cookie.html</id>
+    <published>2020-03-05T16:00:00.000Z</published>
+    <updated>2020-03-09T04:52:32.126Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><img src="https://i.imgur.com/Jrb5zzg.png" alt=""></p><h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul><li>α</li></ul><h4 id="使用Burpsuit进行抓包"><a href="#使用Burpsuit进行抓包" class="headerlink" title="使用Burpsuit进行抓包"></a>使用Burpsuit进行抓包</h4><p><img src="https://i.imgur.com/BBo9qRc.png" alt=""></p><p><img src="https://i.imgur.com/tcIoxDK.png" alt=""></p><p><img src="https://i.imgur.com/6SillS2.png" alt=""></p><p><img src="https://i.imgur.com/yVu20RK.png" alt=""></p><ul><li>β</li></ul><h4 id="使用-HTTP-Header-Live-拓展"><a href="#使用-HTTP-Header-Live-拓展" class="headerlink" title="使用 HTTP Header Live 拓展"></a>使用 HTTP Header Live 拓展</h4><p><img src="https://i.imgur.com/DpPsVxr.png" alt=""></p><p><img src="https://i.imgur.com/6y6f0hR.png" alt=""></p><p>flag=cyberpeace{34275870cbf633cfcc2f07a54fe5b16e}</p><h2 id="了解cookie"><a href="#了解cookie" class="headerlink" title="了解cookie"></a>了解cookie</h2><p>Cookie 并不是它的原意“甜饼”的意思, 而是一个保存在客户机中的简单的文本文件, 这个文件与特定的 Web文档关联在一起, 保存了该客户机访问这个Web 文档时的信息, 当客户机再次访问这个 Web 文档时这些信息可供该文档使用。由于“Cookie”具有可以保存在客户机上的神奇特性, 因此它可以帮助我们实现记录用户个人信息的功能, 而这一切都不必使用复杂的CGI等程序 。举例来说, 一个 Web 站点可能会为每一个访问者产生一个唯一的ID, 然后以 Cookie 文件的形式保存在每个用户的机器上。如果使用浏览器访问 Web, 会看到所有保存在硬盘上的  Cookie。在这个文件夹里每一个文件都是一个由“名/值”对组成的文本文件,另外还有一个文件保存有所有对应的 Web 站点的信息。在这里的每个  Cookie 文件都是一个简单而又普通的文本文件。透过文件名, 就可以看到是哪个 Web  站点在机器上放置了Cookie(当然站点信息在文件里也有保存)</p><p><a href="https://segmentfault.com/a/1190000016248401" target="_blank" rel="noopener">资料1</a></p><p><a href="https://www.jianshu.com/p/6fc9cea6daa2" target="_blank" rel="noopener">资料2</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;cookie&quot;&gt;&lt;a href=&quot;#cookie&quot; class=&quot;headerlink&quot; title=&quot;cookie&quot;&gt;&lt;/a&gt;cookie&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Jrb5zzg.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="α" scheme="http://ba2in9a.top/categories/%CE%B1/"/>
+    
+    
+      <category term="CTF" scheme="http://ba2in9a.top/tags/CTF/"/>
+    
+      <category term="Web" scheme="http://ba2in9a.top/tags/Web/"/>
+    
+      <category term="Writeup" scheme="http://ba2in9a.top/tags/Writeup/"/>
     
   </entry>
   
@@ -114,36 +144,6 @@
       
         &lt;h1 id=&quot;robots&quot;&gt;&lt;a href=&quot;#robots&quot; class=&quot;headerlink&quot; title=&quot;robots&quot;&gt;&lt;/a&gt;robots&lt;/h1&gt;&lt;p&gt;是的，一片空白，，，&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/XdXAIT
-      
-    
-    </summary>
-    
-    
-      <category term="α" scheme="http://ba2in9a.top/categories/%CE%B1/"/>
-    
-    
-      <category term="CTF" scheme="http://ba2in9a.top/tags/CTF/"/>
-    
-      <category term="Web" scheme="http://ba2in9a.top/tags/Web/"/>
-    
-      <category term="Writeup" scheme="http://ba2in9a.top/tags/Writeup/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cookie</title>
-    <link href="http://ba2in9a.top/cookie.html"/>
-    <id>http://ba2in9a.top/cookie.html</id>
-    <published>2020-03-05T16:00:00.000Z</published>
-    <updated>2020-03-09T04:52:32.126Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><img src="https://i.imgur.com/Jrb5zzg.png" alt=""></p><h2 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h2><ul><li>α</li></ul><h4 id="使用Burpsuit进行抓包"><a href="#使用Burpsuit进行抓包" class="headerlink" title="使用Burpsuit进行抓包"></a>使用Burpsuit进行抓包</h4><p><img src="https://i.imgur.com/BBo9qRc.png" alt=""></p><p><img src="https://i.imgur.com/tcIoxDK.png" alt=""></p><p><img src="https://i.imgur.com/6SillS2.png" alt=""></p><p><img src="https://i.imgur.com/yVu20RK.png" alt=""></p><ul><li>β</li></ul><h4 id="使用-HTTP-Header-Live-拓展"><a href="#使用-HTTP-Header-Live-拓展" class="headerlink" title="使用 HTTP Header Live 拓展"></a>使用 HTTP Header Live 拓展</h4><p><img src="https://i.imgur.com/DpPsVxr.png" alt=""></p><p><img src="https://i.imgur.com/6y6f0hR.png" alt=""></p><p>flag=cyberpeace{34275870cbf633cfcc2f07a54fe5b16e}</p><h2 id="了解cookie"><a href="#了解cookie" class="headerlink" title="了解cookie"></a>了解cookie</h2><p>Cookie 并不是它的原意“甜饼”的意思, 而是一个保存在客户机中的简单的文本文件, 这个文件与特定的 Web文档关联在一起, 保存了该客户机访问这个Web 文档时的信息, 当客户机再次访问这个 Web 文档时这些信息可供该文档使用。由于“Cookie”具有可以保存在客户机上的神奇特性, 因此它可以帮助我们实现记录用户个人信息的功能, 而这一切都不必使用复杂的CGI等程序 。举例来说, 一个 Web 站点可能会为每一个访问者产生一个唯一的ID, 然后以 Cookie 文件的形式保存在每个用户的机器上。如果使用浏览器访问 Web, 会看到所有保存在硬盘上的  Cookie。在这个文件夹里每一个文件都是一个由“名/值”对组成的文本文件,另外还有一个文件保存有所有对应的 Web 站点的信息。在这里的每个  Cookie 文件都是一个简单而又普通的文本文件。透过文件名, 就可以看到是哪个 Web  站点在机器上放置了Cookie(当然站点信息在文件里也有保存)</p><p><a href="https://segmentfault.com/a/1190000016248401" target="_blank" rel="noopener">资料1</a></p><p><a href="https://www.jianshu.com/p/6fc9cea6daa2" target="_blank" rel="noopener">资料2</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;cookie&quot;&gt;&lt;a href=&quot;#cookie&quot; class=&quot;headerlink&quot; title=&quot;cookie&quot;&gt;&lt;/a&gt;cookie&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Jrb5zzg.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
       
     
     </summary>

@@ -140,6 +140,12 @@
     <content><![CDATA[<h1 id="修改用户名和邮箱"><a href="#修改用户名和邮箱" class="headerlink" title="修改用户名和邮箱"></a>修改用户名和邮箱</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$  git config --global user.name &quot;输入你的用户名&quot;</span><br><span class="line"></span><br><span class="line">$  git config --global user.email &quot;输入你的邮箱&quot;</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.imgur.com/pZXw86y.png" alt=""></p>
 <h3 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
+<p>注意：多次更改会报错</p>
+<p>warning: user.name has multiple values<br>error: cannot overwrite multiple values with a single value<br>       Use a regexp, –add or –replace-all to change user.name.</p>
+<p>原因：添加多个name值，出现重复的name值</p>
+<p>解决方案：</p>
+<p>git config –global –replace-all user.name “你的 git 的名称” ​</p>
+<p>git config –global –replace-all uesr.email “你的 git 的邮箱”</p>
 <p>git bash和git cmd的区别:<br>git cmd是git bash的子集。所以直接用git bash就行了。<br>git gui是图形界面。</p>
 <h3 id="相关资料："><a href="#相关资料：" class="headerlink" title="相关资料："></a>相关资料：</h3><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><p>版本控制工具，支持该工具的网站有Github、BitBucket、Gitorious、国内的osChina仓库、csdn仓库等等。</p>
 <h4 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h4><p>是Linux、unix系统的外壳，也可以理解为命令行，就是你输入并执行命令的地方，git通过命令行和图形界面两种方式使用shell。</p>
